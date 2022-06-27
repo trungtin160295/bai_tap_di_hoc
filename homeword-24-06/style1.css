@@ -1,0 +1,89 @@
+
+.img-logo{
+    width:50px;
+    height: 50px;
+}
+.h-carousel{
+    height: 300px;
+    }
+
+.margin-auto{
+    margin:auto ;
+}
+main{
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;  
+    background-color: rgba(181, 242, 107, 0.21);
+    margin-top:20px ;
+    gap: 2px;
+}
+.card-flex{
+    display: inline-flex;      
+    width: 95%;   
+    margin-top:20px ;
+    gap: 2px;
+    font-size:12px ;
+}
+.card-new{
+    display:flex ;
+
+}
+.card-new.img{
+    width:30% ;
+    height:30%;
+}
+   
+
+a:hover{color: rgb(165, 42, 50);
+text-decoration:none;}
+
+.header-card-flex{
+padding-left:10px;
+padding-right: 10px;
+border-radius:6px;
+text-align: center;
+color: black;
+}
+a{color: black;}
+.font12{
+    font-size:14px ;
+}
+ul{
+    padding-inline-start: 10px;
+}
+    
+
+.footer-flex{
+    display:flex;
+    width: 90%;        
+ }
+.footer-flex .col-1{
+    padding-right: 0px;
+    padding-left: 0px;
+    font-size: 12px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+footer div{    
+    margin-left: auto;
+    margin-right: auto;
+}
+footer div a{    
+    margin-right:10px ; 
+    margin-left: 10px;  
+     
+}
+footer div.bg-white{ justify-content: center;}
+.w-80{
+    width: 70%;
+    text-align: center;
+}
+
+
+
+
+
+
