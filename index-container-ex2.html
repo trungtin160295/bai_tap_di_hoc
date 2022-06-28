@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài tập về sắp xếp trong container</title>
+    <style>
+         body{text-align: center;
+            margin-left:auto;margin-right :auto;
+            font-size:20px;}
+        .container{width: 500px; 
+            height:560px;
+             background-color: aqua; 
+             margin-left:auto;
+             margin-right :auto;border:3px solid}
+        .header{width: 90%;
+             height:100px ; margin-top:30px ;
+             border: 2px solid; 
+             margin-left:auto;
+             margin-right :auto; 
+             background-color: aquamarine; }
+        .nav{width: 90%;
+             height:30px ;
+             margin-top: 30px;border: 2px solid;
+              margin-left:auto;margin-right :auto;
+              background-color: burlywood;}
+        .wrapper{
+            width: 90%; 
+            height:300px ;
+            margin-top: 10px;
+            border: 2px solid; 
+            margin-left:auto;
+            margin-right :auto ;
+            background-color: chartreuse;           
+        }       
+        .content{
+            width: 60%;
+            height:200px;
+            border: 1px solid; 
+            display: flex;
+            flex-direction:column;
+            align-content: center;
+            background-color: beige;
+
+        }
+        .sidebar{
+            width: 30%;
+            height:200px;
+            border: 1px solid; 
+            align-content: center;
+            justify-content: center;           
+                                     
+        }
+        .flex{display: flex;
+            justify-content: center;
+            gap:15px ;
+            align-content: center;
+            height: 200px; 
+            margin-top:20px ;
+        }
+        .subcontent{
+            border:1px solid ;
+            width:90% ;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top:10px ;
+            height: 60px;
+            background-color: aquamarine;
+        }
+        .footer{width:90% ;
+            height: 50px;
+            background-color: cadetblue;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid;
+            margin-top: 20px;}
+            
+       
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="margin-top: 10px; ;">class='container'</div>
+        <div class="header">
+            <div>class='header'</div>
+            <div class="nav">class='nav' </div>
+
+        </div>
+        <div class="wrapper">
+            <div style="margin-top:20px ;"> class='wrapper'</div>
+            <div class="flex" >
+                <div class="content ">
+                    <div style="margin-top:10px ;">class='content'</div>
+                    <div class="subcontent"> <p>class='subcontent'</p></div>
+                    <div class="subcontent"> <p>class='subcontent'</p></div>
+
+                </div>
+                <div class="sidebar"><p>class= 'sidebar'</p></div>
+            </div>
+        </div>
+        <div class="footer"> class='footer'</div>
+    </div>
+
+    
+</body>
+</html>

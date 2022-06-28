@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project layout</title>
+    <style>
+        body{
+            margin-top:20px ;
+            margin-left: auto;
+            margin-right: auto;
+            width: 95%; }
+        header{
+            background-color: black;
+            color:aliceblue;  
+            height: 40px;              
+            margin-top: auto;
+            margin-bottom: auto; 
+        }
+        main{
+            width:80% ;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+        .flex{display: flex;gap: 20px;}
+        header div.flex{margin-left: auto;
+            margin-right: auto; 
+            width:80% ;                    
+            align-content: center;            
+            justify-content: space-between;
+            }                        
+        .header-left{
+            font-size:20px;
+            padding-top:5px;           
+        }
+        .header-right{
+            display: flex;
+            font-size:15px;
+            flex-direction: row; 
+            margin-top:12px ;                    
+                    
+        }
+        .header-right a{
+            color: aliceblue;
+            text-decoration: none;
+            width:60px ;}
+        .card-flex {display: flex;
+        margin-top:10px ;} 
+        .card-flex img{
+            display: flex;
+            width: 700px;
+            height:300px ;
+
+        }
+        .flex.row{width:40% ;
+            flex-direction: column;
+            gap: 20px;
+        }
+        button{background-color: aqua;
+        margin-top:20px ;}
+        hr{
+        margin-top: 20px;
+        border-width:3px ;
+        }
+        a:focus{background-color: brown;}
+        footer{background-color: black;
+            height: 100px;
+            color: aliceblue;    
+            margin-top: 10px;                    
+        }
+        footer div{
+           text-align: center;
+         font-size:20px ;
+         padding-top:40px;      
+        }
+        nav{
+            margin-left: auto;
+            margin-right: auto;
+            align-content: center;
+            align-items: center;
+            width: 160px;
+        }
+        nav a{
+            border:1px solid ;
+            padding:0 5px ;
+            text-decoration: none;
+        }
+           
+    </style>
+</head>
+<body>
+    <header>
+        <div class="flex" >
+            <div class="header-left">Bootstrap</div>
+            <div class="header-right ">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Sevrices</a>
+                <a href="">Contact</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div>
+            <span style="font-size:30px;">Page Heading</span>
+            <span style="font-size:20px;">Secondary Text</span>        
+        </div>
+        <div class="flex">
+            <div class="card-flex"><img src="./test1/anh/may-anh-cho-nguoi-moi.jpg" alt="anh/may-anh-cho-nguoi-moi"></div>
+            <div class="row">
+                <h4>Ảnh chân dung </h4>
+                <div>Ảnh chân dung là dạng ảnh chụp được ứng dụng nhiều trong đời sống hằng ngày. Dạng ảnh chân dung thường là ảnh chụp một người hoặc nhiều người. Gương mặt là phần trọng tâm của bức ảnh biểu đạt toàn bộ cá tính, tâm trạng, biểu cảm.</div>
+                <a href="#"><button>Xem >>></button></a>
+            </div>            
+        </div>
+        <hr>
+        <div class="flex">
+            <div class="card-flex"><img src="./test1/anh/may-anh-cho-nguoi-moi.jpg" alt="anh/may-anh-cho-nguoi-moi"></div>
+            <div class="row">
+                <h4>Ảnh chân dung </h4>
+                <div>Ảnh chân dung là dạng ảnh chụp được ứng dụng nhiều trong đời sống hằng ngày. Dạng ảnh chân dung thường là ảnh chụp một người hoặc nhiều người. Gương mặt là phần trọng tâm của bức ảnh biểu đạt toàn bộ cá tính, tâm trạng, biểu cảm.</div>
+                <a href="#"><button>Xem >>></button></a>
+            </div>            
+        </div>
+        <hr>        
+        <div class="flex">
+            <div class="card-flex"><img src="./test1/anh/may-anh-cho-nguoi-moi.jpg" alt="anh/may-anh-cho-nguoi-moi"></div>
+            <div class="row">
+                <h4>Ảnh chân dung </h4>
+                <div>Ảnh chân dung là dạng ảnh chụp được ứng dụng nhiều trong đời sống hằng ngày. Dạng ảnh chân dung thường là ảnh chụp một người hoặc nhiều người. Gương mặt là phần trọng tâm của bức ảnh biểu đạt toàn bộ cá tính, tâm trạng, biểu cảm.</div>
+                <a href="#"><button>Xem >>></button></a>
+            </div>            
+        </div>
+        <hr>        
+        <div class="flex">
+            <div class="card-flex"><img src="./test1/anh/may-anh-cho-nguoi-moi.jpg" alt="anh/may-anh-cho-nguoi-moi"></div>
+            <div class="row">
+                <h4>Ảnh chân dung </h4>
+                <div>Ảnh chân dung là dạng ảnh chụp được ứng dụng nhiều trong đời sống hằng ngày. Dạng ảnh chân dung thường là ảnh chụp một người hoặc nhiều người. Gương mặt là phần trọng tâm của bức ảnh biểu đạt toàn bộ cá tính, tâm trạng, biểu cảm.</div>
+                <a href="#"><button>Xem >>></button></a>
+            </div>            
+        </div>
+        <hr>        
+        <div class="flex">
+            <div class="card-flex"><img src="./test1/anh/may-anh-cho-nguoi-moi.jpg" alt="anh/may-anh-cho-nguoi-moi"></div>
+            <div class="row">
+                <h4>Ảnh chân dung </h4>
+                <div>Ảnh chân dung là dạng ảnh chụp được ứng dụng nhiều trong đời sống hằng ngày. Dạng ảnh chân dung thường là ảnh chụp một người hoặc nhiều người. Gương mặt là phần trọng tâm của bức ảnh biểu đạt toàn bộ cá tính, tâm trạng, biểu cảm.</div>
+                <a href="#"><button>Xem >>></button></a>
+            </div>            
+        </div>
+        <hr>
+        
+            <nav>
+                <a href="">back</a>
+                <a href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">next</a>
+                
+            </nav>
+        
+    </main>
+    <footer>
+        <div>Cám ơn tất cả mọi người!!</div>
+    </footer>
+    
+</body>
+</html>
