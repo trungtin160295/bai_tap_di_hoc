@@ -1,18 +1,54 @@
-.image{
-    object-fit: cover;
-    height: 32%;
-    width: 32%;
-  }
-  
-  .group-image{
-    width: 820px;
-    height: 820px;
-    display: flex;
+.container-friend{width: 30%;height:800px ;
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+  border-radius:15px;
+  padding: 20px;
+  font-size:30px ;
+}
+.container-friends-header{
+  width:100% ;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+ 
+}
+.container-friends-header a{
+  font-size: 30px;
+  color: black;
+  text-decoration: none;
+}
+.container-friends-header a:hover{text-decoration: underline;}
+.container-friends-header button{
+  border:none ;
+  border-radius:5px ;
+  font-size:20px;
+  padding: 10px;
+  background-color: aqua;
+  color: brown;
+}
+.container-friends-header button:hover{background-color: rgba(0, 0, 0, 0.178);}
+.avatar2{
+  border-radius:10px ;
+  object-fit: cover;
+  height:200px;
+  width: 100%;
+}
+
+.group-friends{   
+  display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
     border-radius:15px ;
-    gap:2%;
-  }
+ }
+  .friend1{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    display:row ;
+    margin-bottom:30px ;
+   }
   
