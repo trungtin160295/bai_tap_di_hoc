@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chia bố cục trang wed</title>
     <style>
+        .center{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        }
+    </style>
+    <style>
         main div div{border:solid;height:100px ;}
         div{
             padding-top: auto;
@@ -18,26 +26,26 @@
         <p>Xin chào!! </p>
     </header>
     <main style="display:flex ;align-content: center; ">
-        <div style ="width: 25%;background-color: blue;"> body-letf</div>
-        <div style ="width: 50%;background-color: brown;"> 
-            <div>
+        <div  class="center" style ="width: 25%;background-color: blue; "> <p>bodyleft</p></div>
+        <div style =" width: 50%; display:flex ; flex-direction: column;background-color: brown; "> 
+            <div class="center">
                 content-1
             </div>
-            <div>
+            <div class="center">
                 content-2
             </div>
         
-            <div>
+            <div class="center">
                 content-3
             </div>
-            <div>
+            <div class="center">
                 content-3
             </div>
         
         
         </div>
         
-        <div style="width:25%;background-color: darkgreen;"> body-right</div>
+        <div class="center" style="width:25%;background-color: darkgreen;"> body-right</div>
 
     </main>
     <footer style="background-color: rgb(255, 0, 204); height: 100px;"> <div>footer</div></footer>
