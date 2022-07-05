@@ -262,8 +262,18 @@ button:hover{background-color: rgba(11, 6, 0, 0.197);}
     }
 
 
-
-
+.container-friends{
+    background-color: #ffffff;
+    border-radius:15px;
+    display: flex;
+    flex-direction: row;
+    padding:20px ;
+}
+.container-friends-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 
 

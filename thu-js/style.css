@@ -1,0 +1,18 @@
+.image{
+    object-fit: cover;
+    height: 32%;
+    width: 32%;
+  }
+  
+  .group-image{
+    width: 820px;
+    height: 820px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    border-radius:15px ;
+    gap:2%;
+  }
+  
