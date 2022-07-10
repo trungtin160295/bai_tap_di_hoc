@@ -1,0 +1,23 @@
+.navbar{
+    background-color: aqua;
+    width: 80%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin:30px auto 0 auto ;
+    padding:0 25px 0 25px ;
+  
+}
+.navbar-left{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: chartreuse;
+}
+.navbar button{
+    background-color: aqua;
+    border: none;
+    font-size:25px ;
+    }
+    .navbar button:hover{background-color: aliceblue;}
+    .navbar button:focus{background-color: rgba(52, 190, 18, 0.561);}

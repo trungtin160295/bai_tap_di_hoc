@@ -43,12 +43,11 @@ group.classList = ["group-friends"];
 
 images.forEach(function(anh,name1)  {
   var friend = document.createElement("div");
-  friend.classList = ["friend1"];
+    friend.classList = ["friend1"];
   var avatar = document.createElement("img");
   avatar.classList = ["avatar2"]
     avatar.src=anh;
-   friend.appendChild(avatar);
-
+    friend.appendChild(avatar);
   let name = document.createElement("span");
   name.innerHTML="bạn số " + name1;
   friend.appendChild(name);

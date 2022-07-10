@@ -1,0 +1,419 @@
+body{font-size: 30px;}
+header{
+    max-width :1700px;    
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+main{background-color: rgba(0, 0, 0, 0.105);
+    padding-top: 30px;
+    }
+   
+.main{
+    max-width :1700px;     
+    margin:0 auto 0 auto ;
+  
+}
+.main1{
+    display: flex;
+    flex-wrap: wrap;
+      
+}
+
+#carousel-coverimage img{height:50vh;}
+@media  (max-width: 821px){
+    .avatar-name div{display: flex;justify-content: center; align-items: center} 
+    .center1{display: flex;justify-content: center;align-items: center}
+}
+ 
+
+.avatar{
+    border:3px solid ;
+    border-color: #ffffff;
+    border-radius:50% ;
+    width:50px ;
+    height:50px;
+    
+}
+.avatar-main{
+    border:5px solid ;
+    border-radius:50% ;
+    border-color: #ffffff;
+    width:200px ;
+    height:200px;
+}
+.information{      
+    align-items:flex-end ;
+    justify-content: space-between;
+}
+.avatar-name{
+    flex-direction:row;
+    align-items:flex-end ;
+}
+
+.name{
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start
+    }
+.text-link{
+    font-size:20px;
+    text-decoration:none;
+    color: rgba(0, 0, 0, 0.541);
+    }
+a:focus{background-color: aqua;}
+/* .border-circle{
+    border:0.5rem solid ;
+    border-color: aliceblue;
+    border-radius:50%;
+} */
+.list-avatar-friends{
+    padding:0;
+    margin-right: -10px;
+    }
+.nav-content{
+   padding:5px 10px 10px 10px ;
+   
+   font-weight:3px ;
+   border: none;
+   background-color: rgb(255, 255, 255);
+}
+.nav-content:hover{background-color: aqua;}
+.nav-content:focus{
+    color: blue;
+    border-bottom:8px solid ;
+    border-color: blue;}
+.width-dropdown-menu{width: 15em;}
+.menu-information{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin:0 20px 0 20px ;}
+
+.content-left-link{font-weight: 400; color: rgb(23, 2, 2) ;font-size: 25px;}
+.main-right{
+    flex-direction: row;
+    padding-left: 15;
+}
+.main-left{
+    flex-direction: row;
+    padding: 0;
+}
+.introduce{
+    display: flex;
+    flex-direction: column;
+    gap:20px ;
+    background-color: #ffff;
+    border-radius:20px  ;
+    align-self:center;
+    padding:30px 0 30px ;
+}
+.introduce button{
+    width: 85%;
+    align-self:center;
+    border-radius:10px ;
+    padding:10px 0 10px ;}
+.main-container{
+    background-color: #ffffff;
+   
+    border-radius:20px ;
+    padding:20px ;
+    margin-bottom: 20px;
+}
+
+.status{    
+    display: flex;
+    flex-direction:row;    
+    gap: 15px;     
+}
+
+.add-status{    
+    background-color: rgba(0, 0, 0, 0.068);
+    border-radius: 30px;
+ 
+    text-align: left;
+}
+.add-content{
+    display: flex;
+   }
+.add-content button{
+    width:33%;
+    border: none;
+    background-color: rgba(240, 248, 255, 0);
+    border-radius:15px ;
+   
+    font-weight:bold;    
+}
+
+.setting-content{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between ;   
+}
+.setting-content button{
+    border: none;
+    border-radius:10px ;
+   
+    padding: 10px;  
+    margin-left:10px ;  
+    }
+.setting-display{
+    display:flex ;}
+.setting-display button{
+    width:33%;
+    border: none;
+    background-color: rgba(240, 248, 255, 0);
+    border-radius:5px ;
+    }
+.header-main-container{
+    display: flex;
+    gap:10px ;
+       
+ }
+.header-main-container p{margin-bottom: 0;}
+a{color: black;}
+.setting-status{color: black;}
+.amount-like{
+    display: flex;
+    flex-direction: row ;
+    margin:15px;
+    justify-content:space-between;
+}
+.amount-like span{font-size:25px ;}
+.interactive{
+    display: flex;
+    flex-direction: row;
+}
+.interactive button{
+    border: none;
+    border-radius:5px ;   
+    width:33% ;
+    background-color: #ffffff;
+   
+}
+.interactive span{font-size:40px ;}
+.comment{
+    display: flex;
+    flex-direction: row;    
+}
+.comment-new{
+    border:none ;
+    border: radius 15px; ;
+    background-color: rgba(0, 0, 0, 0.053);
+    margin-left: 10px;
+    border-radius:20px ;
+    
+    }
+.comment-new input{
+    border:none;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.00);
+}
+.comment button{
+    font-size: 40px;
+    border:none ;
+    }
+.comment-old{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    margin-top:10px ;
+}
+.comment-old-content{
+    display: flex;
+    flex-direction: column;    
+    border-radius:15px;    
+   
+    }
+.comment-child{
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-radius:15px;
+    background-color: rgba(0, 0, 0, 0.053);
+ 
+     
+}
+.comment-old-content button{
+    border: none;
+    background-color:#ffffff ;
+   font-weight: bold;
+   font-size: 15px; ;
+}
+.comment-old-content button:hover{
+    background-color: #ffffff;
+    text-decoration: underline;}
+
+button:hover{background-color: rgba(11, 6, 0, 0.197);}
+
+
+/* style của list ảnh */
+.image{
+    object-fit: cover;
+    width: 30%;
+    margin:1% ;
+  }
+  .lits-img-old header{
+    display: flex;
+    justify-content: space-between;
+  }
+  .lits-img-old{
+    background-color: #ffffff;
+    margin-top:15px ;
+  }
+  .lits-img-old button{border:none ;
+    background-color:#ffffff ;}
+  .group-image{ 
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius:15px ;
+    
+  }
+  
+/* style của list avatar */
+ 
+.group-avatar{     
+    display: flex;
+    flex-direction: row;       
+    }
+.avatar{
+  border:3px solid ;
+    border-color: #ffffff;
+   border-radius:50% ;
+   width:50px ;
+   height:50px;        
+    }
+
+
+.container-friends{
+    background-color: #ffffff;
+    border-radius:15px;
+    display: flex;
+    flex-direction: row;
+    padding:20px ;
+}
+.container-friends-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+/* danh sách bạn bè */
+
+.container-friend{
+    margin-top:20px ;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius:15px;
+    padding: 20px;
+   
+  }
+  .container-friends-header{
+    width:100% ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+   
+  }
+  .container-friends-header a{
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+  }
+  .container-friends-header a:hover{text-decoration: underline;}
+  .container-friends-header button{
+    border:none ;
+    border-radius:5px ;
+   
+    padding: 10px;
+    background-color: #ffffff;
+    color: rgb(42, 106, 165);
+  }
+  
+  .avatar2{
+    border-radius:10px ;
+    object-fit: cover;
+    height:200px;
+    width: 100%;
+  }
+  
+  .group-friends{   
+    display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
+      border-radius:15px ;
+   }
+    .friend1{
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      display:row ;
+      margin-bottom:30px ;
+     }
+    
+     button:hover{background-color: rgba(0, 0, 0, 0.178);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
