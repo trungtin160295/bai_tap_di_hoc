@@ -16,7 +16,7 @@ var images =[
   image6 = "https://img.thuthuatphanmem.vn/uploads/2018/10/09/anh-thien-nhien-cuc-dep_041753727.jpg",
   image7 = "https://img.thuthuatphanmem.vn/uploads/2018/10/09/anh-thien-nhien-dep-hung-vi-nhat_041753806.jpg",
   image8 = "https://img.thuthuatphanmem.vn/uploads/2018/10/09/anh-thien-nhien-dep-va-la-nhat-the-gioi_041753977.jpg",
-  image9 = "https://img.thuthuatphanmem.vn/uploads/2018/10/09/anh-thien-nhien-nui-dep-nhat-the-gioi_041754587.jpg", 
+  image9 = "img./1.jpg", 
 ];
 
 
