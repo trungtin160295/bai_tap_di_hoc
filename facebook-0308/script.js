@@ -132,7 +132,26 @@ listImage.appendChild(group);
 containerFriends.appendChild(listImage);
 
 
+// function clickMenu(id){
+  
+//   // document.getElementById(id).classList.toggle("show")
+//   console.log(document.getElementById(id).classList);
+// }
+// function clickMenu1() {    
+                 
+//   console.log(aaaaaaaaaaaaaa);
+// }
 
-
-
+// window.onclick = function(event) {
+//   if (!event.target.matches('button')) {
+//     var buttons = document.getElementsByTagName("button");
+    
+//     for (let i = 0; i < buttons.length; i++) {
+      
+//       if (buttons[i].classList.contains('show')) {
+//         openDropdown.classList.remove('show');
+//       }
+//     }
+//   }
+// }
 
