@@ -1,0 +1,33 @@
+.menu-header{
+    background-color: aqua;
+    height: 50vh;
+    
+   
+}
+.menu-header>ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap:50px ;
+    
+}
+/* .menu-header>ul>li{
+    display: inline;
+} */
+.menu-header ul li a {
+    text-decoration: none;
+}
+ 
+
+.flex-colum{
+    display: flex;
+    flex-direction: column;
+}
+.flex-colum ul{
+    list-style-type: none;
+    margin-top: 20px;
+    padding: 0;
+    
+}
