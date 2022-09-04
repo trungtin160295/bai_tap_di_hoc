@@ -4,7 +4,7 @@ import {
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
-  CarouselCaption,
+  
 } from 'reactstrap';
 
 
@@ -37,7 +37,7 @@ const items = [
       },
   ];
 
-export default function Slide(args) {
+export default function SliderBanner(args) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 

@@ -6,8 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar  from './Components/Navbar'
 // import MenuHeader from './Components/MenuHeader'
 import Product from './Components/Product'
-import Slide from './Components/Slide'
-
+import SliderBanner from './Components/SliderBanner'
+import TabsProduct from './Components/TabProduct'
+import Login from './Components/Login'
 
 
 
@@ -19,12 +20,14 @@ import Slide from './Components/Slide'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Navbar/> 
+     <Navbar/>     
+    <SliderBanner />     
     
-    <Slide /> 
-    <Product/>
-    
-     {/* <App/> */}
+   
+
+    <TabsProduct/>
+    <Login/>
+
   </React.StrictMode>
 )
 

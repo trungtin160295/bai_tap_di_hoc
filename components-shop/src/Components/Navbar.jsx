@@ -6,7 +6,7 @@ const listMenu =[
              {               
                  name:"Mặc nhà & mặc trong",
                  explain:"Homewear /& Underwear" ,
-                 product:[]     ,    
+                 product:[],    
                  },
              {               
                  name:"Mặc Hằng ngày",
@@ -68,6 +68,7 @@ const listMenu =[
                  attention: "New" ,  
                  product:[]     ,    
                  },
+                 
              {               
                  name:"Clean Vietnam",
                  explain:"Sự kết hợp giữa Coolmate & Vietmax" ,  
@@ -121,6 +122,125 @@ const listMenu =[
 
 export default function Navbar() {
    
+const listMenu =[
+    {title :"Nhu cầu",
+    child : [
+             {               
+                 name:"Mặc nhà & mặc trong",
+                 explain:"Homewear /& Underwear" ,
+                 product:[],    
+                 },
+             {               
+                 name:"Mặc Hằng ngày",
+                 explain:"Casualwear" ,  
+                 product:[]     ,            
+             },     
+             
+             {               
+                 name:"Đồ thể thao",
+                 explain:"Casualwear" , 
+                 attention: "Hot" ,     
+                 product:[]     ,     
+                 },
+             {               
+             name:"Phụ kiện",
+                 explain:"Accessories" ,      
+                 product:[]     ,        
+             }
+         ] 
+         },    
+  
+  
+    {title :"Danh mục",
+    child : [
+             {               
+                 name:"Áo nam",
+                 product:['Áo Tank top','Áo T-shirt','Áo Polo','Áo Sơ mi','Áo thể thao','Áo in hình','Áo khoác thể thao']             
+                 },
+             {               
+                 name:"Phụ kiện",
+                 product:['Mũ (Nón)','Tất(Vớ)']         
+             },     
+             {               
+                 name:"Quần Nam",
+                 product:['Quần Shorts','Quần Jeans','Quần dài',]          
+             },
+             {               
+                 name:"Quần Lót Nam",
+                 product:['Quần Brief (Tam giác)','Quần Trunk (Boxer)','Quần Brief Boxer','(Boxer dài)',]     
+                 },
+             {               
+                 name:"Tất cả sản phẩm",      
+                 product:[]
+                 
+                   
+             },
+             {               
+                 name:"Box đồ nam",  
+                 attention: "Sale" ,     
+                 product:[]
+                   
+             }
+    ] }, 
+    {title :"Bộ Sưu Tập",
+    child : [
+             {               
+                 name:"Vũ trụ áo Marvel NEW",
+                 explain:"Ưu đãi trải nghiệm hấp dẫn" ,
+                 attention: "New" ,  
+                 product:[]     ,    
+                 },
+                 
+             {               
+                 name:"Clean Vietnam",
+                 explain:"Sự kết hợp giữa Coolmate & Vietmax" ,  
+                 product:[]     ,            
+             },     
+             
+             {               
+                 name:"Coolmate Basics",
+                 explain:"10% doanh thu dành cho các bé" , 
+                    
+                 product:[]     ,     
+                 },
+             {               
+             name:"Sản phẩm bền vững",
+                 explain:"Sản phẩm thân thiện với môi trường" ,      
+                 product:[]     ,        
+             }
+         ] 
+         },  
+        
+     {title :"Công nghệ",
+    child : [
+             {               
+                 name:"Excool",
+                 explain:"Công nghệ làm mát tối đa" ,
+                 
+                 product:[]     ,    
+                 },
+             {               
+                 name:"Cleandye",
+                 explain:"Nhuộm không dùng nước" ,  
+                 product:[]     ,            
+             },     
+             
+             {               
+                 name:"HeiQ Viroblock",
+                 explain:"10% doanh thu dành cho các bé" , 
+                    
+                 product:[]     ,     
+                 },
+             {               
+             name:"Anti-Smell",
+                 explain:"Công nghệ khử mùi từ Nhật Bản" ,      
+                 product:[]     ,        
+             }
+         ] 
+         },                                                                                   
+     
+  ]     
+     
 
     return (    
       

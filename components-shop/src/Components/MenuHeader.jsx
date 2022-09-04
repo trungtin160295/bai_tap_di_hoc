@@ -1,5 +1,9 @@
 
-export default  function MenuHeader(props) {   
+export default  function MenuHeader(props) {  
+    
+    
+
+    
     
      const listMenu=props.listMenu;
     
@@ -7,15 +11,19 @@ export default  function MenuHeader(props) {
         
 
         return(
-        <div key={list.title} style={{ width: "300px"}}>
+        <div key={list.title} >
             <a href="#" className="title">{list.title}</a>
         
-        <div style={{margin: '30px 0 0 0'}} className="flex">
+        <div style={{margin: '30px 0 0 0'}} className="menu-header-column">
             {list.child.map((child)  => {
                 return(
                     <div key={child.name} className="menu-header-child">
-                        <a href="#" className="child-name">{child.name} <span>{child.attention}</span></a>
-                        <a href="#" className="child-explain">{child.explain}</a>
+                        <a href="#" className="child-name">
+                            <span>{child.name} <span style={{borderRadius:"12px",backgroundColor:" aqua" }}>{child.attention}</span></span>
+                            <span style={{fontSize:"12px" }}>{child.explain}</span>
+                            
+                        </a>
+                    
                         
                         <ul>
                            {child.product.map((content) => {

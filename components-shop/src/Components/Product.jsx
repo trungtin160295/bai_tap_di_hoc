@@ -3,27 +3,9 @@ import { Button } from 'reactstrap';
 
 
 
-export default function Product() {  
+export default function Product( props) {  
 
-    const product = {
-        id:1,
-        linkImages: { before: "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                        after: "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" },
-         rate:  4.9 ,
-         comment: 400,
-         ductName: "quan lot nam",
-         price:300000,
-         sale: 25,
-         voucherCode: "XMDDDDDDDD",
-        voucherValue: 30000,
-        listSize :['S','M','L','XL','2XL'],
-        listColor : ['màu 1','màu 2','màu 3','màu 4',]
-    
-
-
-    }
-     const a = Math.round(product.price*(1-(product.sale/100))).toString().slice(0,-3)
-     console.log(a);
+   const product=props.products
    
         
     return (
@@ -61,12 +43,12 @@ export default function Product() {
                    product.listColor.map((color) =>{
                         return (<li key = {color.toString() }> <Button >{color}</Button></li>)
                     })
-                }
-                    
+                }                   
 
                 </ul>
                 <div className="product-name ">
-                    <span>{product.ductName}</span>
+                    <a href="">{product.ductName}</a>
+                 
                 </div>
                 <div className="product-price">
                     <span style={{color : "red"}}> {product.price*(1-(product.sale/100))}</span>
