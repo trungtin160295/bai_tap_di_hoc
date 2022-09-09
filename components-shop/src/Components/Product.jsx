@@ -1,5 +1,5 @@
 import { Button } from 'reactstrap';
-
+import Text from './Text';
 
 
 
@@ -11,30 +11,34 @@ export default function Product( props) {
     return (
         <div className="product">
             <div className="product-img">
-            <a href="">
-                <img src={product.linkImages.before} alt="Avatar" className="image hover1"/>
-                <img src={product.linkImages.after} alt="Avatar" className="image hover2"/>
-                <div className="size "> 
-                <ul >
-                {
-                    product.listSize.map((size) =>{
-                        return (<li key = {size.toString() }> <span>{size}</span></li>)
-                    })
-                }
-                </ul>                                                           
-                
-            </div>
-            </a>
+                <a href="">
+                    <img src={product.linkImages.before} alt="Avatar" className="image hover1"/>
+                    <img src={product.linkImages.after} alt="Avatar" className="image hover2"/>
+                    <div className="size "> 
+                        <ul >
+                        {
+                            product.listSize.map((size) =>{
+                                return (<li key = {size.toString() }> 
+                                <Text className="sizechild">{size} </Text>
+                                
+                                </li>)
+                            })
+                        }
+                        </ul>                                                           
+                    
+                    </div>
+                </a>
            
 
-            <span className="price"> Chỉ với {Math.round(product.price*(1-(product.sale/100))).toString().slice(0,-3)} K</span>
-            <span className="attention ">Saving Packs</span>
+        
+            <Text className="price">Chỉ với {Math.round(product.price*(1-(product.sale/100))).toString().slice(0,-3)} K</Text>
+            <Text className="attention ">Saving Packs</Text>
+            
             
             <div className="evaluate">
-                <div>{product.rate} </div>
-                <div><i className="fa-solid fa-star" style={{fontSize: "14px"}}></i></div>
-                <div>({product.comment}) </div>               
-               
+                <Text >{product.rate}</Text>
+                <Text ><i className="fa-solid fa-star" ></i></Text>
+                <Text >{product.comment}</Text>                                                 
                 
             </div>
             <div className="product-information">
@@ -51,10 +55,11 @@ export default function Product( props) {
                  
                 </div>
                 <div className="product-price">
-                    <span style={{color : "red"}}> {product.price*(1-(product.sale/100))}</span>
-                    <span style={{color : "rgba(0, 0, 0, 0.27)"}}> <strike>{product.price}</strike></span>
-                    <span style={{color : "red"}}> -{product.sale}%</span>
+                    <Text className="sale">{product.price*(1-(product.sale/100))}</Text>  
+                    <Text  className="price1">{product.price}</Text> 
+                    <Text  className="sale">-{product.sale}%</Text> 
 
+                    
                 </div>
 
             </div>

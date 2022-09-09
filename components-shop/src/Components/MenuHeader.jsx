@@ -1,4 +1,4 @@
-
+import Text from "./Text";
 export default  function MenuHeader(props) {  
     
     
@@ -12,16 +12,25 @@ export default  function MenuHeader(props) {
 
         return(
         <div key={list.title} >
-            <a href="#" className="title">{list.title}</a>
+            <Text className="title">{list.title}</Text>
+            
         
         <div style={{margin: '30px 0 0 0'}} className="menu-header-column">
             {list.child.map((child)  => {
                 return(
                     <div key={child.name} className="menu-header-child">
                         <a href="#" className="child-name">
-                            <span>{child.name} <span style={{borderRadius:"12px",backgroundColor:" aqua" }}>{child.attention}</span></span>
-                            <span style={{fontSize:"12px" }}>{child.explain}</span>
-                            
+                            <div className="child-name-title"> 
+                                <Text>{child.name}</Text>
+                                {child.attention  &&
+
+                                <Text className= "attention-hot">{child.attention}</Text>
+
+                                }
+                               
+                            </div>
+                           
+                            <Text className="child-explain">{child.explain}</Text>                         
                         </a>
                     
                         

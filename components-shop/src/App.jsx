@@ -1,108 +1,23 @@
-import React from 'react';
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import Header from "./Header";
 
+export function App() {
+  const { register, handleSubmit } = useForm();
+  const [data, setData] = useState("");
 
-
-
-class App extends React.Component {
-
-   constructor(props) {
-
-      super(props);
-
-      
-
-      this.state = {
-
-         data: 0
-
-      }
-
-      this.setNewNumber = this.setNewNumber.bind(this)
-
-   };
-
-   setNewNumber() {
-
-      this.setState({data: this.state.data + 1})
-
-   }
-
-   render() {
-
-      return (
-
-         <div>
-
-            <button onClick = {this.setNewNumber}>INCREMENT</button>
-
-            <Content myNumber = {this.state.data}></Content>
-
-         </div>
-
-      );
-
-   }
-
+  return (
+    <form onSubmit={handleSubmit((data) => setData(JSON.stringify(data)))}>
+      <Header />
+      <input {...register("firstName")} placeholder="First name" />
+      <select {...register("category")}>
+        <option value="">Select...</option>
+        <option value="A">Option A</option>
+        <option value="B">Option B</option>
+      </select>
+      <textarea {...register("aboutYou")} placeholder="About you" />
+      <p>{data}</p>
+      <input type="submit" />
+    </form>
+  );
 }
-
-class Content extends React.Component {
-
-   componentWillMount() {
-
-      console.log('Component WILL MOUNT!')
-
-   }
-
-   componentDidMount() {
-
-      console.log('Component DID MOUNT!')
-
-   }
-
-   componentWillReceiveProps(newProps) {    
-
-      console.log('Component WILL RECIEVE PROPS!')
-
-   }
-
-   shouldComponentUpdate(newProps, newState) {
-
-      return true;
-
-   }
-
-   componentWillUpdate(nextProps, nextState) {
-
-      console.log('Component WILL UPDATE!');
-
-   }
-
-   componentDidUpdate(prevProps, prevState) {
-
-      console.log('Component DID UPDATE!')
-
-   }
-
-   componentWillUnmount() {
-
-      console.log('Component WILL UNMOUNT!')
-
-   }
-
-   render() {
-
-      return (
-
-         <div>
-
-            <h3>{this.props.myNumber}</h3>
-
-         </div>
-
-      );
-
-   }
-
-}
-
-export default App;

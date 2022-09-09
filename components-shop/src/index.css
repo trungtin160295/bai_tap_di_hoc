@@ -82,8 +82,7 @@ nav ul li:hover{
   height:50vh ;
   display:flex;
   gap:50px;
-  justify-content: center
-  
+  justify-content: space-evenly  
 }
 .menu-header a{
   text-decoration: none;
@@ -104,10 +103,26 @@ nav ul li:hover{
 .menu-header .child-name{
   font-weight: 600;
   display: flex;
-  flex-direction: column;
-
-  
+  flex-direction: column;  
 }
+.menu-header .child-name-title{
+  display: flex;
+}
+.menu-header .child-attention{
+  border-radius:5px ;
+  padding:10px ;
+  }
+  .menu-header .attention-hot{
+    background-color:#f9f86c ;
+    border-radius:5px ;
+    padding: 0 10px ;
+  }
+  .menu-header .attention-sale{
+    background-color: aqua;
+    border-radius:5px ;
+    padding:10px ;
+  }
+
 
 .menu-header .child-explain{
  
@@ -116,6 +131,9 @@ nav ul li:hover{
 .menu-header .child-product{
   font-weight: 600;
   color: rgba(97, 86, 86, 0.432);
+}
+.menu-header .child-product:hover{
+  color: rgb(0, 89, 255);
 }
 .menu-header-child{
   
@@ -180,9 +198,7 @@ nav ul li:hover{
 .product .size{
   position: absolute;
   bottom: 10px;
-  left: 10px;  
- 
- 
+  left: 10px;   
   overflow: hidden;
   width: 100%;
   height: 0;
@@ -200,9 +216,14 @@ nav ul li:hover{
   margin:0 ;
   gap:10px ;
 }
-.product .size ul li{
-  margin-left:10px ;
-  
+.sizechild{
+  padding:0 10px ;
+  background-color: aqua;
+  border-radius:5px ;
+}
+
+.sizechild:hover {
+  background-color: #f9f9f9;
 }
 
 .product-img :hover .size {
@@ -254,9 +275,9 @@ nav ul li:hover{
 .product-price {
   display: flex; 
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   gap: 10px;
-  text-decoration: line-through;
+  
   
 }
 .product ul {
@@ -266,6 +287,16 @@ nav ul li:hover{
 .product ul li {
   display: inline-block;
 }
+
+
+.product-price .price1{
+  text-decoration: line-through;
+}
+.product-price .sale{
+  color: red;
+}
+
+
 .slide{
   position: relative;
 }

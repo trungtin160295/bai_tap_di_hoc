@@ -1,3 +1,4 @@
+import Text from "./Text"
 import MenuHeader from "./MenuHeader"
 
 const listMenu =[
@@ -245,10 +246,8 @@ const listMenu =[
     return (    
       
       <header>        
-          <div className='topbar'>
-              <span>Ưu đãi combo tiết kiệm đến 44%</span>
-          </div>
           
+          <Text className='topbar'>Ưu đãi combo tiết kiệm đến 44% </Text>
               <nav>
                   <div id="logo">
                       <a href="#"><img src="./src/img/logo.svg" alt="" /></a>                    
