@@ -11,6 +11,8 @@ import TabsProduct from './Components/TabProduct'
 import Login from './Components/Login'
 
 
+import Footer from './Components/Footer';
+
 
 
 
@@ -20,13 +22,14 @@ import Login from './Components/Login'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <Navbar/>     
+     {/* <Navbar/>     
     <SliderBanner />     
     
    
 
     <TabsProduct/>
-    <Login/>
+    <Login/> */}
+    <Footer/>
 
   </React.StrictMode>
 )
