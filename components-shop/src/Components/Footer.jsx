@@ -127,7 +127,7 @@ export default function Footer() {
                     <Text className="footer-content-right">Chúng tôi luôn trân trọng và mong đợi nhận được mọi ý
                          kiến đóng góp từ khách hàng để có thể nâng cấp trải nghiệm dịch vụ và sản phẩm tốt hơn nữa.</Text>
                     
-                    <div><a href="#" className="sent-idea">Gửi ý kiến</a></div>
+                    <a href="#" className="sent-idea">Gửi ý kiến</a>
                     <div className="hotline">
                         <img src="./src/img/icon-hotline.svg" alt="" />
                         <div>

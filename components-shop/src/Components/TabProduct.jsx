@@ -71,11 +71,11 @@ function TabsProduct() {
       id="controlled-tab-example"
       activeKey={key}
       onSelect={(k) => setKey(k)}
-      className="mb-3"
-      fill
+      className="mb-3 "
+      
     >
       <Tab eventKey="Combo tiết kiệm" title="Combo tiết kiệm">
-      <div className='tabs-product'>
+      <div className='tab-product'>
         {products.map( (product) =>{
             return(
                 <div >
@@ -87,7 +87,7 @@ function TabsProduct() {
       </div>
       </Tab>
       <Tab eventKey="Mặc hàng ngày" title="Mặc hàng ngày">
-      <div className='tabs-product'>
+      <div className='tab-product'>
         {products.map( (product) =>{
             return(
                 <div >
@@ -99,7 +99,7 @@ function TabsProduct() {
       </div>
       </Tab>
       <Tab eventKey="Quần lót nam" title="Quần lót nam" >
-      <div className='tabs-product'>
+      <div className='tab-product'>
         {products.map( (product) =>{
             return(
                 <div >
@@ -111,16 +111,16 @@ function TabsProduct() {
       </div>
       </Tab>
       <Tab eventKey="Đồ thể thao" title="Đồ thể thao" >
-      <div className='tabs-product'>
-        {products.map( (product) =>{
-            return(
-                <div >
-                    <Product products ={product} />
-                </div>
-                
-            )
-        })}
-      </div>
+        <div className='tab-product'>
+            {products.map( (product) =>{
+                return(
+                    <div >
+                        <Product products ={product} />
+                    </div>
+                    
+                )
+            })}
+        </div>
       </Tab>
     </Tabs>
   );

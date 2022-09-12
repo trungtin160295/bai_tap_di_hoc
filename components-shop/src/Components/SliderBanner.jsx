@@ -18,12 +18,12 @@ const items = [
     {
       src: 'https://media.coolmate.me/cdn-cgi/image/width=1920,quality=100/uploads/August2022/COMBO-GIAM-GIA---T7_15.jpeg',
       
-      key: 1,
+      id: 1,
     },
     {
       src: 'https://media.coolmate.me/cdn-cgi/image/width=1920,quality=100/uploads/July2022/Banner-Coolmate-Active-opt-1.jpeg',
       
-      key: 2,
+      id: 2,
     },
     {
       src: 'https://media.coolmate.me/cdn-cgi/image/width=1920,quality=100/uploads/August2022/Banner-CXp-2.jpeg',

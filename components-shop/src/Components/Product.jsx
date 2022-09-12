@@ -24,14 +24,11 @@ export default function Product( props) {
                                 </li>)
                             })
                         }
-                        </ul>                                                           
+                        </ul>                                                         
                     
                     </div>
-                </a>
-           
-
-        
-            <Text className="price">Chỉ với {Math.round(product.price*(1-(product.sale/100))).toString().slice(0,-3)} K</Text>
+                </a>   
+                <Text className="price">Chỉ với {Math.round(product.price*(1-(product.sale/100))).toString().slice(0,-3)} K</Text>
             <Text className="attention ">Saving Packs</Text>
             
             
@@ -40,7 +37,10 @@ export default function Product( props) {
                 <Text ><i className="fa-solid fa-star" ></i></Text>
                 <Text >{product.comment}</Text>                                                 
                 
+            </div>       
+
             </div>
+            
             <div className="product-information">
                 <ul>
                 {
@@ -66,7 +66,7 @@ export default function Product( props) {
         </div>
   
 
-        </div>
+        
         
     );
   }

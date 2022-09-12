@@ -324,13 +324,49 @@ nav ul li:hover{
 
 }
 
-.tabs-product{
+.tab-product{
   display: flex;
   justify-content: center;
   gap: 20px; ;
+  
 }
-/* tabs product */
+.collections{
+  display: flex;
+  justify-content: space-evenly;
+  gap:1% ;
+}
+.collection{
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 22%;
+}
+.collection img:hover{
+  scale: 1.2;
+  transition: all .3s;
+}
+.collection img{
+  height:500px ;
+  width: 100%;
+  transition: all .3s;
+}
+.collection-title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% - 32px);
+  transform: translate3d(-50%,-50%,0);
+  border: 2px solid #fff;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border-radius: 16px;
+  transition: all .3s;
 
+}
 
 
 
@@ -387,11 +423,15 @@ footer{
   border-radius:10px ;
   padding: 10px 20px;
   background-color: rgb(13, 108, 225);
-  color: azure;
-
-  text-decoration: none;
+  color: azure; 
   margin-bottom: 30px;
+  text-decoration: none;
+}
 
+.sent-idea:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  
 }
 .hotline{
   display: flex;
@@ -427,4 +467,7 @@ footer{
 .footer-bottom-right img{
   
   height: 40px;
+}
+footer ul li a:hover {
+  color:#f9f86c ;
 }
