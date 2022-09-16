@@ -9,10 +9,10 @@ import Navbar  from './Components/Navbar'
 import SliderBanner from './Components/SliderBanner'
 import TabsProduct from './Components/TabProduct'
 import Login from './Components/Login'
-
+import Collection from './Components/Collection';
 
 import Footer from './Components/Footer';
-import Test1 from './Components/Test';
+import Test from './Components/Test';
 
 
 
@@ -25,9 +25,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <Navbar/>     
     <SliderBanner />          
     <TabsProduct/>
+    <Collection/>
     <Login/>
     <Footer/> */}
-    <Test1/>
+    <Test/>
 
   </React.StrictMode>
 )

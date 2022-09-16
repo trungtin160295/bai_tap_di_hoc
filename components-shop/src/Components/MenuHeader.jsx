@@ -21,10 +21,10 @@ export default  function MenuHeader(props) {
                     <div key={child.name} className="menu-header-child">
                         <a href="#" className="child-name">
                             <div className="child-name-title"> 
-                                <Text>{child.name}</Text>
+                                    <Text>{child.name}</Text>
                                 {child.attention  &&
 
-                                <Text className= "attention-hot">{child.attention}</Text>
+                                    <Text className= "attention-hot">{child.attention}</Text>
 
                                 }
                                
