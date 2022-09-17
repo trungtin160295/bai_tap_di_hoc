@@ -1,0 +1,25 @@
+.about-cool{     
+  display: flex;
+  justify-content: space-evenly;
+    padding:20px 0 ;
+    color: black;
+
+
+  .about-cool-child{
+    width: 300px;
+    
+    img{
+        width: 300px;
+        border-radius: 20px;
+    }
+    .title{
+        font-weight: 600;
+        margin: 10px 0;
+    }
+    span{
+        font-size: 14px;
+    }
+  }
+    
+  
+}
