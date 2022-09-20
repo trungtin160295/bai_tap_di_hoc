@@ -2,12 +2,16 @@ import Text from "./Text";
 export default  function MenuHeader(props) {  
     
     
-
     
     
-     const listMenu=props.listMenu;
+    const listMenu=props.listMenu;
     
-    const listItems = listMenu.map((list) =>{              
+    
+    
+    return (
+        <div className="menu-header " > 
+            
+            {listMenu.map((list) =>{              
         
 
         return(
@@ -58,14 +62,10 @@ export default  function MenuHeader(props) {
       </div>
         )
         
-    } );
-    return (
-        <div className="menu-header " > 
-            
-            {listItems}
+    } )}
             
   
-        </div>
+    </div>
       
     );
   }

@@ -78,7 +78,7 @@ function TabsProduct() {
       <div className='tab-product'>
         {products.map( (product) =>{
             return(
-                <div >
+                <div key={product.id}>
                     <Product products ={product} />
                 </div>
                 
@@ -90,7 +90,7 @@ function TabsProduct() {
       <div className='tab-product'>
         {products.map( (product) =>{
             return(
-                <div >
+                <div  key={product.id}>
                     <Product products ={product} />
                 </div>
                 
@@ -102,7 +102,7 @@ function TabsProduct() {
       <div className='tab-product'>
         {products.map( (product) =>{
             return(
-                <div >
+                <div  key={product.id}>
                     <Product products ={product} />
                 </div>
                 
@@ -114,7 +114,7 @@ function TabsProduct() {
         <div className='tab-product'>
             {products.map( (product) =>{
                 return(
-                    <div >
+                    <div  key={product.id}>
                         <Product products ={product} />
                     </div>
                     

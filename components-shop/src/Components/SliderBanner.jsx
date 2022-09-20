@@ -9,9 +9,13 @@ import {
 
 
 const listPolicy =[
-        "Miễn phí vận chuyển  cho đơn hàng trên 200k",
-        "60 ngày đổi trả bất kỳ lí do nào",
-        "Đến tận nơi nhận hàng trả và hoàn tiền trong 24h"
+        { content:"Miễn phí vận chuyển  cho đơn hàng trên 200k",
+        id:1
+      },
+       {content:"60 ngày đổi trả bất kỳ lí do nào",
+       id:2} ,
+        {content:"Đến tận nơi nhận hàng trả và hoàn tiền trong 24h",
+        id:3}
 ]
 
 const items = [
@@ -28,13 +32,14 @@ const items = [
     {
       src: 'https://media.coolmate.me/cdn-cgi/image/width=1920,quality=100/uploads/August2022/Banner-CXp-2.jpeg',
       
-      key: 3,
+      id: 3,
     },
     {
         src: 'https://media.coolmate.me/cdn-cgi/image/width=1920,quality=100/uploads/July2022/Excool-Banner-website.jpeg',
         
-        key: 4,
+        id: 4,
       },
+      
   ];
 
 export default function SliderBanner(args) {
@@ -63,14 +68,15 @@ export default function SliderBanner(args) {
       <CarouselItem
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
-        key={item.src}
+        key={item.id}
       >
-        <img src={item.src} alt={item.altText} />
+        <img src={item.src}  />
         {/* <CarouselCaption
           captionText={item.caption}
           captionHeader={item.caption}
         /> */}
       </CarouselItem>
+      
     );
   });
 
@@ -84,10 +90,11 @@ export default function SliderBanner(args) {
                 {...args}
             >
             <CarouselIndicators
+            className=''
                 items={items}
                 activeIndex={activeIndex}
                 onClickHandler={goToIndex}
-                cssModule={ {bottom: "0" }}
+                
             
             />
             {slides}
@@ -109,7 +116,7 @@ export default function SliderBanner(args) {
             {
 
                 listPolicy.map((policy) => {
-                    return (<span key={policy.toString()}>{policy}</span> )
+                    return (<span key={policy.id}>{policy.content}</span> )
                    
                 })
             }

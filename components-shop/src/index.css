@@ -295,8 +295,8 @@ nav ul li:hover {
 .policy span {
   border: solid;
   border-radius: 10px;
-
-  color: rgba(206, 232, 130, 0.693);
+  background: #f9f9f9;
+  color: rgba(13, 17, 1, 0.766);
   padding: 10px 25px;
 }
 

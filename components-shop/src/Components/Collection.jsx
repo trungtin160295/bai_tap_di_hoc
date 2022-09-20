@@ -25,7 +25,7 @@ export default function Collection( ) {
         <div className="collections">
             {collections.map((collection) =>{
                 return(
-                <div className="collection">
+                <div className="collection" key={collection.id}>
                     <a href="#">                        
                         <img src={collection.linkImg} alt="" />                        
                         <span className="collection-title">{collection.title}</span>
