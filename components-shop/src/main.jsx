@@ -17,10 +17,9 @@ import Views from './Components/Views';
 
 
 import TabsProduct from './Components/TabProduct'
-
-import Collection from './Components/Collection';
-
 import Basic from './Components/Basic';
+import TestCallAPI from './Components/TestCallAPI';
+import DetailBlog from './Components/DetailBlog';
 
 
 
@@ -37,7 +36,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route index element={<Home />} />
           <Route path="Coolxprint" element={<Basic/>} />
           <Route path="about" element={<TabsProduct />} />
-          <Route path="size" element={<Collection />} />
+          <Route path="size" element={<TestCallAPI />} />
+          <Route path="/blog/:id" element={<DetailBlog />}/>                      
         </Route>
       </Routes>
     </BrowserRouter>

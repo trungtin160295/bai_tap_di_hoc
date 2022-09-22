@@ -138,6 +138,16 @@ nav ul li:hover {
   list-style-type: none;
 }
 
+main {
+  margin: 0 auto;
+  width: 95%;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
 /* product : sản phẩm*/
 .product {
   margin: 0 auto;
@@ -341,7 +351,31 @@ nav ul li:hover {
   border-radius: 16px;
   transition: all 0.3s;
 }
-
+.marquee {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: #000;
+  border-radius: 24px;
+  color: #fff;
+  font-size: 24px;
+  height: 65px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+.marquee a {
+  text-decoration: none;
+  background-color: #1877cf;
+  color: black;
+  width: 20%;
+  height: 65px;
+  border-radius: 24px;
+  padding: 12px;
+  text-align: center;
+}
+.marquee a:hover {
+  color: #f9f9f9;
+}
 /*Footer*/
 
 footer {
@@ -438,6 +472,7 @@ footer ul li a:hover {
 .basic {
   text-align: center;
 }
+
 .list-basic {
   display: flex;
 }
@@ -457,4 +492,16 @@ footer ul li a:hover {
 }
 .basic button:hover {
   background-color: antiquewhite;
+}
+
+.card-collections {
+  display: flex;
+  gap: 2%;
+}
+.card-collections div {
+  width: 48%;
+  margin-bottom: 30px;
+}
+.card-collections img {
+  width: 100%;
 }

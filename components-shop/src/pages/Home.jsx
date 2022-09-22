@@ -1,8 +1,10 @@
  import SlideBanner from '../Components/SliderBanner'
  import TabsProduct from '../Components/TabProduct'
  import Card from '../Components/Card'
- import AboutCool from '../Components/AboutCool'
+import Basic from '../Components/Basic'
+
  import Collection from '../Components/Collection'
+
 
 
 
@@ -30,25 +32,39 @@
         linkImg:"./src/img/mceclip1_61.jpg",
         id:4},
     
-      ]
+    ]
+
 
     return(
-        <main>
+        <>
             <SlideBanner/>
             <TabsProduct/>
-            <Card obj={cleandenim}/>
-            <Card obj={cleandenim}/>                   
-            <AboutCool/>
-            <Collection/>
-            <Card obj={cleandenim}/> 
-          
-            <marquee>CoolClub - Ưu đãi nhiều hơn, mua sắm vui hơn. Nhận ngay ưu đãi 7% cho lần mua sắm tiếp theo</marquee>
+            <Card obj={cleandenim} />
+            <Card obj={cleandenim} right="false"/>    
+            <Basic/>                    
+            {
+                <div className="collections">
+                    {collections.map((collection) =>{
+                        return(
+                        <Collection collection={collection}/>
+                    )
+                    })}
+                </div>
+            }
+            <Card obj={cleandenim}/>    
+            <div className='marquee ' >
+                <marquee>CoolClub - Ưu đãi nhiều hơn, mua sắm vui hơn. Nhận ngay ưu đãi 7% cho lần mua sắm tiếp theo</marquee>
+             <a href="">Đăng nhập ngay</a>
+            </div>       
+
+           <div className='card-collections '>
+            <div><a href=""><img src="https://mcdn.coolmate.me/uploads/November2021/image1_59.jpg" alt="" /></a></div>
+            <div><a href=""><img src="https://mcdn.coolmate.me/uploads/November2021/image2.jpg" alt="" /></a></div>
+            
+           </div>
 
 
-
-
-
-        </main>
+        </>
 
     )
  }

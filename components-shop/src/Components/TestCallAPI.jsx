@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 import { useState, useEffect } from 'react';
 
 
-const Blog = () => {
+const TestCallAPI = () => {
 
     const [show, setShow] = useState(false);
     const [newData, setNewData] = useState([]);
@@ -141,4 +141,4 @@ const Blog = () => {
     )
 }
 
-export default Blog;
+export default TestCallAPI;

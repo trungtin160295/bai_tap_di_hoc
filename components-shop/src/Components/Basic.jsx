@@ -25,7 +25,7 @@ export default function Basic() {
     ]
     return (
         <div className =" basic ">
-           
+           <h1>Coolmate Basics</h1>
             <div className="list-basic">
                     {list.map((image) => {
                         return(
