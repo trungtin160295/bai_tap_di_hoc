@@ -14,7 +14,38 @@ import Basic from '../Components/Basic'
     const cleandenim ={
         linkImage:"https://mcdn.coolmate.me/image/August2022/mceclip0.jpg",
         title:"Coolmate's CLEAN DENIM",
-        content:"Một chiếc quần Jeans đầu tiên tại Coolmate được sử dụng chất liệu là Cotton Tái sinh (Regenerative Cotton) - loại Cotton chất lượng  và trồng bằng quy trình sạch, bền vững. Chiếc quần với vải Denim được dệt toàn bộ tại nhà máy Nhơn Trạch, Đồng Nai của Saitex /- nhà máy với nhiều trang máy móc, thiết bị hiện đại với quy trình sản xuất khép kín, giảm thiểu CO2 và nước thải ra môi trường.",
+        content:[{content:"Một chiếc quần Jeans đầu tiên tại Coolmate được sử dụng chất liệu là Cotton Tái sinh (Regenerative Cotton) - loại Cotton chất lượng  và trồng bằng quy trình sạch, bền vững. Chiếc quần với vải Denim được dệt toàn bộ tại nhà máy Nhơn Trạch, Đồng Nai của Saitex /- nhà máy với nhiều trang máy móc, thiết bị hiện đại với quy trình sản xuất khép kín, giảm thiểu CO2 và nước thải ra môi trường.",
+                    key:1}],
+        
+    }
+    const excool ={
+        linkImage:"https://mcdn.coolmate.me/uploads/January2022/ao_(1)_1_(1)_(1).jpg",
+        title:"Dòng sản phẩm công nghệ EXCOOL",
+        content:[{content:"Công nghệ Việt cho người Việt. Với hơn 100.000 sản phẩm đã được gửi đến tay khách hàng sử dụng và hài lòng",
+                    key:1}],
+        
+    }
+    const shoppingWithCool ={
+        linkImage:"https://mcdn.coolmate.me/uploads/January2022/ao_(1)_1_(1)_(1).jpg",
+        title:"Trải nghiệm mua sắm hài lòng với #Coolmate",
+        content:[{
+            content:"Giá cả hợp lý",
+            key:1,
+        },
+        {
+            content:"Dịch vụ 100% hài lòng",
+            key:2,
+        },
+        {
+            content:"60 ngày đổi trả",
+            key:3,
+        }
+        ,{
+            content:"Tự hào sản xuất tại Việt Nam",
+            key:4,
+        }
+
+        ],
         
     }
 
@@ -40,7 +71,7 @@ import Basic from '../Components/Basic'
             <SlideBanner/>
             <TabsProduct/>
             <Card obj={cleandenim} />
-            <Card obj={cleandenim} right="false"/>    
+            <Card obj={excool} right="false"/>    
             <Basic/>                    
             {
                 <div className="collections">
@@ -51,7 +82,7 @@ import Basic from '../Components/Basic'
                     })}
                 </div>
             }
-            <Card obj={cleandenim}/>    
+            <Card obj={shoppingWithCool}/>    
             <div className='marquee ' >
                 <marquee>CoolClub - Ưu đãi nhiều hơn, mua sắm vui hơn. Nhận ngay ưu đãi 7% cho lần mua sắm tiếp theo</marquee>
              <a href="">Đăng nhập ngay</a>

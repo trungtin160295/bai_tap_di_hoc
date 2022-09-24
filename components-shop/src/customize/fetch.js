@@ -42,7 +42,6 @@ const useFetch = (url) => {
   return {
     data,
     isLoading,
-    isError,
   };
 };
 

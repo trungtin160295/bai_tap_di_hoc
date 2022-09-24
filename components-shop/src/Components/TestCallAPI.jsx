@@ -16,12 +16,12 @@ const TestCallAPI = () => {
     const handleShow = () => setShow(true);
 
     const { data: dataBlogs, isLoading, isError }
-        = useFetch(`https://jsonplaceholder.typicode.com/posts`, false);
+        = useFetch(`https://jsonplaceholder.typicode.com/posts`);
 
     useEffect(() => {
         if (dataBlogs && dataBlogs.length > 0) {
             let data = dataBlogs.slice(0, 20);
-            setNewData(data)
+            setNewData(data) 
         }
     }, [dataBlogs]);
 
