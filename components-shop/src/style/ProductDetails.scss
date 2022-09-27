@@ -1,17 +1,139 @@
 main {
    align-items: flex-start;
+   background-color: rgba(167, 244, 251, 0.266);
  
 }
 .product-petails{
+    width:80% ;
     .path{
     margin:15px 0     
     }
-    .present{
-       
+    .product-presented{
         
-        
-        .image-gallery-content .image-gallery-slide .image-gallery-image{
-            max-width: 100%;
-        }
+        width:100% ;
+        .presented-information{
+            position: sticky;
+            top: 20px;
 
-}}
+            .product-title{
+                font-size: 40px;
+                font-weight:700 ;
+            }
+            .star{
+                color: rgb(240, 224, 50);
+                }
+            .product-price {
+                display: flex;
+                font-size: 18px;
+                font-weight: 500;
+                gap: 10px;
+                margin:10px 0 ;
+                .price {
+                  text-decoration: line-through;
+                  color: rgba(75, 12, 12, 0.259);
+                }
+                .product-discount {
+                  color: red;
+                  
+                }
+            }
+            .product-combo{
+                border-radius:5px ;
+                border: 2px solid;
+                background-color: rgb(245, 245, 245);
+                padding:5px 10px ;
+            }
+            .product-sale{
+                margin: 10px;
+                color: blue;
+            }
+            .product-color{
+                margin-top: 20px ;
+
+                .product-listcolor{
+                    display: flex;
+                    gap:10px;
+
+                    span{
+                        
+                        border-radius:5px ;
+                        border: 2px solid;
+                        background-color: rgb(245, 245, 245);
+                        padding:5px 10px ;
+                       
+                    }
+
+                    :hover{
+                        background-color: rgb(42, 165, 128);
+                    }
+                }                           
+            }
+            .product-zise{
+                margin-top: 20px ;
+
+                .product-listzise{
+                    display: flex;
+                    gap:10px;
+
+                    span{
+                       
+                        border-radius:5px ;
+                        border: 2px solid;
+                        background-color: rgb(245, 245, 245);
+                        padding:5px 10px ;
+                       
+                    }
+
+                    :hover{
+                        background-color: rgb(58, 224, 63);
+                    }
+                } 
+
+            }
+            .product-policy{
+               
+                display: flex;                
+                justify-content: center;                
+                flex-wrap: wrap;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 15px;
+                text-align: center;
+                letter-spacing: .03em; 
+                margin:10px ;
+                gap:1% ;
+                padding-bottom:20px ;
+                border-bottom: 1px solid #160505;
+                .policy-item{
+                    margin-bottom:10px ;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-flow: column;
+                    width: 32%;
+                    text-align: center;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    background-color: rgb(136, 240, 178);
+                    .policy-icon{
+                        position: relative;
+                        width: 35px;
+                        height: 35px;
+                        margin-bottom: 10px;
+                        img{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;                            
+                            object-fit: contain;
+                        }
+                    }
+
+                }              
+            }
+            
+        }
+    } 
+        
+}

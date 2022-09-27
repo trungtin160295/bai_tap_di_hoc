@@ -29,15 +29,15 @@ export default function Product( props) {
                     </div>
                 </a>   
                 <Text className="price">Chỉ với {Math.round(product.price*(1-(product.sale/100))).toString().slice(0,-3)} K</Text>
-            <Text className="attention ">Saving Packs</Text>
+                <Text className="attention ">Saving Packs</Text>
             
             
-            <div className="evaluate">
+                <div className="evaluate">
                 <Text >{product.rate}</Text>
                 <Text ><i className="fa-solid fa-star" ></i></Text>
                 <Text >{product.comment}</Text>                                                 
                 
-            </div>       
+                </div>       
 
             </div>
             
@@ -57,13 +57,12 @@ export default function Product( props) {
                 <div className="product-price">
                     <Text className="sale">{product.price*(1-(product.sale/100))}</Text>  
                     <Text  className="price1">{product.price}</Text> 
-                    <Text  className="sale">-{product.sale}%</Text> 
-
-                    
+                    <Text  className="sale">-{product.sale}%</Text>                     
                 </div>
+                
 
             </div>
-        </div>
+    </div>
   
 
         
