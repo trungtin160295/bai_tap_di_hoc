@@ -4,6 +4,8 @@
 import Basic from '../Components/Basic'
 
  import Collection from '../Components/Collection'
+ 
+ import '../style/Home.scss'
 
 
 
@@ -67,7 +69,7 @@ import Basic from '../Components/Basic'
 
 
     return(
-        <>
+        <main>
             <SlideBanner/>
             <TabsProduct/>
             <Card obj={cleandenim} />
@@ -93,9 +95,10 @@ import Basic from '../Components/Basic'
             <div><a href=""><img src="https://mcdn.coolmate.me/uploads/November2021/image2.jpg" alt="" /></a></div>
             
            </div>
+           
 
 
-        </>
+        </main>
 
     )
  }

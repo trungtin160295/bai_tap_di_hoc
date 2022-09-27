@@ -1,0 +1,232 @@
+/* Navbar */
+.topbar {
+    text-align: center;
+    font-weight: 600;
+    background-color: #f9f86c;
+    line-height: 25px;
+    font-size: 13px;
+  }
+  .navbar {
+    background-color: rgba(236, 243, 243, 0.747);
+    display: flex;
+    justify-content: space-around;
+  }
+  #logo img {
+    width: 100px;
+    height: 40px;
+    padding-top: 5px;
+  }
+  
+  nav ul {
+    margin: 10px 0 8px 0;
+    display: flex;
+    justify-content: space-between;
+  
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li:hover {
+    color: rgba(0, 0, 0, 0.137);
+  }
+  .nav-center a {
+    text-decoration: none;
+    padding: 0 10px;
+    color: black;
+    font-weight: 500;
+  }
+  
+  .hover:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+  }
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .nav-right img {
+    height: 30px;
+  }
+  .nav-right button {
+    border: none;
+    background-color: rgba(236, 243, 243, 0.747);
+  }
+  /* Menuhearder */
+  .menu-header {
+    height: 50vh;
+    display: flex;
+    gap: 50px;
+    justify-content: space-evenly;
+  }
+  
+  .menu-header a {
+    text-decoration: none;
+    color: black;
+  }
+  .menu-header .title {
+    color: rgba(97, 86, 86, 0.432);
+    font-weight: 600;
+  }
+  .menu-header-column {
+    display: flex;
+    height: 50vh;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: auto;
+  }
+  .menu-header .child-name {
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-header .child-name-title {
+    display: flex;
+  }
+  .menu-header .child-attention {
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .menu-header .attention-hot {
+    background-color: #f9f86c;
+    border-radius: 5px;
+    padding: 0 10px;
+  }
+  .menu-header .attention-sale {
+    background-color: aqua;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .menu-header .child-explain {
+    font-size: 13px;
+  }
+  .menu-header .child-product {
+    font-weight: 600;
+    color: rgba(97, 86, 86, 0.432);
+  }
+  .menu-header .child-product:hover {
+    color: rgb(0, 89, 255);
+  }
+  .menu-header-child {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-header-child ul {
+    flex-direction: column;
+    padding: 0;
+    list-style-type: none;
+  }
+
+
+
+
+  .about-cool{     
+    display: flex;
+    justify-content: space-evenly;
+      padding:20px 0 ;
+      color: black;
+  
+  
+    .about-cool-child{
+      width: 300px;
+      
+      img{
+          width: 300px;
+          border-radius: 20px;
+      }
+      .title{
+          font-weight: 600;
+          margin: 10px 0;
+      }
+      span{
+          font-size: 14px;
+      }
+    }
+      
+    
+  }
+  
+  
+  
+  
+  .blogs-container {
+    display       : flex;
+    flex-direction: row;
+    flex-wrap     : wrap;
+    gap           : 10px;
+    font-size     : 14px;
+  
+  
+    .single-blog {
+        border       : 1px solid grey;
+        border-radius: 3px;
+        padding      : 10px;
+        margin       : 0 10px;
+        min-width    : 300px;
+        max-width    : 420px;
+        text-align   : left !important;
+  
+        .title {
+            font-size  : 18px;
+            font-weight: 600;
+        }
+  
+        .content {
+            padding: 10px 0;
+        }
+    }
+  }
+  
+  .blog-detail {
+    border       : 1px solid grey;
+    padding      : 10px;
+    border-radius: 3px;
+    margin       : 10px;
+    min-height   : 100px;
+  
+    .content {
+        padding-top: 10px;
+    }
+  }
+  
+  .btn-add-new {
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
+  .add-new-container {
+    max-width    : 400px;
+    border       : 1px solid grey;
+    border-radius: 3px;
+    padding      : 15px;
+    margin       : 0 auto;
+    text-align   : left;
+  
+    .text-add-new {
+        margin    : 10px 0;
+        text-align: center;
+    }
+  
+    .inputs-data {
+        padding: 5px;
+        margin : 5px;
+  
+        display       : flex;
+        flex-direction: column;
+    }
+  
+    button {
+        margin-left: 10px;
+    }
+  
+  
+  }

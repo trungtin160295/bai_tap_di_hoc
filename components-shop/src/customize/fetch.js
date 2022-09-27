@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const useFetch = (url) => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
@@ -15,8 +15,7 @@ const useFetch = (url) => {
           cancelToken: ourRequest.token, // <-- 2nd step
         });
 
-        let data = res && res.data ? res.data : []; // true, false
-
+        let data = res && res.data ? res.data : {}; // true, false
         setData(data);
         setIsLoading(false);
         setIsError(false);

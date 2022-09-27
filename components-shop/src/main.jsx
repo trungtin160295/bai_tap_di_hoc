@@ -20,7 +20,7 @@ import TabsProduct from './Components/TabProduct'
 import Basic from './Components/Basic';
 import TestCallAPI from './Components/TestCallAPI';
 import DetailBlog from './Components/DetailBlog';
-
+import ProductDetails from './pages/ProductDetails'
 
 
 
@@ -33,7 +33,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Views />} >
-          <Route index element={<Home />} />
+          <Route index element={<ProductDetails />} />
           <Route path="Coolxprint" element={<Basic/>} />
           <Route path="about" element={<TabsProduct />} />
           <Route path="size" element={<TestCallAPI />} />

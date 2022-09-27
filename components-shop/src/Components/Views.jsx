@@ -11,7 +11,9 @@ export default function Views() {
     return (
       <>
          <Navbar/>
-          <main><Outlet /> </main>
+                    
+            <Outlet /> 
+        
               
          <Footer/>                         
       </>

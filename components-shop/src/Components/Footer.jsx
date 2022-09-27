@@ -1,4 +1,5 @@
 import Text from "./Text"
+import '../style/Footer.scss'
 
 
 export default function Footer() {  

@@ -2,6 +2,7 @@ import Text from "./Text"
 import MenuHeader from "./MenuHeader"
 import AboutCool from "./AboutCool"
 import {  NavLink } from "react-router-dom";
+import '../style/Navbar.scss'
   
 
 export default function Navbar() {
@@ -131,7 +132,7 @@ const listMenu =[
       <header>        
           
           <Text className='topbar'>Ưu đãi combo tiết kiệm đến 44% </Text>
-              <nav>
+              <nav className="navbar">
                   <div id="logo">
                       <a href="#"><img src="./src/img/logo.svg" alt="" /></a>                    
                   </div>

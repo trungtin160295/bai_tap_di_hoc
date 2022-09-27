@@ -1,4 +1,4 @@
-import './Header.scss'
+
 
 
 export default function AboutCool() {  

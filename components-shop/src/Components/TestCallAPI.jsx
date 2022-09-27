@@ -1,7 +1,7 @@
 
 
 import useFetch from "../customize/fetch";
-import './Header.scss';
+
 import { Link } from "react-router-dom";
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
@@ -17,6 +17,8 @@ const TestCallAPI = () => {
 
     const { data: dataBlogs, isLoading, isError }
         = useFetch(`https://jsonplaceholder.typicode.com/posts`);
+
+      
 
     useEffect(() => {
         if (dataBlogs && dataBlogs.length > 0) {
