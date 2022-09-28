@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const useFetch = (url) => {
+const useFetch = (url, isProductdData) => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
+  const [imgProduct, setImgProduct] = useState(null);
 
   useEffect(() => {
     const ourRequest = axios.CancelToken.source(); // <-- 1st step
@@ -16,6 +17,18 @@ const useFetch = (url) => {
         });
 
         let data = res && res.data ? res.data : {}; // true, false
+        if (data && isProductdData === true) {
+          const setimgProduct = data.linkImages.map((item) => {
+            return {
+              original: item,
+              thumbnail: item,
+              originalWidth: "100%",
+              originalHeght: "100%",
+            };
+          });
+          setImgProduct(setimgProduct);
+        }
+
         setData(data);
         setIsLoading(false);
         setIsError(false);
@@ -41,6 +54,8 @@ const useFetch = (url) => {
   return {
     data,
     isLoading,
+    isError,
+    imgProduct,
   };
 };
 

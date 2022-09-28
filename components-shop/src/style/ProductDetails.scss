@@ -68,10 +68,10 @@ main {
                     }
                 }                           
             }
-            .product-zise{
+            .product-size{
                 margin-top: 20px ;
 
-                .product-listzise{
+                .product-listsize{
                     display: flex;
                     gap:10px;
 
@@ -112,8 +112,8 @@ main {
                     flex-flow: column;
                     width: 32%;
                     text-align: center;
-                    padding-top: 15px;
-                    padding-bottom: 15px;
+                    padding: 15px;
+                    
                     background-color: rgb(136, 240, 178);
                     .policy-icon{
                         position: relative;

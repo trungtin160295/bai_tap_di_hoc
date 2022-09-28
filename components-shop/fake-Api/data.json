@@ -145,7 +145,41 @@
            "category":"Áo nam",
            "type":"Áo tank top",
            "collection":"Proudly Vietnam",
-           "technology":"Excool"         
+           "technology":"Excool",
+           "outstanding":[
+                  {
+                    "key" :"1",
+                     "content" :"Chất liệu: 100% Polyester kết hợp tính năng: Wicking (Thấm hút nhanh), 4-way Mechanical stretch (Co giãn 4 chiều) và Quick-Dry (Nhanh khô)."
+           },
+                 {
+                     "key" :"2",
+                     "content" :"Vải siêu nhẹ chỉ 106 gsm, mang lại cảm giác mặc như không mặc."
+                   },
+                   {
+                     "key" :"3",
+                     "content" :"Công nghệ hoàn thiện vải giúp chiếc quần thoải mái, khô thoáng và dễ chịu tối đa cho các hoạt động chạy nhẹ và tập gym."
+                   },
+                   {
+                    "key" :"4",
+                    "content" :"Dệt kiểu Double Weaving mang lại cảm giác Cooling khi mặc."
+                    },
+                    {
+                    "key" :"5",
+                        "content" :"Có túi 2 bên đựng đồ cá nhân nhỏ gọn và tiện lợi."
+                    },
+                    {
+                        "key" :"6",
+                        "content" :"Vải được nhuộm bằng công nghệ Zero Water Discharge (Không nước thải) theo đuổi xu hướng yếu tố thời trang bền vững."
+                    },
+                    {
+                     "key" :"7",
+                     "content" :"Đơn vị sản xuất vải là Promax - đơn vị hàng đầu về sản xuất đồ thể thao trên thế giới"
+                   },
+                   {
+                     "key" :"8",
+                     "content" :"Tự hào sản xuất tại Việt Nam."
+                   }
+              ]       
         },
        
         {
