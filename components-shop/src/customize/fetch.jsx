@@ -16,7 +16,7 @@ const useFetch = (url, isProductdData) => {
           cancelToken: ourRequest.token, // <-- 2nd step
         });
 
-        let data = res && res.data ? res.data : {}; // true, false
+        let data = res && res.data ? res.data : null; // true, false
         if (data && isProductdData === true) {
           const setimgProduct = data.linkImages.map((item) => {
             return {

@@ -28,7 +28,7 @@ export default function Product( props) {
                     
                     </div>
                 </a>   
-                <Text className="price">Chỉ với {Math.round(product.price*(1-(product.sale/100))).toString().slice(0,-3)} K</Text>
+                <Text className="price">Chỉ với {Math.round(product.price*(1-(product.discount/100))).toString().slice(0,-3)} K</Text>
                 <Text className="attention ">Saving Packs</Text>
             
             
@@ -55,9 +55,9 @@ export default function Product( props) {
                  
                 </div>
                 <div className="product-price">
-                    <Text className="sale">{product.price*(1-(product.sale/100))}</Text>  
+                    <Text className="sale">{product.price*(1-(product.discount/100))}</Text>  
                     <Text  className="price1">{product.price}</Text> 
-                    <Text  className="sale">-{product.sale}%</Text>                     
+                    <Text  className="sale">-{product.discount}%</Text>                     
                 </div>
                 
 

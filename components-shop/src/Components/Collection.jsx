@@ -4,7 +4,7 @@ export default function Collection(props ) {
     
     return(
         
-                <div className="collection" key={props.collection.id}>
+                <div className="collection" >
                     <a href="#">                        
                         <img src={props.collection.linkImg} alt="" />    
                                             

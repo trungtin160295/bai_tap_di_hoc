@@ -79,7 +79,7 @@ import Basic from '../Components/Basic'
                 <div className="collections">
                     {collections.map((collection) =>{
                         return(
-                        <Collection collection={collection}/>
+                        <Collection key={id} collection={collection} />
                     )
                     })}
                 </div>

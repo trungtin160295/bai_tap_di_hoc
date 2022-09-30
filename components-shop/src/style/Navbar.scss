@@ -1,110 +1,128 @@
-/* Navbar */
-.topbar {
+/* header */
+
+header{
+  .topbar {
     text-align: center;
     font-weight: 600;
     background-color: #f9f86c;
     line-height: 25px;
     font-size: 13px;
   }
-  .navbar {
+  nav {
     background-color: rgba(236, 243, 243, 0.747);
     display: flex;
     justify-content: space-around;
+    .logo img {
+      width: 100px;
+      height: 40px;
+      padding-top: 5px;
+    }
+    ul {
+      margin: 10px 0 8px 0;
+      display: flex;
+      justify-content: space-between;  
+      list-style-type: none;
+      padding: 0;
+    }
+    ul li:hover {
+      color: rgba(0, 0, 0, 0.137);
+    }
+    .nav-center{
+      a {
+        text-decoration: none;
+        padding: 0 10px;
+        color: black;
+        font-weight: 500;
+      }
+      .hover:hover .dropdown-content {
+        display: block;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        width: 100%;
+        left: 0;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 5;
+      }
+    }
+    .nav-right img {
+      height: 30px;
+    }
+    .nav-right button {
+      border: none;
+      background-color: rgba(236, 243, 243, 0.747);
+    }  
   }
-  #logo img {
-    width: 100px;
-    height: 40px;
-    padding-top: 5px;
-  }
+}
+ 
   
-  nav ul {
-    margin: 10px 0 8px 0;
-    display: flex;
-    justify-content: space-between;
   
-    list-style-type: none;
-    padding: 0;
-  }
+ 
   
-  nav ul li:hover {
-    color: rgba(0, 0, 0, 0.137);
-  }
-  .nav-center a {
-    text-decoration: none;
-    padding: 0 10px;
-    color: black;
-    font-weight: 500;
-  }
   
-  .hover:hover .dropdown-content {
-    display: block;
-  }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    width: 100%;
-    left: 0;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 5;
-  }
-  .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  .nav-right img {
-    height: 30px;
-  }
-  .nav-right button {
-    border: none;
-    background-color: rgba(236, 243, 243, 0.747);
-  }
   /* Menuhearder */
   .menu-header {
     height: 50vh;
     display: flex;
     gap: 50px;
     justify-content: space-evenly;
+    .title {
+      color: rgba(2, 0, 0, 0.706);
+      font-weight: 600;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    .menu-header-column {
+      display: flex;
+      height: 50vh;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: auto;
+      .menu-header-child {
+        display: flex;
+        flex-direction: column;
+
+        .child-name {
+          font-weight: 600;
+          display: flex;
+          flex-direction: column;
+          .child-name-title {
+            display: flex;
+            .attention-hot {
+              background-color: #e21c16;
+              border-radius: 5px;
+              padding: 0 10px;
+            }
+            .attention-sale {
+              background-color: rgb(57, 199, 49);
+              border-radius: 5px;
+              padding: 10px;
+            }
+            .attention-new {
+              background-color: aqua;
+              border-radius: 5px;
+              padding: 10px;
+            }
+          }
+        }
+        hr{
+          width:'80%';
+          color: black;
+
+        }
+      }
+      .child-attention {
+        border-radius: 5px;
+        padding: 10px;
+      }
+    }
   }
   
-  .menu-header a {
-    text-decoration: none;
-    color: black;
-  }
-  .menu-header .title {
-    color: rgba(97, 86, 86, 0.432);
-    font-weight: 600;
-  }
-  .menu-header-column {
-    display: flex;
-    height: 50vh;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: auto;
-  }
-  .menu-header .child-name {
-    font-weight: 600;
-    display: flex;
-    flex-direction: column;
-  }
-  .menu-header .child-name-title {
-    display: flex;
-  }
-  .menu-header .child-attention {
-    border-radius: 5px;
-    padding: 10px;
-  }
-  .menu-header .attention-hot {
-    background-color: #f9f86c;
-    border-radius: 5px;
-    padding: 0 10px;
-  }
-  .menu-header .attention-sale {
-    background-color: aqua;
-    border-radius: 5px;
-    padding: 10px;
-  }
+  
   
   .menu-header .child-explain {
     font-size: 13px;
@@ -116,10 +134,7 @@
   .menu-header .child-product:hover {
     color: rgb(0, 89, 255);
   }
-  .menu-header-child {
-    display: flex;
-    flex-direction: column;
-  }
+  
   .menu-header-child ul {
     flex-direction: column;
     padding: 0;

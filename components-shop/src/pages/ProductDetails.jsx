@@ -16,66 +16,8 @@ const ProductDetails = () => {
   
   const { data: product, isLoading, isError,imgProduct }
         = useFetch(`http://localhost:3004/products/1`, true); 
-    console.log( "aa",imgProduct);
-  //  const product={
-  //   "id":8,
-  //   "linkImages": [  "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/May2022/outdor23_3.jpg",
-  //                    "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/May2022/outdor23_2.jpg",
-  //                   "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/May2022/outdor23_1.jpg",
-  //                   "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/May2022/outdor23_4.jpg"
-                    
-  //               ],
-  //    "rate":  4.9 ,
-  //    "comment": 400,
-  //    "ductName": "Áo Polo nam công nghệ khử mùi cao 4",
-  //    "price":300000,
-  //    "discount": 25,
-  //    "voucherCode": "XMDDDDDDDD",
-  //    "sale":"Ưu đãi sản phẩm mới 20-27/9",
-  //    "combo":"Mua 3 được giảm thêm 5%",
-  //   "voucherValue": 30000,
-  //  "listSize" :["S","M","L","XL","2XL"],
-  //  "listColor" : ["màu 1","màu 2","màu 3","màu 4"],
-  //  "demand":"mặc hàng ngày",
-  //  "category":"Áo nam",
-  //  "type":"Áo tank top",
-  //  "collection":"Proudly Vietnam",
-  //  "technology":"Excool" ,
-  //  "outstanding":[
-  //       {
-  //         "key" :"1",
-  //         "content" :"Chất liệu: 100% Polyester kết hợp tính năng: Wicking (Thấm hút nhanh), 4-way Mechanical stretch (Co giãn 4 chiều) và Quick-Dry (Nhanh khô)."
-  //       },
-  //       {
-  //         "key" :"2",
-  //         "content" :"Vải siêu nhẹ chỉ 106 gsm, mang lại cảm giác mặc như không mặc."
-  //       },
-  //       {
-  //         "key" :"3",
-  //         "content" :"Công nghệ hoàn thiện vải giúp chiếc quần thoải mái, khô thoáng và dễ chịu tối đa cho các hoạt động chạy nhẹ và tập gym."
-  //       },
-  //       {
-  //         "key" :"4",
-  //         "content" :"Dệt kiểu Double Weaving mang lại cảm giác Cooling khi mặc."
-  //       },
-  //       {
-  //         "key" :"5",
-  //         "content" :"Có túi 2 bên đựng đồ cá nhân nhỏ gọn và tiện lợi."
-  //       },
-  //       {
-  //         "key" :"6",
-  //         "content" :"Vải được nhuộm bằng công nghệ Zero Water Discharge (Không nước thải) theo đuổi xu hướng yếu tố thời trang bền vững."
-  //       },
-  //       {
-  //         "key" :"7",
-  //         "content" :"Đơn vị sản xuất vải là Promax - đơn vị hàng đầu về sản xuất đồ thể thao trên thế giới"
-  //       },
-  //       {
-  //         "key" :"8",
-  //         "content" :"Tự hào sản xuất tại Việt Nam."
-  //       }
-  //  ]
-  // }
+   
+ 
   
   
   const productPolicy =[
@@ -109,7 +51,7 @@ const ProductDetails = () => {
     
        
     <main className="product-petails">
-          {isLoading === false && product && 
+          {isLoading === false && product !=null && 
             <>
                 <div  className="path">
             Trang chủ / {product.type}

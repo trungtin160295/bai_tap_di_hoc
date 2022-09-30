@@ -14,9 +14,9 @@ import Home from './pages/Home';
 
 
 import Views from './Components/Views';
+import Menu from './Components/Menu'
 
-
-import TabsProduct from './Components/TabProduct'
+import TabsProduct from './Components/TabProduct';
 import Basic from './Components/Basic';
 import TestCallAPI from './Components/TestCallAPI';
 import DetailBlog from './Components/DetailBlog';
@@ -33,11 +33,13 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Views />} >
-          <Route index element={<ProductDetails />} />
-          <Route path="Coolxprint" element={<Basic/>} />
-          <Route path="about" element={<TabsProduct />} />
-          <Route path="size" element={<TestCallAPI />} />
-          <Route path="/blog/:id" element={<DetailBlog />}/>                      
+          <Route  index element={<ProductDetails/>} />
+          <Route path="Sale" element={<ProductDetails/>} />
+          <Route path="Sản phẩm" element={<TabsProduct />} />
+          <Route path="Về Coolmate" element={<TestCallAPI />} />
+          <Route path="/blog/:id" element={<DetailBlog />}/> 
+          <Route path="/Chọn Size" element={<ProductDetails/>}/> 
+          <Route path="Coolxprint" element={<Menu/>} />                       
         </Route>
       </Routes>
     </BrowserRouter>

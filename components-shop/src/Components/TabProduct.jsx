@@ -1,136 +1,117 @@
 import React, { useState } from 'react';
+import useFetch from '../customize/fetch';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Product from './Product';
 
-const products = [
-    {
-        id:1,
-        linkImages: { before: "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                        after: "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" },
-         rate:  4.9 ,
-         comment: 400,
-         ductName: "Áo Polo nam công nghệ khử mùi cao 4",
-         price:300000,
-         discount: 25,
-         voucherCode: "XMDDDDDDDD",
-         sale:"Ưu đãi sản phẩm mới 20-27/9",
-         combo:"Mua 3 được giảm thêm 5%",
-        voucherValue: 30000,
-        listSize :['S','M','L','XL','2XL'],
-        listColor : ['màu 1','màu 2','màu 3','màu 4',]
-    },
-    {
-        id:2,
-        linkImages: { before: "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                        after: "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" },
-         rate:  4.9 ,
-         comment: 400,
-         ductName: "Áo Polo nam công nghệ khử mùi cao 4",
-         price:300000,
-         discount: 25,
-         voucherCode: "XMDDDDDDDD",
-         sale:"Ưu đãi sản phẩm mới 20-27/9",
-         combo:"Mua 3 được giảm thêm 5%",
-        voucherValue: 30000,
-        listSize :['S','M','L','XL','2XL'],
-        listColor : ['màu 1','màu 2','màu 3','màu 4',]
-    },
-    {
-        id:3,
-        linkImages: { before: "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-        after: "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" },
-        rate:  4.9 ,
-        comment: 400,
-        ductName: "Áo Polo nam công nghệ khử mùi cao 4",
-        price:300000,
-        discount: 25,
-        voucherCode: "XMDDDDDDDD",
-        sale:"Ưu đãi sản phẩm mới 20-27/9",
-        combo:"Mua 3 được giảm thêm 5%",
-        voucherValue: 30000,
-        listSize :['S','M','L','XL','2XL'],
-        listColor : ['màu 1','màu 2','màu 3','màu 4',]
-    },
-    {
-        id:4,
-        linkImages: { before: "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                        after: "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" },
-         rate:  4.9 ,
-         comment: 400,
-         ductName: "Áo Polo nam công nghệ khử mùi cao 4",
-         price:300000,
-         discount: 25,
-         voucherCode: "XMDDDDDDDD",
-         sale:"Ưu đãi sản phẩm mới 20-27/9",
-         combo:"Mua 3 được giảm thêm 5%",
-        voucherValue: 30000,
-        listSize :['S','M','L','XL','2XL'],
-        listColor : ['màu 1','màu 2','màu 3','màu 4',]
-    },
-]
+
+import AliceCarousel from 'react-alice-carousel'
+import 'react-alice-carousel/lib/alice-carousel.css'
+
+
+
 
 
 function TabsProduct() {
-  const [key, setKey] = useState('Combo tiết kiệm');
+    const { data: titleTabs, isLoading}
+    = useFetch(`http://localhost:3004/homeProducts`, false);    
+    const [key, setKey] = useState("");
+    {titleTabs !=null && key ==="" && setKey(`${titleTabs[0].title}`)}
 
+    
+    
+    const handleOnDragStart = (e) => e.preventDefault()
+      
+    const responsive = {
+        0: { items: 3 },
+        568: { items: 5 },
+        1024: { items: 6 },
+        1520: {items: 6 }
+    };
+    
   return (
-    <Tabs
-      id="controlled-tab-example"
-      activeKey={key}
-      onSelect={(k) => setKey(k)}
-      className="mb-3 "
+
+    <>
+        {isLoading === false && titleTabs !=null &&
+        
+    
+        <Tabs
+            id="controlled-tab-example"
+            activeKey={key}
+            onSelect={(k) => setKey(k)}
+            className="mb-3 "
       
     >
-      <Tab eventKey="Combo tiết kiệm" title="Combo tiết kiệm">
-      <div className='tab-product'>
-        {products.map( (product) =>{
-            return(
-                <div key={product.id}>
-                    <Product products ={product} />
-                </div>
+        {
+            titleTabs.map((item) =>{
                 
-            )
-        })}
-      </div>
-      </Tab>
-      <Tab eventKey="Mặc hàng ngày" title="Mặc hàng ngày">
-      <div className='tab-product'>
-        {products.map( (product) =>{
-            return(
-                <div  key={product.id}>
-                    <Product products ={product} />
-                </div>
-                
-            )
-        })}
-      </div>
-      </Tab>
-      <Tab eventKey="Quần lót nam" title="Quần lót nam" >
-      <div className='tab-product'>
-        {products.map( (product) =>{
-            return(
-                <div  key={product.id}>
-                    <Product products ={product} />
-                </div>
-                
-            )
-        })}
-      </div>
-      </Tab>
-      <Tab eventKey="Đồ thể thao" title="Đồ thể thao" >
-        <div className='tab-product'>
-            {products.map( (product) =>{
-                return(
-                    <div  key={product.id}>
-                        <Product products ={product} />
-                    </div>
+                return (
                     
+                    <Tab eventKey={item.title ? item.title :item.conten } title={item.title ? item.title : item.conten } key={item.id}>
+                        <div className='tab-product'>                           
+                            { 
+                             <>           
+                                 
+                            <Slider
+                                dots={false}
+                                slidesToShow={6}
+                                slidesToScroll={2}
+                                autoplay={true}
+                                autoplaySpeed={3000}
+      
+                            >
+                                {item.products.map( (product) =>{
+                                return(
+                                    <div key={product.id}>
+                                        <Product products ={product} />
+                                    </div>
+                                    
+                                )
+                            })}
+                            </Slider>
+
+                            
+                            {/* <AliceCarousel                                                       
+
+                                mouseTracking                            
+                                responsive={responsive}
+                                controlsStrategy="alternate"
+                                autoWidth
+                             
+                            >
+                                {item.products.map( (product) =>{
+                                 return(
+                                     <div key={product.id}  >
+                                         <Product products ={product} />
+                                    </div>
+                                    
+                              )})}
+                            </AliceCarousel> */}
+                            
+                        
+                            </> }
+                    
+                        </div>
+                    </Tab>
+                    
+                    
+                
                 )
-            })}
-        </div>
-      </Tab>
-    </Tabs>
+
+            })
+            
+        }
+      
+      
+      
+      
+        </Tabs>}
+
+    </>
+    
   );
 }
 

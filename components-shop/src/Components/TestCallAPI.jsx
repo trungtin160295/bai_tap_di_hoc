@@ -16,7 +16,7 @@ const TestCallAPI = () => {
     const handleShow = () => setShow(true);
 
     const { data: dataBlogs, isLoading, isError }
-        = useFetch(`https://jsonplaceholder.typicode.com/posts`,true);    
+        = useFetch(`https://jsonplaceholder.typicode.com/posts`,false);    
 
     useEffect(() => {
         if (dataBlogs && dataBlogs.length > 0) {

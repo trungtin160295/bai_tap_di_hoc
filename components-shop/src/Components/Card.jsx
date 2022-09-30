@@ -5,7 +5,7 @@ import '../style/Card.scss'
 
 export default  function Card(props) {  
 const {linkImage,title,content}= {...props.obj};
-      console.log(content);
+      
 
     let className;
     if (props.right) {
