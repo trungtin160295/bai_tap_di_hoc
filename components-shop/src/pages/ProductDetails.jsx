@@ -4,45 +4,49 @@ import React from "react";
 import "react-image-gallery/styles/css/image-gallery.css";
 import ImageGallery from "react-image-gallery";
 import useFetch from "../customize/fetch";
-import { useState, useEffect } from 'react';
+
 import '../style/ProductDetails.scss'
 import {Row,Col, } from 'react-bootstrap';
 import Text from '../Components/Text';
-
+import { useParams} from "react-router-dom";
 
 
 
 const ProductDetails = () => {  
+  let {id} = useParams();
+
   
-  const { data: product, isLoading, isError,imgProduct }
-        = useFetch(`http://localhost:3004/products/1`, true); 
+  const { data: product, isLoading,imgProduct }
+        = useFetch(`http://localhost:3004/products/${id}`, true); 
+ 
    
  
+        
   
   
   const productPolicy =[
     { key:"1",
-      icon:"./src/img/iconPolicy/doi-tra.svg",
+      icon:"https://www.coolmate.me/images/icons/icon3.svg",
       content:"Đổi trả cực dễ chỉ cần số điện thoại"
     },
     {key:"2",
-      icon:"./src/img/iconPolicy/van-chuyen.svg",
+      icon:"https://www.coolmate.me/images/icons/icon4.svg",
       content:"Miễn phí vận chuyển cho đơn hàng trên 200k"
     },
     {key:"3",
-      icon:"./src/img/iconPolicy/doi-tra-60.svg",
+      icon:"https://www.coolmate.me/images/icons/icon5.svg",
       content:"60 ngày đổi trả vì bất kỳ lý do gì"
     },
     {key:"4",
-      icon:"./src/img/iconPolicy/hotline.svg",
+      icon:"https://www.coolmate.me/images/icons/icon2.svg",
       content:"Hotline 1900.27.27.37 hỗ trợ từ 8h30 - 22h mỗi ngày"
     },
     {key:"5",
-      icon:"./src/img/iconPolicy/hoan-tien.svg",
+      icon:"https://www.coolmate.me/images/icons/icon1.svg",
       content:"Đến tận nơi nhận hàng trả,hoàn tiền trong 24h"
     },
     {key:"6",
-      icon:"./src/img/iconPolicy/giao-hang.svg",
+      icon:"https://www.coolmate.me/images/icons/icon6.svg",
       content:"Giao hàng nhanh toàn quốc"
     },
   ]
@@ -50,7 +54,7 @@ const ProductDetails = () => {
   return (
     
        
-    <main className="product-petails">
+    <div className="product-petails">
           {isLoading === false && product !=null && 
             <>
                 <div  className="path">
@@ -60,13 +64,13 @@ const ProductDetails = () => {
           
             
             <Row>
-                <Col xs={12} xl={6}>
-                  <div >
+                <Col md={12} xl={6}  className="product-img">
+                  
                     <ImageGallery items={imgProduct}   autoPlay="true"  />
-                  </div>               
+                                
                 </Col>
-              <Col xs={12} xl={6}> 
-                <div className="presented-information">
+              <Col xs={12} xl={6} className="presented-information"> 
+                
                       <h1 className="product-title">{product.ductName}</h1>
                       <div className="evaluate">                  
                         <span><i className="fa-solid fa-star star" ></i>({product.rate}) &nbsp;</span>
@@ -144,7 +148,7 @@ const ProductDetails = () => {
     
                       
                       
-                </div>
+                
               </Col>
               
             </Row>
@@ -164,7 +168,7 @@ const ProductDetails = () => {
     
     
         
-    </main>
+    </div>
       
      
     

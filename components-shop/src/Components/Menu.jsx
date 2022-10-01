@@ -4,9 +4,10 @@
 import Text from "./Text"
 import MenuHeader from "./MenuHeader"
 import AboutCool from "./AboutCool"
-import {  NavLink } from "react-router-dom";
+import {  NavLink,Link } from "react-router-dom";
 import '../style/Navbar.scss'
 import useFetch from "../customize/fetch";
+
 
 
 export default function Menu() {    
@@ -14,9 +15,9 @@ export default function Menu() {
     data: dataMenu,
     isLoading    
   } = useFetch(`http://localhost:3004/menu`, false);
+  console.log(dataMenu);
 
-//   let activeStyle = {
-//     textDecoration: "underline",  };
+
 
   
 
@@ -24,12 +25,12 @@ export default function Menu() {
            
         
         <header>
-            {isLoading === false && dataMenu.sale ? <Text className='topbar'>{dataMenu.sale} </Text>:null}
+            {isLoading === false && dataMenu.sale ? <Text className='topbar'>{dataMenu.sale} </Text> :null}
             {isLoading === false && dataMenu.menu ?  
             
             <nav className="navbar">
                 <div className="logo">
-                    <a href="#"><img src="./src/img/logo.svg" alt="" /></a>                    
+                    <Link to="/"><img src="https://www.coolmate.me/images/logo-coolmate.svg" alt="" /></Link>                    
                 </div>
                  {console.log(dataMenu.menu)} 
                 <div className="nav-center">

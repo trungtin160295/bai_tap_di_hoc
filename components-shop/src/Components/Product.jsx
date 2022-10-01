@@ -1,19 +1,20 @@
+import { Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
 import Text from './Text';
 
 
 
 export default function Product( props) {  
-
+    
    const product=props.products
    
         
     return (
         <div className="product">
             <div className="product-img">
-                <a href="">
-                    <img src={product.linkImages.before} alt="Avatar" className="image hover1"/>
-                    <img src={product.linkImages.after} alt="Avatar" className="image hover2"/>
+                <Link to={`/product/${product.id}`}>
+                    <img src={product.imgsHome.before} alt="Avatar" className="image hover1"/>
+                    <img src={product.imgsHome.after} alt="Avatar" className="image hover2"/>
                     <div className="size "> 
                         <ul >
                         {
@@ -27,7 +28,7 @@ export default function Product( props) {
                         </ul>                                                         
                     
                     </div>
-                </a>   
+                </Link>   
                 <Text className="price">Chỉ với {Math.round(product.price*(1-(product.discount/100))).toString().slice(0,-3)} K</Text>
                 <Text className="attention ">Saving Packs</Text>
             
@@ -51,7 +52,7 @@ export default function Product( props) {
 
                 </ul>
                 <div className="product-name ">
-                    <a href="">{product.ductName}</a>
+                    <Link to={`/product/${product.id}`}> {product.ductName}</Link>
                  
                 </div>
                 <div className="product-price">

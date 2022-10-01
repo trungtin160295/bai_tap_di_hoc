@@ -21,6 +21,7 @@ import Basic from './Components/Basic';
 import TestCallAPI from './Components/TestCallAPI';
 import DetailBlog from './Components/DetailBlog';
 import ProductDetails from './pages/ProductDetails'
+import ListProduct from './Components/ListProduct';
 
 
 
@@ -33,13 +34,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Views />} >
-          <Route  index element={<ProductDetails/>} />
-          <Route path="Sale" element={<ProductDetails/>} />
+          <Route  index element={<Home/>} />
+          <Route path="Sale" element={<ListProduct/>} />
           <Route path="Sản phẩm" element={<TabsProduct />} />
           <Route path="Về Coolmate" element={<TestCallAPI />} />
           <Route path="/blog/:id" element={<DetailBlog />}/> 
           <Route path="/Chọn Size" element={<ProductDetails/>}/> 
-          <Route path="Coolxprint" element={<Menu/>} />                       
+          <Route path="Coolxprint" element={<Menu/>} />      
+          <Route path="/product/:id" element={<ProductDetails/>}/>                  
         </Route>
       </Routes>
     </BrowserRouter>

@@ -69,7 +69,7 @@ import Basic from '../Components/Basic'
 
 
     return(
-        <main>
+        <>
             <SlideBanner/>
             <TabsProduct/>
             <Card obj={cleandenim} />
@@ -79,7 +79,7 @@ import Basic from '../Components/Basic'
                 <div className="collections">
                     {collections.map((collection) =>{
                         return(
-                        <Collection key={id} collection={collection} />
+                        <Collection key={collection.id} collection={collection} />
                     )
                     })}
                 </div>
@@ -98,7 +98,7 @@ import Basic from '../Components/Basic'
            
 
 
-        </main>
+        </>
 
     )
  }
