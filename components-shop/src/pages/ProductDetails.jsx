@@ -9,7 +9,7 @@ import '../style/ProductDetails.scss'
 import {Row,Col, } from 'react-bootstrap';
 import Text from '../Components/Text';
 import { useParams} from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 
 const ProductDetails = () => {  
@@ -54,11 +54,13 @@ const ProductDetails = () => {
   return (
     
        
-    <div className="product-petails">
-          {isLoading === false && product !=null && 
-            <>
-                <div  className="path">
-            Trang chủ / {product.type}
+  <div className="product-petails">
+    {isLoading === false && product !=null && 
+      <>
+         <div  className="path">
+          <Link to="/">Trang chủ /</Link>
+          <Link to={`/${product.type}`}>{product.type}</Link>          
+             
           </div>
           <div className="product-presented">
           

@@ -2,7 +2,16 @@
 .product-petails{
     width:80% ;
     .path{
-    margin:15px 0     
+    margin:15px 20px ;   
+    a{
+        text-decoration:none;
+        color:black ;
+
+    }
+    a:hover{color: blue;
+
+    }
+
     }
     
     .product-presented{

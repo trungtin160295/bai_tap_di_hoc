@@ -19,7 +19,7 @@ export default function Login() {
         <div>
           <h2>Đăng nhập</h2>
           <span>Nếu đã từng mua hàng trên Website trước đây,
-             bạn có thể dùng tính năng  <a href="#">"Lấy mật khẩu"</a> để có thể truy cập vào tài khoản bằng email nhé. </span>
+             bạn có thể dùng tính năng  <a href="">"Lấy mật khẩu"</a> để có thể truy cập vào tài khoản bằng email nhé. </span>
         </div>
         <Modal.Body>
           <Form>
