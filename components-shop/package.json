@@ -3,8 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "api": "json-sever db.json -p 3004 --delay 1500",
+  "scripts": {    
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"

@@ -7,7 +7,7 @@ import Product from './Product';
 import useFetch from "../customize/fetch";
 import { useState, useEffect } from 'react';
 
-export default function ListProduct( props) { 
+export default function ListProduct({imgFirst,amount}) { 
     
     const [listProducts, setListProducts] = useState([])
 
@@ -15,18 +15,20 @@ export default function ListProduct( props) {
     = useFetch(`http://localhost:3004/products`, false); 
     useEffect(() => {
         if(isLoading === false && dataProducts.length >0) {
-            let listProducts =dataProducts.slice(0, 10);
+            console.log(amount);
+            let listProducts =dataProducts.slice(0,amount);
+
             setListProducts(listProducts)
         }
     }, [dataProducts]);
 
-    
+    console.log(dataProducts);
     return (
         listProducts.length >0 &&
         <Row className='list-product' >
-            {props.image ?
+            {imgFirst ?
             <Col xxl={2} xl={3} lg={4}  md={6} className="collection-thumbnail">
-                <img src={props.image} alt={props.image} />
+                <img src={imgFirst} alt={imgFirst} />
             </Col>
             :null
             }

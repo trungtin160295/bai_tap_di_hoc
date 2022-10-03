@@ -40,12 +40,7 @@ export default function Menu() {
                           return(
                             <li className="hover" key={item.id}>
                                 
-                                  <NavLink
-                                  to={item.title}
-                                
-                                  >
-                                  {item.title}
-                                  </NavLink>
+                                  <NavLink  to={item.title}>  {item.title}  </NavLink>
                                   {item.child ?  
                                     <div className="dropdown-content ">
                                         
@@ -65,29 +60,29 @@ export default function Menu() {
                                                                   {list.child.map((child)  => {                                
                                                                       return(
                                                                           <div key={child.name} className="menu-header-child">
-                                                                              <a href="#" className="child-name">
+                                                                              <Link to={`/Home/${child.name}`} className="child-name">
                                                                                   <div className="child-name-title"> 
                                                                                           <Text>{child.name}</Text>
-                                                                                      {child.attention  &&  <Text className= "attention-hot">{child.attention}</Text>}                                            
+                                                                                      {child.attention? <Text className= "attention-hot">{child.attention}</Text> :null}                                            
                                                                                   
                                                                                   </div>
                                                                               
-                                                                                  {child.explain  && <Text className="child-explain">{child.explain}</Text> }                        
-                                                                              </a>
+                                                                                  {child.explain ? <Text className="child-explain">{child.explain}</Text> :null }                        
+                                                                              </Link>
                                                                           
-                                                                              
+                                                                              { child.product?
                                                                               <ul>
                                                                               
-                                                                                  { child.product  && child.product.map((content) => {
+                                                                                   {child.product.map((content) => {
                                                                                       return (
                                                                                           <li key= {content}>
-                                                                                              <a href="#"  className="child-product">{content}</a>
+                                                                                              <Link to= {`/Home/${content}`}  className="child-product">{content}</Link>
                                                                                               
                                                                                           </li>                                                    
                                                                                       
                                                                                       )
                                                                                   })} 
-                                                                              </ul>
+                                                                              </ul>:null} 
                                                                               <hr  style={{width:'80%'  ,margin: '0'} }/>
                                       
                                                                           </div>
