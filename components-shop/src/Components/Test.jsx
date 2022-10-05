@@ -1,16 +1,21 @@
+
+
+
+
+
 import React, { useState ,useEffect} from 'react';
 import useFetch from '../customize/fetch';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-
+import "slick-carousel/slick/slick-theme.css";
 import Product from './Product';
 import '../style/Home.scss'
 
 
 
 
-function TabsProduct(){
+
+function Test() {
     const { data: titleTabs, isLoading}
     = useFetch(`http://localhost:3004/homeProducts`, false);     
     
@@ -24,26 +29,33 @@ function TabsProduct(){
         setSelectedIndex(index)
         
       }
-      const settings = {        
+      const settings = {
+    
+     
       speed: 1000,
       slidesToShow: 5,
       slidesToScroll: 2,
       initialSlide: 2,
-      autoplaySpeed:2000,
-      autoplay: true,                     
+      autoplaySpeed:500,
+      autoplay: true,        
+          
+      
       responsive: [
         {
           breakpoint: 1024,
           settings: {
             slidesToShow: 3,
-            slidesToScroll: 3, 
+            slidesToScroll: 3,     
+
+            
           }
         },
         {
           breakpoint: 600,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2, 
+            slidesToScroll: 2,
+           
           }
         },
         {
@@ -86,11 +98,15 @@ function TabsProduct(){
             <div className="slick-container">
                 <Slider {...settings}>
                     
-                    {titleTabs[selectedIndex].products.map((child,index) => {                      
+                    {titleTabs[selectedIndex].products.map((child,index) => {
+                        console.log(child);
                         return ( 
                         <Product products ={child}  index={index} key={child.id}/>
                         )
+                        
+
                     }
+                    
                     )}
                 </Slider>
             </div>
@@ -105,4 +121,4 @@ function TabsProduct(){
   );
 }
 
-export default  TabsProduct;
+export default  Test;

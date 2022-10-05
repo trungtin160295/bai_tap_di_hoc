@@ -15,39 +15,47 @@ export default function Product( props) {
                 <Link to={`/product/${product.id}`}>
                     <img src={product.imgsHome.before} alt="Avatar" className="image hover1"/>
                     <img src={product.imgsHome.after} alt="Avatar" className="image hover2"/>
-                    <div className="size "> 
+                    {product.listSize? 
+                     <div className="size "> 
                         <ul >
                         {
                             product.listSize.map((size) =>{
-                                return (<li key = {size.toString() }> 
-                                <Text className="sizechild">{size} </Text>
-                                
+                                return (
+                                <li key = {size.toString() }> 
+                                 <Text className="sizechild">{size} </Text>                                
                                 </li>)
                             })
                         }
                         </ul>                                                         
-                    
+                 
                     </div>
+                    :null
+                 }
+                   
                 </Link>   
                 <Text className="price">Chỉ với {Math.round(product.price*(1-(product.discount/100))).toString().slice(0,-3)} K</Text>
                 <Text className="attention ">Saving Packs</Text>
             
-            
-                <div className="evaluate">
-                <Text >{product.rate}</Text>
-                <Text ><i className="fa-solid fa-star" ></i></Text>
-                <Text >{product.comment}</Text>                                                 
+                {product.rate? 
+                    <div className="evaluate">
+                    <Text >{product.rate}</Text>
+                    <Text ><i className="fa-solid fa-star" ></i></Text>
+                    <Text >{product.comment}</Text>                                                 
                 
-                </div>       
+                </div> 
+                :null
+                }      
+                      
 
             </div>
             
             <div className="product-information">
                 <ul>
-                {
+                {product.listColor?
                    product.listColor.map((color) =>{
                         return (<li key = {color.toString() }> <Button >{color}</Button></li>)
                     })
+                    :null
                 }                   
 
                 </ul>

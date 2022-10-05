@@ -1,180 +1,609 @@
-{
-    "menu":{
-        "sale":"Ưu đãi combo tiết kiệm đến 50% ",
-        "menu":[
-       {
-        "id":"1",
-        "title":"Sale"
-       },
-       {
-        "id":"2",
-        "title":"Sản phẩm",
-        "child":[
-            {"title" :"Nhu cầu",
-            "child" : [
-                     {               
-                         "name":"Mặc nhà & mặc trong",
-                         "explain":"Homewear /& Underwear" 
-                           
-                         },
-                     {               
-                         "name":"Mặc Hằng ngày",
-                         "explain":"Casualwear" 
-                                      
-                     },     
-                     
-                     {               
-                         "name":"Đồ thể thao",
-                         "explain":"Casualwear" , 
-                         "attention": "Hot" ,     
-                         "product":[]         
-                      },
-                     {               
-                          "name":"Phụ kiện",
-                         "explain":"Accessories" ,      
-                         "product":[]            
-                     }
-                 ] 
-                 },    
-          
-          
-            {"title" :"Danh mục",
-            "child" : [
-                     {               
-                         "name":"Áo nam",
-                         "product":["Áo Tank top","Áo T-shirt","Áo Polo","Áo Sơ mi","Áo thể thao","Áo in hình","Áo khoác thể thao"]             
-                         },
-                     {               
-                         "name":"Phụ kiện",
-                         "product":["Mũ (Nón)","Tất(Vớ)"]         
-                     },     
-                     {               
-                         "name":"Quần Nam",
-                         "product":["Quần Shorts","Quần Jeans","Quần dài"]          
+{  "headerAndFooter":{
+    "header":{
+    "sale":"Ưu đãi combo tiết kiệm đến 50% ",
+    "header":[
+   {
+    "id":"1",
+    "title":"Sale"
+   },
+   {
+    "id":"2",
+    "title":"Sản phẩm",
+    "child":[
+        {"title" :"Nhu cầu",
+        "child" : [
+                 {               
+                     "name":"Mặc nhà & mặc trong",
+                     "explain":"Homewear /& Underwear" 
+                       
                      },
-                     {               
-                         "name":"Quần Lót Nam",
-                         "product":["Quần Brief (Tam giác)","Quần Trunk (Boxer)","Quần Brief Boxer","(Boxer dài)" ]  
-                         },
-                     {               
-                         "name":"Tất cả sản phẩm",      
-                        "product":[]
-                         
-                           
+                 {               
+                     "name":"Mặc Hằng ngày",
+                     "explain":"Casualwear" 
+                                  
+                 },     
+                 
+                 {               
+                     "name":"Đồ thể thao",
+                     "explain":"Casualwear" , 
+                     "attention": "Hot" ,     
+                     "product":[]         
+                  },
+                 {               
+                      "name":"Phụ kiện",
+                     "explain":"Accessories" ,      
+                     "product":[]            
+                 }
+             ] 
+             },    
+      
+      
+        {"title" :"Danh mục",
+        "child" : [
+                 {               
+                     "name":"Áo nam",
+                     "product":["Áo Tank top","Áo T-shirt","Áo Polo","Áo Sơ mi","Áo thể thao","Áo in hình","Áo khoác thể thao"]             
                      },
-                     {               
-                         "name":"Box đồ nam",  
-                         "attention": "Sale" ,     
-                         "product":[]
-                           
-                     }
-                  ] 
-              }, 
-            {"title" :"Bộ Sưu Tập",
-            "child": [
-                     {               
-                        "name":"Vũ trụ Áo Marvel NEW",
-                         "explain":"Ưu đãi trải nghiệm hấp dẫn" ,
-                         "attention": "New" ,  
-                         "product":[]        
-                         },
-                         
-                     {               
-                         "name":"Clean Vietnam",
-                         "explain":"Sự kết hợp giữa Coolmate & Vietmax" ,  
-                         "product":[]                 
-                     },     
-                     
-                     {               
-                         "name":"Coolmate Basics",
-                         "explain":"10% doanh thu dành cho các bé" , 
-                            
-                         "product":[]          
-                         },
-                     {               
-                     "name":"Sản phẩm bền vững",
-                         "explain":"Sản phẩm thân thiện với môi trường" ,      
-                         "product":[]           
-                        }
-                 ] 
-                 },  
-                
-             {"title" :"Công nghệ",
-              "child" : [
-                     {               
-                         "name":"Excool",
-                          "explain":"Công nghệ làm mát tối đa" ,
-                         
-                         "product":[]      
-                         },
-                     {               
-                         "name":"Cleandye",
-                         "explain":"Nhuộm không dùng nước" ,  
-                         "product":[]                
-                     },     
-                     
-                     {               
-                         "name":"HeiQ Viroblock",
-                         "explain":"10% doanh thu dành cho các bé" , 
-                            
-                         "product":[]         
-                         },
-                     {               
-                     "name":"Anti-Smell",
-                         "explain":"Công nghệ khử mùi từ Nhật Bản" ,      
-                         "product":[]           
+                 {               
+                     "name":"Phụ kiện",
+                     "product":["Mũ (Nón)","Tất(Vớ)"]         
+                 },     
+                 {               
+                     "name":"Quần Nam",
+                     "product":["Quần Shorts","Quần Jeans","Quần dài"]          
+                 },
+                 {               
+                     "name":"Quần Lót Nam",
+                     "product":["Quần Brief (Tam giác)","Quần Trunk (Boxer)","Quần Brief Boxer","(Boxer dài)" ]  
                      },
-                     {
-                        "name":"",
-                         "explain":"" ,      
-                         "product":[] ,
-                         "imgSale":"https://media.coolmate.me/cdn-cgi/image/width=1920,quality=100/uploads/September2022/Desktop-Banner-CLEARANCE-SALE-_100.jpeg"
-                     }
-                 ] 
-                 }                                                                        
-             
-        ] 
-       },
-       {
-        "id":"3",
-        "title":"Coolxprint"
-       },
-       {
-        "id":"4",
-        "title":"Về Coolmate",
+                 {               
+                     "name":"Tất cả sản phẩm",      
+                    "product":[]
+                     
+                       
+                 },
+                 {               
+                     "name":"Box đồ nam",  
+                     "attention": "Sale" ,     
+                     "product":[]
+                       
+                 }
+              ] 
+          }, 
+        {"title" :"Bộ Sưu Tập",
         "child": [
+                 {               
+                    "name":"Vũ trụ Áo Marvel NEW",
+                     "explain":"Ưu đãi trải nghiệm hấp dẫn" ,
+                     "attention": "New" ,  
+                     "product":[]        
+                     },
+                     
+                 {               
+                     "name":"Clean Vietnam",
+                     "explain":"Sự kết hợp giữa Coolmate & Vietmax" ,  
+                     "product":[]                 
+                 },     
+                 
+                 {               
+                     "name":"Coolmate Basics",
+                     "explain":"10% doanh thu dành cho các bé" , 
+                        
+                     "product":[]          
+                     },
+                 {               
+                 "name":"Sản phẩm bền vững",
+                     "explain":"Sản phẩm thân thiện với môi trường" ,      
+                     "product":[]           
+                    }
+             ] 
+             },  
+            
+         {"title" :"Công nghệ",
+          "child" : [
+                 {               
+                     "name":"Excool",
+                      "explain":"Công nghệ làm mát tối đa" ,
+                     
+                     "product":[]      
+                     },
+                 {               
+                     "name":"Cleandye",
+                     "explain":"Nhuộm không dùng nước" ,  
+                     "product":[]                
+                 },     
+                 
+                 {               
+                     "name":"HeiQ Viroblock",
+                     "explain":"10% doanh thu dành cho các bé" , 
+                        
+                     "product":[]         
+                     },
+                 {               
+                 "name":"Anti-Smell",
+                     "explain":"Công nghệ khử mùi từ Nhật Bản" ,      
+                     "product":[]           
+                 },
+                 {
+                    "name":"",
+                     "explain":"" ,      
+                     "product":[] ,
+                     "imgSale":"https://media.coolmate.me/cdn-cgi/image/width=1920,quality=100/uploads/September2022/Desktop-Banner-CLEARANCE-SALE-_100.jpeg"
+                 }
+             ] 
+             }                                                                        
+         
+    ] 
+   },
+   {
+    "id":"3",
+    "title":"Coolxprint"
+   },
+   {
+    "id":"4",
+    "title":"Về Coolmate",
+    "child": [
+        {
+            "id":"1",
+            "linkImg":"https://mcdn.coolmate.me/image/August2022/mceclip0_97.jpg",
+            "title":"Coolmate 101",
+            "content":"Tất cả những gì bạn muốn biết về Coolmate và gia nhập Coolmate"
+        },
+        {
+            "id":2,
+            "linkImg":"https://mcdn.coolmate.me/image/August2022/mceclip1_92.jpg",
+            "title":"Dịch vụ 100% hài lòng",
+            "content":"Bật mí dịch vụ Coolmate cam kết với khách hàng"
+        },
+        {
+            "id":3,
+            "linkImg":"https://mcdn.coolmate.me/image/August2022/mceclip2_100.jpg",
+            "title":"Cool-club- Khách hàng thân thiết",
+            "content":"Những ưu đãi hấp dẫn dành cho khách hàng thân thiết"
+        },
+        {
+            "id":4,
+            "linkImg":"https://mcdn.coolmate.me/image/August2022/mceclip3_34.jpg",
+            "title":"Câu chuyện về Coolmate",
+            "content":"Về Starup với mô hình Online D2C"
+        }
+    ]
+   },
+   {
+    "id":"5",
+    "title":"Chọn Size"
+   }
+    ] },
+    "footer": [
+    {
+      "id": 1,
+      "name": "Khám phá COOLMATE",
+      "children": [
+        "Áo Polo",
+        "Áo T-shirt",
+        "Áo Sơ mi",
+        "Quần",
+        "Quần Lót",
+        "Tất (Vớ)",
+        "Mũ (Nón)",
+        "Phụ Kiện Khác"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Dịch vụ khách hàng",
+      "children": [
+        "Hỏi đáp - FAQs",
+        "Chính sách đổi trả 60 ngày",
+        "Liên hệ",
+        "Thành viên Coolclub",
+        "Khách hàng hài lòng 100%",
+        "Chính sách khuyến mãi",
+        "Chính sách giao hàng"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Kiến thức mặc đẹp",
+      "children": ["Hướng dẫn chọn size", "Blog", "Group mặc đẹp sống chất"]
+    },
+    {
+      "id": 4,
+      "name": "Tài liệu - Tuyển dụng",
+      "children": ["Tuyển dụng", "Đăng ký bản quyền"]
+    },
+    {
+      "id": 5,
+      "name": "Về COOLMATE",
+      "children": [
+        "Câu chuyện về Coolmate",
+        "Nhà máy",
+        "CoolClub",
+        "Care & Share"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Địa chỉ liên hệ",
+      "children": [
+        "HUB Hà Nội: Số 103, Đường Vạn Phúc, Phường Vạn Phúc, Quận Hà Đông, TP. Hà Nội",
+        "HUB Tp HCM: Lầu 1, Số 163 Trần Trọng Cung, Phường Tân Thuận Đông, Quận 7, Tp. Hồ Chí Minh"
+      ]
+    }
+  ]},
+      
+   "home":{
+    
+    "bannerSlider":[
+        {
+          "src": "https://media.coolmate.me/cdn-cgi/image/width=1920,quality=100/uploads/August2022/COMBO-GIAM-GIA---T7_15.jpeg",
+          
+          "id": "1"
+        },
+        {
+          "src": "https://media.coolmate.me/cdn-cgi/image/width=1920,quality=100/uploads/July2022/Banner-Coolmate-Active-opt-1.jpeg",
+          
+          "id": "2"
+        },
+        {
+          "src": "https://media.coolmate.me/cdn-cgi/image/width=1920,quality=100/uploads/August2022/Banner-CXp-2.jpeg",
+          
+          "id": "3"
+        },
+        {
+            "src": "https://media.coolmate.me/cdn-cgi/image/width=1920,quality=100/uploads/July2022/Excool-Banner-website.jpeg",
+            
+            "id": "4"
+          }
+          
+      ],
+      "homeProducts":[
+        {"id":"1",            
+        "title":"We made too much",
+        "attention":"Sale",
+
+        "products":[
             {
-                "id":"1",
-                "linkImg":"https://mcdn.coolmate.me/image/August2022/mceclip0_97.jpg",
-                "title":"Coolmate 101",
-                "content":"Tất cả những gì bạn muốn biết về Coolmate và gia nhập Coolmate"
+                "id":1,                    
+                "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                                "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                            },               
+                "rate":  3.9 ,
+                "comment": 400,
+                "ductName": "Áo Polo nam công nghệ khử mùi cao 1",
+                "price":200000,
+                "discount": 25,
+                "voucherCode": "XMDDDDDDDD",
+                "sale":"Ưu đãi sản phẩm mới 20-27/9",
+                "combo":"Mua 3 được giảm thêm 5%",
+                "attention": "Hot" ,
+                "voucherValue": 30000,
+                "listSize" :["S","M","L","XL","2XL"],
+                "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
             },
             {
-                "id":2,
-                "linkImg":"https://mcdn.coolmate.me/image/August2022/mceclip1_92.jpg",
-                "title":"Dịch vụ 100% hài lòng",
-                "content":"Bật mí dịch vụ Coolmate cam kết với khách hàng"
+                "id":2,                    
+                "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                                "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                            },               
+                "rate":  3.9 ,
+                "comment": 400,
+                "ductName": "Áo Polo nam công nghệ khử mùi cao 2",
+                "price":200000,
+                "discount": 25,
+                "voucherCode": "XMDDDDDDDD",
+                "sale":"Ưu đãi sản phẩm mới 20-27/9",
+                "combo":"Mua 3 được giảm thêm 5%",
+                "attention": "Hot" ,
+                "voucherValue": 30000,
+                "listSize" :["S","M","L","XL","2XL"],
+                "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
             },
             {
-                "id":3,
-                "linkImg":"https://mcdn.coolmate.me/image/August2022/mceclip2_100.jpg",
-                "title":"Cool-club- Khách hàng thân thiết",
-                "content":"Những ưu đãi hấp dẫn dành cho khách hàng thân thiết"
+                "id":3,                    
+                "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                                "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                            },               
+                "rate":  3.9 ,
+                "comment": 400,
+                "ductName": "Áo Polo nam công nghệ khử mùi cao 1",
+                "price":200000,
+                "discount": 25,
+                "voucherCode": "XMDDDDDDDD",
+                "sale":"Ưu đãi sản phẩm mới 20-27/9",
+                "combo":"Mua 3 được giảm thêm 5%",
+                "attention": "Hot" ,
+                "voucherValue": 30000,
+                "listSize" :["S","M","L","XL","2XL"],
+                "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
             },
             {
-                "id":4,
-                "linkImg":"https://mcdn.coolmate.me/image/August2022/mceclip3_34.jpg",
-                "title":"Câu chuyện về Coolmate",
-                "content":"Về Starup với mô hình Online D2C"
+                "id":4,                    
+                "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                                "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                            },               
+                "rate":  3.9 ,
+                "comment": 400,
+                "ductName": "Áo Polo nam công nghệ khử mùi cao 3",
+                "price":200000,
+                "discount": 25,
+                "voucherCode": "XMDDDDDDDD",
+                "sale":"Ưu đãi sản phẩm mới 20-27/9",
+                "combo":"Mua 3 được giảm thêm 5%",
+                "attention": "Hot" ,
+                "voucherValue": 30000,
+                "listSize" :["S","M","L","XL","2XL"],
+                "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+            },
+            {
+                "id":5,                    
+                "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                                "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                            },               
+                "rate":  3.9 ,
+                "comment": 400,
+                "ductName": "Áo Polo nam công nghệ khử mùi cao 4",
+                "price":200000,
+                "discount": 25,
+                "voucherCode": "XMDDDDDDDD",
+                "sale":"Ưu đãi sản phẩm mới 20-27/9",
+                "combo":"Mua 3 được giảm thêm 5%",
+                "attention": "Hot" ,
+                "voucherValue": 30000,
+                "listSize" :["S","M","L","XL","2XL"],
+                "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+            },
+            {
+                "id":6,                    
+                "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                                "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                            },               
+                "rate":  3.9 ,
+                "comment": 400,
+                "ductName": "Áo Polo nam công nghệ khử mùi cao 1",
+                "price":200000,
+                "discount": 25,
+                "voucherCode": "XMDDDDDDDD",
+                "sale":"Ưu đãi sản phẩm mới 20-27/9",
+                "combo":"Mua 3 được giảm thêm 5%",
+                "attention": "Hot" ,
+                "voucherValue": 30000,
+                "listSize" :["S","M","L","XL","2XL"],
+                "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
             }
-        ]
-       },
-       {
-        "id":"5",
-        "title":"Chọn Size"
-       }
-    ] },   
-             
+        ] 
+                  
+        },
+        {"id":"2",                       
+        "title":"Quần lót nam",
+        "products":[
+            {
+                "id":7,                    
+                "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                                "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                            },               
+                "rate":  3.9 ,
+                "comment": 400,
+                "ductName": "Áo Polo nam công nghệ khử mùi cao 5",
+                "price":200000,
+                "discount": 25,
+                "voucherCode": "XMDDDDDDDD",
+                "sale":"Ưu đãi sản phẩm mới 20-27/9",
+                "combo":"Mua 3 được giảm thêm 5%",
+                "attention": "Hot" ,
+                "voucherValue": 30000,
+                "listSize" :["S","M","L","XL","2XL"],
+                "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+            },
+            {
+                "id":8,                    
+                "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                                "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                            },               
+                "rate":  3.9 ,
+                "comment": 400,
+                "ductName": "Áo Polo nam công nghệ khử mùi cao 1",
+                "price":200000,
+                "discount": 25,
+                "voucherCode": "XMDDDDDDDD",
+                "sale":"Ưu đãi sản phẩm mới 20-27/9",
+                "combo":"Mua 3 được giảm thêm 5%",
+                "attention": "Hot" ,
+                "voucherValue": 30000,
+                "listSize" :["S","M","L","XL","2XL"],
+                "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+            },
+            {
+                "id":9,                    
+                "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                                "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                            },               
+                "rate":  3.9 ,
+                "comment": 400,
+                "ductName": "Áo Polo nam công nghệ khử mùi cao 6",
+                "price":200000,
+                "discount": 25,
+                "voucherCode": "XMDDDDDDDD",
+                "sale":"Ưu đãi sản phẩm mới 20-27/9",
+                "combo":"Mua 3 được giảm thêm 5%",
+                "attention": "Hot" ,
+                "voucherValue": 30000,
+                "listSize" :["S","M","L","XL","2XL"],
+                "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+            },
+            {
+                "id":10,                    
+                "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                                "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                            },               
+                "rate":  3.9 ,
+                "comment": 400,
+                "ductName": "Áo Polo nam công nghệ khử mùi cao 7",
+                "price":200000,
+                "discount": 25,
+                "voucherCode": "XMDDDDDDDD",
+                "sale":"Ưu đãi sản phẩm mới 20-27/9",
+                "combo":"Mua 3 được giảm thêm 5%",
+                "attention": "Hot" ,
+                "voucherValue": 30000,
+                "listSize" :["S","M","L","XL","2XL"],
+                "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+            },
+            {
+                "id":11,                    
+                "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                                "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                            },               
+                "rate":  3.9 ,
+                "comment": 400,
+                "ductName": "Áo Polo nam công nghệ khử mùi cao 1",
+                "price":200000,
+                "discount": 25,
+                "voucherCode": "XMDDDDDDDD",
+                "sale":"Ưu đãi sản phẩm mới 20-27/9",
+                "combo":"Mua 3 được giảm thêm 5%",
+                "attention": "Hot" ,
+                "voucherValue": 30000,
+                "listSize" :["S","M","L","XL","2XL"],
+                "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+            },
+            {
+                "id":12,                    
+                "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                                "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                            },               
+                "rate":  3.9 ,
+                "comment": 400,
+                "ductName": "Áo Polo nam công nghệ khử mùi cao 8",
+                "price":200000,
+                "discount": 25,
+                "voucherCode": "XMDDDDDDDD",
+                "sale":"Ưu đãi sản phẩm mới 20-27/9",
+                "combo":"Mua 3 được giảm thêm 5%",
+                "attention": "Hot" ,
+                "voucherValue": 30000,
+                "listSize" :["S","M","L","XL","2XL"],
+                "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+            }
+        ]                                           
+        },
+        {"id":"3",                       
+        "title":"mặc hàng ngày" ,
+        "products":[
+            {
+                "id":13,                    
+                "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                                "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                            },               
+                "rate":  3.9 ,
+                "comment": 400,
+                "ductName": "Áo Polo nam công nghệ khử mùi cao 9",
+                "price":200000,
+                "discount": 25,
+                "voucherCode": "XMDDDDDDDD",
+                "sale":"Ưu đãi sản phẩm mới 20-27/9",
+                "combo":"Mua 3 được giảm thêm 5%",
+                "attention": "Hot" ,
+                "voucherValue": 30000,
+                "listSize" :["S","M","L","XL","2XL"],
+                "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+            },
+            {
+                "id":14,                    
+                "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                                "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                            },               
+                "rate":  3.9 ,
+                "comment": 400,
+                "ductName": "Áo Polo nam công nghệ khử mùi cao 1",
+                "price":200000,
+                "discount": 25,
+                "voucherCode": "XMDDDDDDDD",
+                "sale":"Ưu đãi sản phẩm mới 20-27/9",
+                "combo":"Mua 3 được giảm thêm 5%",
+                "attention": "Hot" ,
+                "voucherValue": 30000,
+                "listSize" :["S","M","L","XL","2XL"],
+                "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+            },
+            {
+                "id":15,                    
+                "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                                "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                            },               
+                "rate":  3.9 ,
+                "comment": 400,
+                "ductName": "Áo Polo nam công nghệ khử mùi cao 10",
+                "price":200000,
+                "discount": 25,
+                "voucherCode": "XMDDDDDDDD",
+                "sale":"Ưu đãi sản phẩm mới 20-27/9",
+                "combo":"Mua 3 được giảm thêm 5%",
+                "attention": "Hot" ,
+                "voucherValue": 30000,
+                "listSize" :["S","M","L","XL","2XL"],
+                "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+            },
+            {
+                "id":16,                    
+                "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                                "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                            },               
+                "rate":  3.9 ,
+                "comment": 400,
+                "ductName": "Áo Polo nam công nghệ khử mùi cao 11",
+                "price":200000,
+                "discount": 25,
+                "voucherCode": "XMDDDDDDDD",
+                "sale":"Ưu đãi sản phẩm mới 20-27/9",
+                "combo":"Mua 3 được giảm thêm 5%",
+                "attention": "Hot" ,
+                "voucherValue": 30000,
+                "listSize" :["S","M","L","XL","2XL"],
+                "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+            },
+            {
+                "id":17,                    
+                "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                                "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                            },               
+                "rate":  3.9 ,
+                "comment": 400,
+                "ductName": "Áo Polo nam công nghệ khử mùi cao 12",
+                "price":200000,
+                "discount": 25,
+                "voucherCode": "XMDDDDDDDD",
+                "sale":"Ưu đãi sản phẩm mới 20-27/9",
+                "combo":"Mua 3 được giảm thêm 5%",
+                "attention": "Hot" ,
+                "voucherValue": 30000,
+                "listSize" :["S","M","L","XL","2XL"],
+                "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+            },
+            {
+                "id":18,                    
+                "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                                "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                            },               
+                "rate":  3.9 ,
+                "comment": 400,
+                "ductName": "Áo Polo nam công nghệ khử mùi cao 13",
+                "price":200000,
+                "discount": 25,
+                "voucherCode": "XMDDDDDDDD",
+                "sale":"Ưu đãi sản phẩm mới 20-27/9",
+                "combo":"Mua 3 được giảm thêm 5%",
+                "attention": "Hot" ,
+                "voucherValue": 30000,
+                "listSize" :["S","M","L","XL","2XL"],
+                "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+            }
+        ]                         
+        }
+                 
+    ]
+
+   }   ,       
         
     
     
@@ -2232,352 +2661,379 @@
               }
               
         ],
-    "homeProducts":[
+    
+    "tabs":[
             {"id":"1",            
-            "title":"We made too much",
-            "attention":"Sale",
-
-            "products":[
-                {
-                    "id":1,                    
-                    "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                                    "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
-                                },               
-                    "rate":  3.9 ,
-                    "comment": 400,
-                    "ductName": "Áo Polo nam công nghệ khử mùi cao 1",
-                    "price":200000,
-                    "discount": 25,
-                    "voucherCode": "XMDDDDDDDD",
-                    "sale":"Ưu đãi sản phẩm mới 20-27/9",
-                    "combo":"Mua 3 được giảm thêm 5%",
-                    "attention": "Hot" ,
-                    "voucherValue": 30000,
-                    "listSize" :["S","M","L","XL","2XL"],
-                    "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
-                },
-                {
-                    "id":2,                    
-                    "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                                    "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
-                                },               
-                    "rate":  3.9 ,
-                    "comment": 400,
-                    "ductName": "Áo Polo nam công nghệ khử mùi cao 2",
-                    "price":200000,
-                    "discount": 25,
-                    "voucherCode": "XMDDDDDDDD",
-                    "sale":"Ưu đãi sản phẩm mới 20-27/9",
-                    "combo":"Mua 3 được giảm thêm 5%",
-                    "attention": "Hot" ,
-                    "voucherValue": 30000,
-                    "listSize" :["S","M","L","XL","2XL"],
-                    "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
-                },
-                {
-                    "id":3,                    
-                    "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                                    "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
-                                },               
-                    "rate":  3.9 ,
-                    "comment": 400,
-                    "ductName": "Áo Polo nam công nghệ khử mùi cao 1",
-                    "price":200000,
-                    "discount": 25,
-                    "voucherCode": "XMDDDDDDDD",
-                    "sale":"Ưu đãi sản phẩm mới 20-27/9",
-                    "combo":"Mua 3 được giảm thêm 5%",
-                    "attention": "Hot" ,
-                    "voucherValue": 30000,
-                    "listSize" :["S","M","L","XL","2XL"],
-                    "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
-                },
-                {
-                    "id":4,                    
-                    "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                                    "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
-                                },               
-                    "rate":  3.9 ,
-                    "comment": 400,
-                    "ductName": "Áo Polo nam công nghệ khử mùi cao 3",
-                    "price":200000,
-                    "discount": 25,
-                    "voucherCode": "XMDDDDDDDD",
-                    "sale":"Ưu đãi sản phẩm mới 20-27/9",
-                    "combo":"Mua 3 được giảm thêm 5%",
-                    "attention": "Hot" ,
-                    "voucherValue": 30000,
-                    "listSize" :["S","M","L","XL","2XL"],
-                    "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
-                },
-                {
-                    "id":5,                    
-                    "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                                    "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
-                                },               
-                    "rate":  3.9 ,
-                    "comment": 400,
-                    "ductName": "Áo Polo nam công nghệ khử mùi cao 4",
-                    "price":200000,
-                    "discount": 25,
-                    "voucherCode": "XMDDDDDDDD",
-                    "sale":"Ưu đãi sản phẩm mới 20-27/9",
-                    "combo":"Mua 3 được giảm thêm 5%",
-                    "attention": "Hot" ,
-                    "voucherValue": 30000,
-                    "listSize" :["S","M","L","XL","2XL"],
-                    "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
-                },
-                {
-                    "id":6,                    
-                    "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                                    "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
-                                },               
-                    "rate":  3.9 ,
-                    "comment": 400,
-                    "ductName": "Áo Polo nam công nghệ khử mùi cao 1",
-                    "price":200000,
-                    "discount": 25,
-                    "voucherCode": "XMDDDDDDDD",
-                    "sale":"Ưu đãi sản phẩm mới 20-27/9",
-                    "combo":"Mua 3 được giảm thêm 5%",
-                    "attention": "Hot" ,
-                    "voucherValue": 30000,
-                    "listSize" :["S","M","L","XL","2XL"],
-                    "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
-                }
-            ] 
-                      
+            "title":"We made too much",            
+            "search" :"attention",
+            "content":"Sale"                                      
             },
-            {"id":"2",                       
-            "title":"Quần lót nam",
-            "products":[
-                {
-                    "id":7,                    
-                    "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                                    "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
-                                },               
-                    "rate":  3.9 ,
-                    "comment": 400,
-                    "ductName": "Áo Polo nam công nghệ khử mùi cao 5",
-                    "price":200000,
-                    "discount": 25,
-                    "voucherCode": "XMDDDDDDDD",
-                    "sale":"Ưu đãi sản phẩm mới 20-27/9",
-                    "combo":"Mua 3 được giảm thêm 5%",
-                    "attention": "Hot" ,
-                    "voucherValue": 30000,
-                    "listSize" :["S","M","L","XL","2XL"],
-                    "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
-                },
-                {
-                    "id":8,                    
-                    "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                                    "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
-                                },               
-                    "rate":  3.9 ,
-                    "comment": 400,
-                    "ductName": "Áo Polo nam công nghệ khử mùi cao 1",
-                    "price":200000,
-                    "discount": 25,
-                    "voucherCode": "XMDDDDDDDD",
-                    "sale":"Ưu đãi sản phẩm mới 20-27/9",
-                    "combo":"Mua 3 được giảm thêm 5%",
-                    "attention": "Hot" ,
-                    "voucherValue": 30000,
-                    "listSize" :["S","M","L","XL","2XL"],
-                    "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
-                },
-                {
-                    "id":9,                    
-                    "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                                    "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
-                                },               
-                    "rate":  3.9 ,
-                    "comment": 400,
-                    "ductName": "Áo Polo nam công nghệ khử mùi cao 6",
-                    "price":200000,
-                    "discount": 25,
-                    "voucherCode": "XMDDDDDDDD",
-                    "sale":"Ưu đãi sản phẩm mới 20-27/9",
-                    "combo":"Mua 3 được giảm thêm 5%",
-                    "attention": "Hot" ,
-                    "voucherValue": 30000,
-                    "listSize" :["S","M","L","XL","2XL"],
-                    "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
-                },
-                {
-                    "id":10,                    
-                    "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                                    "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
-                                },               
-                    "rate":  3.9 ,
-                    "comment": 400,
-                    "ductName": "Áo Polo nam công nghệ khử mùi cao 7",
-                    "price":200000,
-                    "discount": 25,
-                    "voucherCode": "XMDDDDDDDD",
-                    "sale":"Ưu đãi sản phẩm mới 20-27/9",
-                    "combo":"Mua 3 được giảm thêm 5%",
-                    "attention": "Hot" ,
-                    "voucherValue": 30000,
-                    "listSize" :["S","M","L","XL","2XL"],
-                    "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
-                },
-                {
-                    "id":11,                    
-                    "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                                    "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
-                                },               
-                    "rate":  3.9 ,
-                    "comment": 400,
-                    "ductName": "Áo Polo nam công nghệ khử mùi cao 1",
-                    "price":200000,
-                    "discount": 25,
-                    "voucherCode": "XMDDDDDDDD",
-                    "sale":"Ưu đãi sản phẩm mới 20-27/9",
-                    "combo":"Mua 3 được giảm thêm 5%",
-                    "attention": "Hot" ,
-                    "voucherValue": 30000,
-                    "listSize" :["S","M","L","XL","2XL"],
-                    "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
-                },
-                {
-                    "id":12,                    
-                    "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                                    "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
-                                },               
-                    "rate":  3.9 ,
-                    "comment": 400,
-                    "ductName": "Áo Polo nam công nghệ khử mùi cao 8",
-                    "price":200000,
-                    "discount": 25,
-                    "voucherCode": "XMDDDDDDDD",
-                    "sale":"Ưu đãi sản phẩm mới 20-27/9",
-                    "combo":"Mua 3 được giảm thêm 5%",
-                    "attention": "Hot" ,
-                    "voucherValue": 30000,
-                    "listSize" :["S","M","L","XL","2XL"],
-                    "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
-                }
-            ]                                           
+            {"id":"2",            
+            "title":"Quần lót nam",            
+            "search" :"demand",
+            "content":"Quần lót nam"                                      
             },
-            {"id":"3",                       
-            "title":"mặc hàng ngày" ,
-            "products":[
-                {
-                    "id":13,                    
-                    "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                                    "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
-                                },               
-                    "rate":  3.9 ,
-                    "comment": 400,
-                    "ductName": "Áo Polo nam công nghệ khử mùi cao 9",
-                    "price":200000,
-                    "discount": 25,
-                    "voucherCode": "XMDDDDDDDD",
-                    "sale":"Ưu đãi sản phẩm mới 20-27/9",
-                    "combo":"Mua 3 được giảm thêm 5%",
-                    "attention": "Hot" ,
-                    "voucherValue": 30000,
-                    "listSize" :["S","M","L","XL","2XL"],
-                    "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
-                },
-                {
-                    "id":14,                    
-                    "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                                    "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
-                                },               
-                    "rate":  3.9 ,
-                    "comment": 400,
-                    "ductName": "Áo Polo nam công nghệ khử mùi cao 1",
-                    "price":200000,
-                    "discount": 25,
-                    "voucherCode": "XMDDDDDDDD",
-                    "sale":"Ưu đãi sản phẩm mới 20-27/9",
-                    "combo":"Mua 3 được giảm thêm 5%",
-                    "attention": "Hot" ,
-                    "voucherValue": 30000,
-                    "listSize" :["S","M","L","XL","2XL"],
-                    "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
-                },
-                {
-                    "id":15,                    
-                    "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                                    "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
-                                },               
-                    "rate":  3.9 ,
-                    "comment": 400,
-                    "ductName": "Áo Polo nam công nghệ khử mùi cao 10",
-                    "price":200000,
-                    "discount": 25,
-                    "voucherCode": "XMDDDDDDDD",
-                    "sale":"Ưu đãi sản phẩm mới 20-27/9",
-                    "combo":"Mua 3 được giảm thêm 5%",
-                    "attention": "Hot" ,
-                    "voucherValue": 30000,
-                    "listSize" :["S","M","L","XL","2XL"],
-                    "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
-                },
-                {
-                    "id":16,                    
-                    "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                                    "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
-                                },               
-                    "rate":  3.9 ,
-                    "comment": 400,
-                    "ductName": "Áo Polo nam công nghệ khử mùi cao 11",
-                    "price":200000,
-                    "discount": 25,
-                    "voucherCode": "XMDDDDDDDD",
-                    "sale":"Ưu đãi sản phẩm mới 20-27/9",
-                    "combo":"Mua 3 được giảm thêm 5%",
-                    "attention": "Hot" ,
-                    "voucherValue": 30000,
-                    "listSize" :["S","M","L","XL","2XL"],
-                    "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
-                },
-                {
-                    "id":17,                    
-                    "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                                    "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
-                                },               
-                    "rate":  3.9 ,
-                    "comment": 400,
-                    "ductName": "Áo Polo nam công nghệ khử mùi cao 12",
-                    "price":200000,
-                    "discount": 25,
-                    "voucherCode": "XMDDDDDDDD",
-                    "sale":"Ưu đãi sản phẩm mới 20-27/9",
-                    "combo":"Mua 3 được giảm thêm 5%",
-                    "attention": "Hot" ,
-                    "voucherValue": 30000,
-                    "listSize" :["S","M","L","XL","2XL"],
-                    "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
-                },
-                {
-                    "id":18,                    
-                    "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
-                                    "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
-                                },               
-                    "rate":  3.9 ,
-                    "comment": 400,
-                    "ductName": "Áo Polo nam công nghệ khử mùi cao 13",
-                    "price":200000,
-                    "discount": 25,
-                    "voucherCode": "XMDDDDDDDD",
-                    "sale":"Ưu đãi sản phẩm mới 20-27/9",
-                    "combo":"Mua 3 được giảm thêm 5%",
-                    "attention": "Hot" ,
-                    "voucherValue": 30000,
-                    "listSize" :["S","M","L","XL","2XL"],
-                    "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
-                }
-            ]                         
-            }
-                     
+            {"id":"3",            
+            "title":"Đồ thể thao",            
+            "search" :"type",
+            "content":"Đồ thể thao"                                      
+            },
+            {"id":"4",            
+            "title":"Mặc hàng ngày",            
+            "search" :"demand",
+            "content":"Mặc hàng ngày"                                      
+            }                                                  
         ]
+,
+"homeProducts":[
+    {"id":"1",            
+    "title":"We made too much",
+    "attention":"Sale",
+
+    "products":[
+        {
+            "id":1,                    
+            "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                            "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                        },               
+            "rate":  3.9 ,
+            "comment": 400,
+            "ductName": "Áo Polo nam công nghệ khử mùi cao 1",
+            "price":200000,
+            "discount": 25,
+            "voucherCode": "XMDDDDDDDD",
+            "sale":"Ưu đãi sản phẩm mới 20-27/9",
+            "combo":"Mua 3 được giảm thêm 5%",
+            "attention": "Hot" ,
+            "voucherValue": 30000,
+            "listSize" :["S","M","L","XL","2XL"],
+            "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+        },
+        {
+            "id":2,                    
+            "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                            "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                        },               
+            "rate":  3.9 ,
+            "comment": 400,
+            "ductName": "Áo Polo nam công nghệ khử mùi cao 2",
+            "price":200000,
+            "discount": 25,
+            "voucherCode": "XMDDDDDDDD",
+            "sale":"Ưu đãi sản phẩm mới 20-27/9",
+            "combo":"Mua 3 được giảm thêm 5%",
+            "attention": "Hot" ,
+            "voucherValue": 30000,
+            "listSize" :["S","M","L","XL","2XL"],
+            "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+        },
+        {
+            "id":3,                    
+            "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                            "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                        },               
+            "rate":  3.9 ,
+            "comment": 400,
+            "ductName": "Áo Polo nam công nghệ khử mùi cao 1",
+            "price":200000,
+            "discount": 25,
+            "voucherCode": "XMDDDDDDDD",
+            "sale":"Ưu đãi sản phẩm mới 20-27/9",
+            "combo":"Mua 3 được giảm thêm 5%",
+            "attention": "Hot" ,
+            "voucherValue": 30000,
+            "listSize" :["S","M","L","XL","2XL"],
+            "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+        },
+        {
+            "id":4,                    
+            "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                            "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                        },               
+            "rate":  3.9 ,
+            "comment": 400,
+            "ductName": "Áo Polo nam công nghệ khử mùi cao 3",
+            "price":200000,
+            "discount": 25,
+            "voucherCode": "XMDDDDDDDD",
+            "sale":"Ưu đãi sản phẩm mới 20-27/9",
+            "combo":"Mua 3 được giảm thêm 5%",
+            "attention": "Hot" ,
+            "voucherValue": 30000,
+            "listSize" :["S","M","L","XL","2XL"],
+            "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+        },
+        {
+            "id":5,                    
+            "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                            "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                        },               
+            "rate":  3.9 ,
+            "comment": 400,
+            "ductName": "Áo Polo nam công nghệ khử mùi cao 4",
+            "price":200000,
+            "discount": 25,
+            "voucherCode": "XMDDDDDDDD",
+            "sale":"Ưu đãi sản phẩm mới 20-27/9",
+            "combo":"Mua 3 được giảm thêm 5%",
+            "attention": "Hot" ,
+            "voucherValue": 30000,
+            "listSize" :["S","M","L","XL","2XL"],
+            "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+        },
+        {
+            "id":6,                    
+            "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                            "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                        },               
+            "rate":  3.9 ,
+            "comment": 400,
+            "ductName": "Áo Polo nam công nghệ khử mùi cao 1",
+            "price":200000,
+            "discount": 25,
+            "voucherCode": "XMDDDDDDDD",
+            "sale":"Ưu đãi sản phẩm mới 20-27/9",
+            "combo":"Mua 3 được giảm thêm 5%",
+            "attention": "Hot" ,
+            "voucherValue": 30000,
+            "listSize" :["S","M","L","XL","2XL"],
+            "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+        }
+    ] 
+              
+    },
+    {"id":"2",                       
+    "title":"Quần lót nam",
+    "products":[
+        {
+            "id":7,                    
+            "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                            "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                        },               
+            "rate":  3.9 ,
+            "comment": 400,
+            "ductName": "Áo Polo nam công nghệ khử mùi cao 5",
+            "price":200000,
+            "discount": 25,
+            "voucherCode": "XMDDDDDDDD",
+            "sale":"Ưu đãi sản phẩm mới 20-27/9",
+            "combo":"Mua 3 được giảm thêm 5%",
+            "attention": "Hot" ,
+            "voucherValue": 30000,
+            "listSize" :["S","M","L","XL","2XL"],
+            "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+        },
+        {
+            "id":8,                    
+            "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                            "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                        },               
+            "rate":  3.9 ,
+            "comment": 400,
+            "ductName": "Áo Polo nam công nghệ khử mùi cao 1",
+            "price":200000,
+            "discount": 25,
+            "voucherCode": "XMDDDDDDDD",
+            "sale":"Ưu đãi sản phẩm mới 20-27/9",
+            "combo":"Mua 3 được giảm thêm 5%",
+            "attention": "Hot" ,
+            "voucherValue": 30000,
+            "listSize" :["S","M","L","XL","2XL"],
+            "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+        },
+        {
+            "id":9,                    
+            "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                            "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                        },               
+            "rate":  3.9 ,
+            "comment": 400,
+            "ductName": "Áo Polo nam công nghệ khử mùi cao 6",
+            "price":200000,
+            "discount": 25,
+            "voucherCode": "XMDDDDDDDD",
+            "sale":"Ưu đãi sản phẩm mới 20-27/9",
+            "combo":"Mua 3 được giảm thêm 5%",
+            "attention": "Hot" ,
+            "voucherValue": 30000,
+            "listSize" :["S","M","L","XL","2XL"],
+            "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+        },
+        {
+            "id":10,                    
+            "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                            "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                        },               
+            "rate":  3.9 ,
+            "comment": 400,
+            "ductName": "Áo Polo nam công nghệ khử mùi cao 7",
+            "price":200000,
+            "discount": 25,
+            "voucherCode": "XMDDDDDDDD",
+            "sale":"Ưu đãi sản phẩm mới 20-27/9",
+            "combo":"Mua 3 được giảm thêm 5%",
+            "attention": "Hot" ,
+            "voucherValue": 30000,
+            "listSize" :["S","M","L","XL","2XL"],
+            "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+        },
+        {
+            "id":11,                    
+            "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                            "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                        },               
+            "rate":  3.9 ,
+            "comment": 400,
+            "ductName": "Áo Polo nam công nghệ khử mùi cao 1",
+            "price":200000,
+            "discount": 25,
+            "voucherCode": "XMDDDDDDDD",
+            "sale":"Ưu đãi sản phẩm mới 20-27/9",
+            "combo":"Mua 3 được giảm thêm 5%",
+            "attention": "Hot" ,
+            "voucherValue": 30000,
+            "listSize" :["S","M","L","XL","2XL"],
+            "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+        },
+        {
+            "id":12,                    
+            "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                            "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                        },               
+            "rate":  3.9 ,
+            "comment": 400,
+            "ductName": "Áo Polo nam công nghệ khử mùi cao 8",
+            "price":200000,
+            "discount": 25,
+            "voucherCode": "XMDDDDDDDD",
+            "sale":"Ưu đãi sản phẩm mới 20-27/9",
+            "combo":"Mua 3 được giảm thêm 5%",
+            "attention": "Hot" ,
+            "voucherValue": 30000,
+            "listSize" :["S","M","L","XL","2XL"],
+            "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+        }
+    ]                                           
+    },
+    {"id":"3",                       
+    "title":"mặc hàng ngày" ,
+    "products":[
+        {
+            "id":13,                    
+            "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                            "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                        },               
+            "rate":  3.9 ,
+            "comment": 400,
+            "ductName": "Áo Polo nam công nghệ khử mùi cao 9",
+            "price":200000,
+            "discount": 25,
+            "voucherCode": "XMDDDDDDDD",
+            "sale":"Ưu đãi sản phẩm mới 20-27/9",
+            "combo":"Mua 3 được giảm thêm 5%",
+            "attention": "Hot" ,
+            "voucherValue": 30000,
+            "listSize" :["S","M","L","XL","2XL"],
+            "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+        },
+        {
+            "id":14,                    
+            "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                            "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                        },               
+            "rate":  3.9 ,
+            "comment": 400,
+            "ductName": "Áo Polo nam công nghệ khử mùi cao 1",
+            "price":200000,
+            "discount": 25,
+            "voucherCode": "XMDDDDDDDD",
+            "sale":"Ưu đãi sản phẩm mới 20-27/9",
+            "combo":"Mua 3 được giảm thêm 5%",
+            "attention": "Hot" ,
+            "voucherValue": 30000,
+            "listSize" :["S","M","L","XL","2XL"],
+            "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+        },
+        {
+            "id":15,                    
+            "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                            "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                        },               
+            "rate":  3.9 ,
+            "comment": 400,
+            "ductName": "Áo Polo nam công nghệ khử mùi cao 10",
+            "price":200000,
+            "discount": 25,
+            "voucherCode": "XMDDDDDDDD",
+            "sale":"Ưu đãi sản phẩm mới 20-27/9",
+            "combo":"Mua 3 được giảm thêm 5%",
+            "attention": "Hot" ,
+            "voucherValue": 30000,
+            "listSize" :["S","M","L","XL","2XL"],
+            "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+        },
+        {
+            "id":16,                    
+            "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                            "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                        },               
+            "rate":  3.9 ,
+            "comment": 400,
+            "ductName": "Áo Polo nam công nghệ khử mùi cao 11",
+            "price":200000,
+            "discount": 25,
+            "voucherCode": "XMDDDDDDDD",
+            "sale":"Ưu đãi sản phẩm mới 20-27/9",
+            "combo":"Mua 3 được giảm thêm 5%",
+            "attention": "Hot" ,
+            "voucherValue": 30000,
+            "listSize" :["S","M","L","XL","2XL"],
+            "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+        },
+        {
+            "id":17,                    
+            "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                            "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                        },               
+            "rate":  3.9 ,
+            "comment": 400,
+            "ductName": "Áo Polo nam công nghệ khử mùi cao 12",
+            "price":200000,
+            "discount": 25,
+            "voucherCode": "XMDDDDDDDD",
+            "sale":"Ưu đãi sản phẩm mới 20-27/9",
+            "combo":"Mua 3 được giảm thêm 5%",
+            "attention": "Hot" ,
+            "voucherValue": 30000,
+            "listSize" :["S","M","L","XL","2XL"],
+            "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+        },
+        {
+            "id":18,                    
+            "imgsHome": {  "before": "https://media.coolmate.me/cdn-cgi/image/width=450,height=663,quality=100/uploads/August2022/quickdry_box_2_new.jpg",
+                            "after": "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/quickdry_box_2_new_333.jpg" 
+                        },               
+            "rate":  3.9 ,
+            "comment": 400,
+            "ductName": "Áo Polo nam công nghệ khử mùi cao 13",
+            "price":200000,
+            "discount": 25,
+            "voucherCode": "XMDDDDDDDD",
+            "sale":"Ưu đãi sản phẩm mới 20-27/9",
+            "combo":"Mua 3 được giảm thêm 5%",
+            "attention": "Hot" ,
+            "voucherValue": 30000,
+            "listSize" :["S","M","L","XL","2XL"],
+            "listColor" : ["màu 1","màu 2","màu 3","màu 4"]
+        }
+    ]                         
+    }
+             
+]
+
+
     }
 
+    
        
   

@@ -2,41 +2,32 @@
 
 
 import Text from "./Text"
-import MenuHeader from "./MenuHeader"
-import AboutCool from "./AboutCool"
+import '../style/Footer.scss'
+
 
 import {  NavLink,Link } from "react-router-dom";
 import '../style/Navbar.scss'
 import useFetch from "../customize/fetch";
 
 
-
-export default function Menu() {    
-    const {
-    data: dataMenu,
-    isLoading    
-  } = useFetch(`http://localhost:3004/menu`, false);
-  console.log(dataMenu);
-
-
-
-  
+ function Header({dataheader}) {    
+ 
 
     return (    
            
         
         <header>
-            {isLoading === false && dataMenu.sale ? <Text className='topbar'>{dataMenu.sale} </Text> :null}
-            {isLoading === false && dataMenu.menu ?  
+            {dataheader.sale ? <Text className='topbar'>{dataheader.sale} </Text> :null}
+            {dataheader.header ?  
             
             <nav className="navbar">
                 <div className="logo">
                     <Link to="/"><img src="https://www.coolmate.me/images/logo-coolmate.svg" alt="" /></Link>                    
                 </div>
-                 {console.log(dataMenu.menu)} 
+                 
                 <div className="nav-center">
                   <ul >
-                      { dataMenu.menu.map((item) =>{
+                      { dataheader.header.map((item) =>{
                           return(
                             <li className="hover" key={item.id}>
                                 
@@ -46,7 +37,7 @@ export default function Menu() {
                                         
                                         {item.title ==="Sản phẩm" &&
                                           <div className="menu-header">
-                                              {
+                                              { item.child ?
                                                   item.child.map((list) =>{       
                                           
 
@@ -57,7 +48,8 @@ export default function Menu() {
                                                           
                                                               <div  className="menu-header-column">
                                                                   
-                                                                  {list.child.map((child)  => {                                
+                                                                  {
+                                                                    list.child.map((child)  => {                                
                                                                       return(
                                                                           <div key={child.name} className="menu-header-child">
                                                                               <Link to={`/Home/${child.name}`} className="child-name">
@@ -96,7 +88,8 @@ export default function Menu() {
                                                       )
                                                   
                                                   } )
-                                              } 
+                                                :null
+                                              }  
                                               
                                           </div>
                                         }  
@@ -145,6 +138,84 @@ export default function Menu() {
     )
   }
    
+
+  function Footer( {dataFooter}) {      
+    
+     return(
+       dataFooter ?
+       <footer >
+           <div className="footer-menu">
+               {dataFooter.map((item) => {
+                   return(
+                       <div className="footer-menu-item" key={item.id}>  
+                           <Text className="footer-title">{item.name}</Text>
+                           <ul>
+                               {item.children.map((content) =>{
+                                   return(
+                                   <li key={content.toString()}>                                                                
+                                       <a href="#">{content}</a>
+                                    </li>)
+                                   
+                                   
+                               } ) }
+                           </ul>
+                       </div>
+                   )    })}
+               
+               <div className="footer-right">
+                   <Text className="footer-title-right">COOLMATE lắng nghe bạn!</Text>
+                   <Text className="footer-content-right">Chúng tôi luôn trân trọng và mong đợi nhận được mọi ý
+                        kiến đóng góp từ khách hàng để có thể nâng cấp trải nghiệm dịch vụ và sản phẩm tốt hơn nữa.</Text>
+                   
+                   <a href="#" className="sent-idea">Gửi ý kiến</a>
+                   <div className="hotline">
+                       <img src="./src/img/icon-hotline.svg" alt="" />
+                       <div>
+                           <Text> Hotline</Text>
+                           <Text> 1900.272737 (028.7777.2737)</Text>
+                       </div>                        
+                   </div>
+                   <div className="hotline">
+                       <img src="./src/img/icon-email.svg" alt="" />
+                       <div>
+                           <Text> Email</Text>
+                           <Text> Cool@coolmate.me</Text>
+                       </div>                        
+                   </div>
+                   <div className="social">
+                       <a href=""><img src="./src/img/icon-facebook.svg" alt="" /></a>
+                       <a href=""><img src="./src/img/icon-instar.svg" alt="" /></a>
+                       <a href=""><img src="./src/img/icon-youtube.svg" alt="" /></a>
+                   
+                   
+                   
+                   </div>
+               </div>
+
+           </div>
+           <div className="footer-bottom">
+               <div className="company">
+                   <h6>@ CÔNG TY TNHH FASTECH ASIA</h6>
+                    <span>Mã số doanh nghiệp: 0108617038. Giấy chứng nhận đăng ký doanh nghiệp do Sở Kế hoạch và Đầu tư TP Hà Nội cấp lần đầu ngày 20/02/2019.</span>
+
+              </div>
+               <div className="footer-bottom-right">
+                   <a href="#"><img src="./src/img/handle_cert.png" alt="" /></a>
+                    <a href="#"><img src="./src/img/dmca_protected_15_120.png" alt="" /></a>
+                   <a href="#"><img src="./src/img/coolmate-info.png" alt="" /></a>
+                    <a href="#"><img src="./src/img/logoSaleNoti.png" alt="" /></a>
+
+               
+              </div>
+            </div>
+           
+       </footer>
+       :null
+
+       
+
+     )    
+   }
     
   
-  
+export {Header,Footer}  

@@ -1,16 +1,119 @@
 
 
   /* product : sản phẩm*/
-
-  .tab-product {
-    display: flex;
-    justify-content: center;
-    max-width:100vw;
+ 
+  .category-container {
+    position: relative;
+    margin-top: 15px;
+    width: 100%;
+    min-height:500px ;
     
+  }
+  .second-slogan {
+    font-size: 24px;
+    margin: 8px auto;
+    text-align: center;
+    font-weight: bold;
+  }
+  .category-title {
+    
+    margin: 0 auto;    
+    padding-bottom: 15px;
+    padding-top: 15px;
+    display: flex;
+    gap:3px ;
+    justify-content: center;
+    .category-name  {
+      padding: 0 20px;
+      font-weight: bold;    
+      padding-bottom: 15px;
+      font-size: 18px !important;
+      :hover {
+        cursor: pointer;
+        color: red;
+      }
+      
+    }
+    .on-click {
+      border-bottom: 2px solid #1877cf;
+      color: #1877cf;
+    }
+    .not-on-click {
+      border-bottom: 2px solid rgb(117, 24, 24);
+    }
+    .tag {
+      font-size: 15px;
+      padding: 0 5px;
+      margin-left: 5px;
+      background-color: yellow;
+      border-radius: 5px;
+      font-weight: bold;
+      color: red;
+      
+     
+    }
+    
+    
+  }
+ 
+  .slick-container{
+    position: relative;
 
+  }
+
+  
+  .image-holder {
+    position: relative;
+    border-radius: 5%;
+    overflow: hidden;
+  }
+  .item-holder img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .slick-next {
+    right: 0px !important;
+    z-index: 10 !important;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-top:-275px;    
+    position: absolute !important;   
+    
+    
+  }
+  .slick-prev {
+    left: 0px !important;
+    z-index: 10 !important;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-top:250px ;    
+    position: absolute !important; 
+   
+   
+    
+  }
+  .slick-prev::before,
+  .slick-next::before {
+    color:rgb(192, 25, 25) !important;
+    font-size: 20px !important;
+  }
+  .slick-list {
+    width: 95% !important;
+    margin: 0 auto !important;
+    height: 100% !important;
+  }
+  .slick-track {
+    display: flex !important;
+    justify-content: space-between !important;
+    gap:10px ;
+  }
+
+
+
+  
     .product {
       margin: 0 auto;
-      width: 80%;
+      width: 100%;      
       border-radius: 20px;
       .product-img {
         position: relative;
@@ -142,7 +245,7 @@
     }
     
     
-  }
+  
   
   
   
