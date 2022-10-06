@@ -4,7 +4,7 @@ import React from "react";
 import "react-image-gallery/styles/css/image-gallery.css";
 import ImageGallery from "react-image-gallery";
 import useFetch from "../customize/fetch";
-
+import { Button,Spinner } from 'reactstrap';
 import '../style/ProductDetails.scss'
 import {Row,Col, } from 'react-bootstrap';
 import Text from '../Components/Text';
@@ -14,10 +14,11 @@ import { Link } from "react-router-dom";
 
 const ProductDetails = () => {  
   let {id} = useParams();
-
+console.log("id",id);
   
   const { data: product, isLoading,imgProduct }
-        = useFetch(`http://localhost:3004/products/${id}`, true); 
+      = useFetch(`http://localhost:3004/products/${id}`, true); 
+  console.log(id,product);
  
    
  
@@ -81,17 +82,22 @@ const ProductDetails = () => {
                       
                       <div className="product-price">
                         <Text className="price-discount">{product.price*(1-(product.discount/100))}đ &nbsp;</Text>  
+                        
+                        {product.discount != ""&&
                         <Text  className="price">{product.price}d &nbsp;</Text> 
-                        <Text  className="product-discount">-{product.discount}%</Text>                     
+                        &&
+                        <Text  className="product-discount">-{product.discount}%</Text> 
+                        }
+                                         
                       </div>
-                      { product.combo ? 
+                      { product.combo!= "" && 
                         <span className="product-combo">
                           {product.combo}
                         </span>
-                        : null}
-                      { product.sale ? 
+                        }
+                      { product.sale != "" &&
                         <Text className="product-sale">{product.sale}   </Text>
-                        : null}
+                        }
                       <div className="product-color">
                         <span>Màu sắc:</span>
                         <div className="product-listcolor">
@@ -144,37 +150,29 @@ const ProductDetails = () => {
     
                         </div>
                         : null
-                      }
-                        
-                      
-    
-                      
-                      
-                
-              </Col>
+                      }</Col>
               
             </Row>
-              
-            
-    
-          
           </div>
 
-           </>}
-           {isLoading === true &&
-              <span style={{ textAlign: "center", width: '100%' }}>Loading data...</span>
-            }
-          
-  
-  
-    
-    
-        
-    </div>
-      
-     
-    
-   
+          </>}
+          {isLoading === true &&
+              <div className='loading'>
+              <Button
+                  color="primary"
+                  disabled
+                >
+                  <Spinner size="sm">
+                    Loading...
+                  </Spinner>
+                  <span>
+                    {' '}Loading
+                  </span>
+                </Button>
+              </div>
+          }
+            
+    </div> 
   )
 };
 

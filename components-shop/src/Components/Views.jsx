@@ -5,6 +5,7 @@ import {Header,Footer}  from './HeaderFooter';
 import { Outlet } from "react-router-dom";
 import Test from './Test';
 import useFetch from '../customize/fetch';
+import { Button,Spinner } from 'reactstrap';
 
 
 
@@ -23,8 +24,18 @@ export default function Views() {
       </>
       :
       isLoading ===true && 
-        <div>
-        loading
+        <div className='loading'>
+        <Button
+            color="primary"
+            disabled
+          >
+            <Spinner size="sm">
+              Loading...
+            </Spinner>
+            <span>
+              {' '}Loading
+            </span>
+          </Button>
         </div>
       
     );

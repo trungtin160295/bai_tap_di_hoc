@@ -12,9 +12,9 @@ export default function Product( props) {
     return (
         <div className="product">
             <div className="product-img">
-                <Link to={`/product/${product.id}`}>
-                    <img src={product.imgsHome.before} alt="Avatar" className="image hover1"/>
-                    <img src={product.imgsHome.after} alt="Avatar" className="image hover2"/>
+                <Link to={`/product/${product.ductName} ${product.id} `}>
+                    <img src={product.linkImages[0]} alt="Avatar" className="image hover1"/>
+                    <img src={product.linkImages[1]} alt="Avatar" className="image hover2"/>
                     {product.listSize? 
                      <div className="size "> 
                         <ul >
@@ -60,13 +60,20 @@ export default function Product( props) {
 
                 </ul>
                 <div className="product-name ">
-                    <Link to={`/product/${product.id}`}> {product.ductName}</Link>
+                    <Link to={`/product/${product.ductName} ${product.id}`}> {product.ductName}</Link>
                  
                 </div>
                 <div className="product-price">
-                    <Text className="sale">{product.price*(1-(product.discount/100))}</Text>  
+
+
+
+                    <Text className="sale">{product.price*(1-(product.discount/100))}</Text> 
+                    {product.price ===""&&
                     <Text  className="price1">{product.price}</Text> 
-                    <Text  className="sale">-{product.discount}%</Text>                     
+                    &&
+                    <Text  className="sale">-{product.discount}%</Text> 
+                    }
+                                        
                 </div>
                 
 

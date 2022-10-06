@@ -31,7 +31,7 @@ import useFetch from "../customize/fetch";
                           return(
                             <li className="hover" key={item.id}>
                                 
-                                  <NavLink  to={item.title}>  {item.title}  </NavLink>
+                                  <NavLink  to={`/${item.title}`}>  {item.title}  </NavLink>
                                   {item.child ?  
                                     <div className="dropdown-content ">
                                         
@@ -52,7 +52,7 @@ import useFetch from "../customize/fetch";
                                                                     list.child.map((child)  => {                                
                                                                       return(
                                                                           <div key={child.name} className="menu-header-child">
-                                                                              <Link to={`/Home/${child.name}`} className="child-name">
+                                                                              <Link to={`${child.name}`} className="child-name">
                                                                                   <div className="child-name-title"> 
                                                                                           <Text>{child.name}</Text>
                                                                                       {child.attention? <Text className= "attention-hot">{child.attention}</Text> :null}                                            
@@ -68,7 +68,7 @@ import useFetch from "../customize/fetch";
                                                                                    {child.product.map((content) => {
                                                                                       return (
                                                                                           <li key= {content}>
-                                                                                              <Link to= {`/Home/${content}`}  className="child-product">{content}</Link>
+                                                                                              <Link to= {`Danh mục/${content}`}  className="child-product">{content}</Link>
                                                                                               
                                                                                           </li>                                                    
                                                                                       
