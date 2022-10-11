@@ -7,8 +7,7 @@ import Product from './Product';
 import useFetch from "../customize/fetch";
 import { useState, useEffect } from 'react';
 
-export default function ListProduct({imgFirst,dataProducts}) {     
-    
+export default function ListProduct({imgFirst,dataProducts}) {      
 
    
    
@@ -17,6 +16,7 @@ export default function ListProduct({imgFirst,dataProducts}) {
     return (
         
         dataProducts.length > 0 &&
+        
         <Row className='list-product' >
             {imgFirst ?
             <Col xxl={2} xl={3} lg={4}  md={6} className="collection-thumbnail">
@@ -30,6 +30,7 @@ export default function ListProduct({imgFirst,dataProducts}) {
                 return(                 
                     <Col xxl={2} xl={3} lg={4}  md={6} className='product-child' key={product.id}>
                          <Product products ={product} />   
+                        
                     </Col>
                                                                            
                 )

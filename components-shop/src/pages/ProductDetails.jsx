@@ -83,7 +83,7 @@ console.log("id",id);
                       <div className="product-price">
                         <Text className="price-discount">{product.price*(1-(product.discount/100))}đ &nbsp;</Text>  
                         
-                        {product.discount != ""&&
+                        {!product.discount &&
                         <Text  className="price">{product.price}d &nbsp;</Text> 
                         &&
                         <Text  className="product-discount">-{product.discount}%</Text> 

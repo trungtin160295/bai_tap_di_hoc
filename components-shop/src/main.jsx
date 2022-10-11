@@ -42,13 +42,15 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             chưa có
             
           </div>} />
+          <Route path="Đồ thể thao" element={<h2>dsdasd</h2>}/> 
           <Route path="Sản phẩm" element={<TabsProduct />} />
           <Route path="Về Coolmate" element={<TestCallAPI />} />
           <Route path="/blog/:id" element={<DetailBlog />}/> 
           <Route path="/Chọn Size" element={<Login/>}/> 
+          
           <Route path="Coolxprint" element={<ProductDetails/>} />      
           <Route path = "/product/:ductName :id" element={<ProductDetails/>}/>       
-          <Route path="/Danh mục/:content" element={<PagesContent/>}/> 
+          <Route path="/Danh-mục/:content" element={<PagesContent/>}/> 
           <Route path="/:name" element={<PagesName/>}/>      
                         
         </Route>

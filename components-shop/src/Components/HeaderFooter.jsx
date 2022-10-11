@@ -8,6 +8,7 @@ import '../style/Footer.scss'
 import {  NavLink,Link } from "react-router-dom";
 import '../style/Navbar.scss'
 import useFetch from "../customize/fetch";
+import useSrt from "../customize/str"
 
 
  function Header({dataheader}) {    
@@ -51,26 +52,23 @@ import useFetch from "../customize/fetch";
                                                                   {
                                                                     list.child.map((child)  => {                                
                                                                       return(
-                                                                          <div key={child.name} className="menu-header-child">
+                                                                          <div key={child.name} className="menu-header-child">                                                                            
                                                                               <Link to={`${child.name}`} className="child-name">
                                                                                   <div className="child-name-title"> 
                                                                                           <Text>{child.name}</Text>
                                                                                       {child.attention? <Text className= "attention-hot">{child.attention}</Text> :null}                                            
                                                                                   
-                                                                                  </div>
-                                                                              
+                                                                                  </div>                                                                              
                                                                                   {child.explain ? <Text className="child-explain">{child.explain}</Text> :null }                        
-                                                                              </Link>
-                                                                          
+                                                                              </Link>                                                                          
                                                                               { child.product?
-                                                                              <ul>
-                                                                              
+                                                                              <ul>                                                                              
                                                                                    {child.product.map((content) => {
                                                                                       return (
                                                                                           <li key= {content}>
-                                                                                              <Link to= {`Danh mục/${content}`}  className="child-product">{content}</Link>
+                                                                                              <Link to= {`Danh-mục/${content}`}  className="child-product">{content}</Link>
                                                                                               
-                                                                                          </li>                                                    
+                                                                                          </li>                                                   
                                                                                       
                                                                                       )
                                                                                   })} 

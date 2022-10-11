@@ -1,4 +1,5 @@
-{  "headerAndFooter":{
+{ 
+     "headerAndFooter":{
     "header":{
     "sale":"Ưu đãi combo tiết kiệm đến 50% ",
     "header":[
@@ -230,7 +231,8 @@
         "HUB Tp HCM: Lầu 1, Số 163 Trần Trọng Cung, Phường Tân Thuận Đông, Quận 7, Tp. Hồ Chí Minh"
       ]
     }
-  ]},
+  ]
+    },
       
    "home":{
     

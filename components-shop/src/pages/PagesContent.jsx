@@ -23,7 +23,7 @@ export  default function PageTitle () {
   return (
     <>
         <div className="collections-filter">
-            <h2>Sản phẩm :{content}</h2> content
+            <h2>Sản phẩm :{content}</h2> 
 
             <select
             value={filter}

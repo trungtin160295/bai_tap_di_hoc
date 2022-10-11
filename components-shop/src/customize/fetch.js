@@ -44,7 +44,7 @@ const useFetch = (url, isProductdData) => {
 
     setTimeout(() => {
       fetchData();
-    }, 1000);
+    }, 3000);
 
     return () => {
       ourRequest.cancel("Operation canceled by the user."); // <-- 3rd step
