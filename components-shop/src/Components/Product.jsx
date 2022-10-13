@@ -12,7 +12,7 @@ export default function Product( props) {
     return (
         <div className="product">
             <div className="product-img">
-                <Link to={`/product/${product.ductName} ${product.id} `}>
+                <Link to={`/product/${product.ductName}&${product.id} `}>
                     <img src={product.linkImages[0]} alt="Avatar" className="image hover1"/>
                     <img src={product.linkImages[1]} alt="Avatar" className="image hover2"/>
                     {product.listSize? 

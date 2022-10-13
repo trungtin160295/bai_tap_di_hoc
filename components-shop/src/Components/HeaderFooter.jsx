@@ -122,10 +122,10 @@ import useSrt from "../customize/str"
                  
                     
                 <div className="nav-right">
-                    <button><img src="./src/img/icon-search.svg" alt="" /></button>
-                    <button><img src="./src/img/icon-account.svg" alt="" /></button>                  
+                    <button><img src="./src/img/icon-search.svg" alt="1" /></button>
+                    <button><img src="./src/img/icon-account.svg" alt="1" /></button>                  
                     
-                    <a href="#"><img src="./src/img/icon-cart.svg" alt="" />   </a>
+                    <a href="#"><img src="./src/img/icon-cart.svg" alt="1" />   </a>
                                      
                 </div>
             </nav>

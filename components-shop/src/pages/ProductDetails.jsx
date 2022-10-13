@@ -1,6 +1,6 @@
 
 import React from "react";
-
+import { useState, useEffect } from "react";
 import "react-image-gallery/styles/css/image-gallery.css";
 import ImageGallery from "react-image-gallery";
 import useFetch from "../customize/fetch";
@@ -19,8 +19,77 @@ console.log("id",id);
   const { data: product, isLoading,imgProduct }
       = useFetch(`http://localhost:3004/products/${id}`, true); 
   console.log(id,product);
- 
    
+
+    const [color, setColor] = useState(undefined)
+
+    const [size, setSize] = useState(undefined)
+
+    const [quantity, setQuantity] = useState(1)
+
+    const updateQuantity = (type) => {
+        if (type === 'plus') {
+            setQuantity(quantity + 1)
+        } else {
+            setQuantity(quantity - 1 < 1 ? 1 : quantity - 1)
+        }
+    }
+
+    useEffect(() => {
+        
+        setQuantity(1)
+        setColor(undefined)
+        setSize(undefined)
+    }, [product])
+
+    const check = () => {
+        if (color === undefined) {
+            alert('Vui lòng chọn màu sắc!')
+            return false
+        }
+
+        if (size === undefined) {
+            alert('Vui lòng chọn kích cỡ!')
+            return false
+        }
+
+        return true
+    }
+
+    // const addToCart = () => {
+    //     if (check()) {
+    //         let newItem = {
+    //             slug: product.slug,
+    //             color: color,
+    //             size: size,
+    //             price: product.price,
+    //             quantity: quantity
+    //         }
+    //         if (dispatch(addItem(newItem))) {
+    //             alert('Success')
+    //         } else {
+    //             alert('Fail')
+    //         }
+    //     }
+    // }
+
+    // const goToCart = () => {
+    //     if (check()) {
+    //         let newItem = {
+    //             slug: product.slug,
+    //             color: color,
+    //             size: size,
+    //             price: product.price,
+    //             quantity: quantity
+    //         }
+    //         if (dispatch(addItem(newItem))) {
+    //             dispatch(remove())
+    //             props.history.push('/cart')
+    //         } else {
+    //             alert('Fail')
+    //         }
+    //     }
+    // }  
  
         
   
@@ -102,8 +171,17 @@ console.log("id",id);
                         <span>Màu sắc:</span>
                         <div className="product-listcolor">
                         {
-                            product.listColor.map((color) =>{
-                              return <span key={color}>{color}</span>
+                            product.listColor.map((item) =>{
+                              return(
+                              <span 
+                                key={item}
+                                className={color === item ? 'active' : ''} 
+                                onClick={() => setColor(item)}
+                               
+                              >
+                                {item}
+                              </span>
+                              ) 
                             })
                         }
                         </div>                                                           
@@ -112,12 +190,41 @@ console.log("id",id);
                         <span>Kích thước :</span>
                         <div className="product-listsize">
                         {
-                            product.listSize.map((size) =>{
-                              return <span key={size}>{size}</span>
+                            product.listSize.map((item) =>{
+                              return(
+                              <span 
+                                key={item}  
+                                className={size === item ? 'active' : ''} 
+                                onClick={() => setSize(item)}
+                                >
+                                  {item}
+                                </span>
+                              )
+
                             })
                         }
                         </div>                                                           
                       </div>
+
+                    <div className="product-quantity">
+                      <div className="product-quantity-title">
+                        Số lượng :  
+                      </div>
+                      <div className="product-quantity-change">
+                          <button className="product-quantity-down" onClick={() => updateQuantity('minus')}>
+                          -
+                          </button>
+                          <span className="quantity">
+                              {quantity}
+                          </span>
+                          <button className="product-quantity-up" onClick={() => updateQuantity('plus')}>
+                              +
+                          </button>
+                      </div>
+                      <div  className="product-buy">
+                        Thêm vào giỏ hàng
+                      </div>
+                  </div>
                       <div className="product-policy">
                         {
                           productPolicy.map((policy) =>{

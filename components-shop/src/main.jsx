@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom/client'
 
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+import store from './redux/store';
+import { Provider} from 'react-redux';
 import {
   BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
+
+
 import Home from './pages/Home';
 
 
@@ -32,32 +37,37 @@ import PagesName from './pages/PagesName';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Views />} >
-          <Route  index element={<Home/>} />
-          <Route path="Sale" element={<div>
-            chưa có
-            
-          </div>} />
-          <Route path="Đồ thể thao" element={<h2>dsdasd</h2>}/> 
-          <Route path="Sản phẩm" element={<TabsProduct />} />
-          <Route path="Về Coolmate" element={<TestCallAPI />} />
-          <Route path="/blog/:id" element={<DetailBlog />}/> 
-          <Route path="/Chọn Size" element={<Login/>}/> 
-          
-          <Route path="Coolxprint" element={<ProductDetails/>} />      
-          <Route path = "/product/:ductName :id" element={<ProductDetails/>}/>       
-          <Route path="/Danh-mục/:content" element={<PagesContent/>}/> 
-          <Route path="/:name" element={<PagesName/>}/>      
-                        
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
 
+  // <Provider store={store} >
+    
+
+  // </Provider>
+  <React.StrictMode>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Views />} >
+        <Route  index element={<Home/>} />
+        <Route path="Sale" element={<div>
+          chưa có
+          
+        </div>} />
+        <Route path="Đồ thể thao" element={<h2>dsdasd</h2>}/> 
+        <Route path="Sản phẩm" element={<TabsProduct />} />
+        <Route path="Về Coolmate" element={<TestCallAPI />} />
+        <Route path="/blog/:id" element={<DetailBlog />}/> 
+        <Route path="/Chọn Size" element={<Login/>}/> 
+        
+        <Route path="Coolxprint" element={<ProductDetails/>} />      
+        <Route path = "/product/:ductName&:id" element={<ProductDetails/>}/>       
+        <Route path="/Danh-mục/:content" element={<PagesContent/>}/> 
+        <Route path="/:name" element={<PagesName/>}/>      
+                      
+      </Route>
+  </Routes>
+</BrowserRouter>
+</React.StrictMode>
+  
+ 
 )
 
 
