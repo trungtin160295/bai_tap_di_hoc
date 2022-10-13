@@ -10,17 +10,28 @@ import {Row,Col, } from 'react-bootstrap';
 import Text from '../Components/Text';
 import { useParams} from "react-router-dom";
 import { Link } from "react-router-dom";
+import { v4 as uuidv4 } from 'uuid';
 
+
+
+import cartSlice from "../redux/sliceReducer/cartReducer";
+import { useDispatch, useSelector } from "react-redux";
+import { cartProductSelector } from "../redux/selectors";
 
 const ProductDetails = () => {  
   let {id} = useParams();
-console.log("id",id);
+
   
   const { data: product, isLoading,imgProduct }
       = useFetch(`http://localhost:3004/products/${id}`, true); 
-  console.log(id,product);
-   
 
+
+
+  const cartProduct = useSelector(cartProductSelector);
+  
+
+   console.log("color1",cartProduct);
+    const dispatch =useDispatch()
     const [color, setColor] = useState(undefined)
 
     const [size, setSize] = useState(undefined)
@@ -34,7 +45,7 @@ console.log("id",id);
             setQuantity(quantity - 1 < 1 ? 1 : quantity - 1)
         }
     }
-
+  
     useEffect(() => {
         
         setQuantity(1)
@@ -56,22 +67,23 @@ console.log("id",id);
         return true
     }
 
-    // const addToCart = () => {
-    //     if (check()) {
-    //         let newItem = {
-    //             slug: product.slug,
-    //             color: color,
-    //             size: size,
-    //             price: product.price,
-    //             quantity: quantity
-    //         }
-    //         if (dispatch(addItem(newItem))) {
-    //             alert('Success')
-    //         } else {
-    //             alert('Fail')
-    //         }
-    //     }
-    // }
+    const addToCart = () => {
+        if (check()) {          
+            if (dispatch(
+              cartSlice.actions.addProduct({
+                color: color,
+                size: size,
+                price: product.price,
+                quantity: quantity,
+                ductName:product.ductName,
+                id:uuidv4()
+              }))) {
+                alert('Success')
+            } else {
+                alert('Fail')
+            }
+        }
+    }
 
     // const goToCart = () => {
     //     if (check()) {
@@ -125,6 +137,7 @@ console.log("id",id);
     
        
   <div className="product-petails">
+    
     {isLoading === false && product !=null && 
       <>
          <div  className="path">
@@ -221,7 +234,7 @@ console.log("id",id);
                               +
                           </button>
                       </div>
-                      <div  className="product-buy">
+                      <div  className="product-buy" onClick={() => addToCart()}>
                         Thêm vào giỏ hàng
                       </div>
                   </div>

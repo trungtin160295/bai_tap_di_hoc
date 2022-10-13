@@ -1,6 +1,10 @@
-import { createStoreHook } from "react-redux";
-import rootReducer from "./reducer";
+import { configureStore } from "@reduxjs/toolkit";
+import cartSlice from "./sliceReducer/cartReducer";
 
-const store = createStoreHook(rootReducer);
+const store = configureStore({
+  reducer: {
+    cart: cartSlice.reducer,
+  },
+});
 
 export default store;

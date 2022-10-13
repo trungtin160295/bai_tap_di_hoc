@@ -38,10 +38,8 @@ import PagesName from './pages/PagesName';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 
-  // <Provider store={store} >
+  <Provider store={store} >
     
-
-  // </Provider>
   <React.StrictMode>
   <BrowserRouter>
     <Routes>
@@ -66,6 +64,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   </Routes>
 </BrowserRouter>
 </React.StrictMode>
+  </Provider>
+  
   
  
 )
