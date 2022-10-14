@@ -20,8 +20,8 @@ import '../src/style/Home.scss'
 import Views from './Components/Views';
 
 import TabsProduct from './Components/TabProduct';
-import TestCallAPI from './Components/TestCallAPI';
-import DetailBlog from './Components/DetailBlog';
+
+
 import ProductDetails from './pages/ProductDetails'
 
 import ListProduct from './Components/ListProduct';
@@ -45,16 +45,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Routes>
       <Route path="/" element={<Views />} >
         <Route  index element={<Home/>} />
-        <Route path="Sale" element={<div>
-          chưa có
-          
-        </div>} />
+        <Route path="Sale" element={<div> chưa có  </div>} />
         <Route path="Đồ thể thao" element={<h2>dsdasd</h2>}/> 
         <Route path="Sản phẩm" element={<TabsProduct />} />
-        <Route path="Về Coolmate" element={<TestCallAPI />} />
-        <Route path="/blog/:id" element={<DetailBlog />}/> 
-        <Route path="/Chọn Size" element={<Login/>}/> 
-        
+        <Route path="Về Coolmate" element={<div> chưa có  </div>} />     
+        <Route path="/Chọn Size" element={<Login/>}/>         
         <Route path="Coolxprint" element={<ProductDetails/>} />      
         <Route path = "/product/:ductName&:id" element={<ProductDetails/>}/>       
         <Route path="/Danh-mục/:content" element={<PagesContent/>}/> 

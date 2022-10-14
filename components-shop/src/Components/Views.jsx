@@ -3,7 +3,7 @@
 
 import {Header,Footer}  from './HeaderFooter';
 import { Outlet } from "react-router-dom";
-import Test from './Test';
+
 import useFetch from '../customize/fetch';
 import { Button,Spinner } from 'reactstrap';
 

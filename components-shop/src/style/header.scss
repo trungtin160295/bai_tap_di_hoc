@@ -15,7 +15,7 @@ header{
     background-color: rgba(236, 243, 243, 0.747);
     display: flex;
     justify-content: space-around;
-    width: 90%;
+    width: 100%;
     margin:0 auto ;
     .logo img {
       width: 100px;
@@ -36,7 +36,7 @@ header{
       a {
         text-decoration: none;
         padding: 0 10px;
-        color: black;
+     
         font-weight: 500;
       }
       .hover:hover .dropdown-content {
@@ -69,85 +69,11 @@ header{
   
  
   
-  
-  /* Menuhearder */
-  .menu-header {
-    height: 50vh;
-    display: flex;
-    gap: 50px;
-    justify-content: space-evenly;
-    .title {
-      color: rgba(2, 0, 0, 0.706);
-      font-weight: 600;
-    }
-    a {
-      text-decoration: none;
-      color: black;
-    }
-    .menu-header-column {
-      display: flex;
-      height: 50vh;
-      flex-direction: column;
-      flex-wrap: wrap;
-      width: auto;
-      .menu-header-child {
-        display: flex;
-        flex-direction: column;
 
-        .child-name {
-          font-weight: 600;
-          display: flex;
-          flex-direction: column;
-          .child-name-title {
-            display: flex;
-            .attention-hot {
-              background-color: #e21c16;
-              border-radius: 5px;
-              padding: 0 10px;
-            }
-            .attention-sale {
-              background-color: rgb(57, 199, 49);
-              border-radius: 5px;
-              padding: 10px;
-            }
-            .attention-new {
-              background-color: aqua;
-              border-radius: 5px;
-              padding: 10px;
-            }
-          }
-        }
-        hr{
-          width:'80%';
-          color: black;
+  
+  
+  
 
-        }
-      }
-      .child-attention {
-        border-radius: 5px;
-        padding: 10px;
-      }
-    }
-  }
-  
-  
-  
-.child-explain {
-    font-size: 13px;
-  }
-  .child-product {
-    font-weight: 600;
-    color: rgba(97, 86, 86, 0.432);
-  }
-  .child-product:hover {
-    color: rgb(0, 89, 255);
-  }
-  
-  .menu-header-child ul {
-    flex-direction: column;
-    padding: 0;
-    list-style-type: none;
-  }
 
 
 
@@ -180,47 +106,9 @@ header{
   
   
   
-  
-  .blogs-container {
-    display       : flex;
-    flex-direction: row;
-    flex-wrap     : wrap;
-    gap           : 10px;
-    font-size     : 14px;
-  
-  
-    .single-blog {
-        border       : 1px solid grey;
-        border-radius: 3px;
-        padding      : 10px;
-        margin       : 0 10px;
-        min-width    : 300px;
-        max-width    : 420px;
-        text-align   : left !important;
-  
-        .title {
-            font-size  : 18px;
-            font-weight: 600;
-        }
-  
-        .content {
-            padding: 10px 0;
-        }
-    }
-  }
-  
-  .blog-detail {
-    border       : 1px solid grey;
-    padding      : 10px;
-    border-radius: 3px;
-    margin       : 10px;
-    min-height   : 100px;
-  
-    .content {
-        padding-top: 10px;
-    }
-  }
  
+  
+
   
  
 
