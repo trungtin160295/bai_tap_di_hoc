@@ -9,13 +9,13 @@ import { Button,Spinner } from 'reactstrap';
 
 
 
-
 export default function Views() { 
 
   const { data: dataHeadefAndFooter, isLoading}
   = useFetch(`http://localhost:3004/headerAndFooter`, false);
 
     return (
+     
       isLoading === false && dataHeadefAndFooter?
       <>
         <Header dataheader={dataHeadefAndFooter.header} />

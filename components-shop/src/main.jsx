@@ -58,7 +58,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="Coolxprint" element={<ProductDetails/>} />      
         <Route path = "/product/:ductName&:id" element={<ProductDetails/>}/>       
         <Route path="/Danh-mục/:content" element={<PagesContent/>}/> 
-        <Route path="/:name" element={<PagesName/>}/>      
+        <Route path="/collection/:name" element={<PagesName/>}/>      
                       
       </Route>
   </Routes>

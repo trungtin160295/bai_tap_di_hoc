@@ -1,6 +1,9 @@
 /* header */
 
 header{
+  position: fixed;
+  width: 100%;
+  z-index: 5;
   .topbar {
     text-align: center;
     font-weight: 600;
@@ -8,10 +11,12 @@ header{
     line-height: 25px;
     font-size: 13px;
   }
-  nav {
+  .navbar {
     background-color: rgba(236, 243, 243, 0.747);
     display: flex;
     justify-content: space-around;
+    width: 90%;
+    margin:0 auto ;
     .logo img {
       width: 100px;
       height: 40px;
@@ -46,6 +51,9 @@ header{
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 5;
       }
+    }
+    .nav-right{
+      display: flex;
     }
     .nav-right img {
       height: 30px;
@@ -124,14 +132,14 @@ header{
   
   
   
-  .menu-header .child-explain {
+.child-explain {
     font-size: 13px;
   }
-  .menu-header .child-product {
+  .child-product {
     font-weight: 600;
     color: rgba(97, 86, 86, 0.432);
   }
-  .menu-header .child-product:hover {
+  .child-product:hover {
     color: rgb(0, 89, 255);
   }
   
@@ -212,36 +220,54 @@ header{
         padding-top: 10px;
     }
   }
+ 
   
-  .btn-add-new {
-    margin: 10px 0;
-    cursor: pointer;
+ 
+
+  .card-login{    
+    .content-login{
+      margin: 20px;
+    }
+
   }
-  
-  .add-new-container {
-    max-width    : 400px;
-    border       : 1px solid grey;
-    border-radius: 3px;
-    padding      : 15px;
-    margin       : 0 auto;
-    text-align   : left;
-  
-    .text-add-new {
-        margin    : 10px 0;
-        text-align: center;
+  .login-top{
+    padding:20px 20px 0 20px ;
+    .login-title{
+      display: flex;
+      justify-content: space-between;
+      .title{
+        color: blue;
+      }
+      .close-button{        
+        background-color: rgb(245, 237, 237);
+        
+      }
+      .close-button:hover{background-color: #ff0c04;}
     }
-  
-    .inputs-data {
-        padding: 5px;
-        margin : 5px;
-  
-        display       : flex;
-        flex-direction: column;
+    .form{
+      display: flex;
     }
-  
-    button {
-        margin-left: 10px;
-    }
-  
-  
   }
+  .form-login{
+    display: flex;
+    flex-direction: column;
+    padding:20px 20px 30px 20px ;
+    gap:20px ;  
+    align-items: center;
+    
+  }
+  .login-input{
+    border-radius: 10px;
+    padding:7px ;
+    font-size:18px ;
+    width:100% ;
+  }
+  .button-login{
+    font-size: 20px;
+    width:40% ;
+    border-radius:10px ;
+  }
+
+.form-in{
+  margin: 20px 0;
+}

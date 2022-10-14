@@ -6,9 +6,10 @@ import '../style/Footer.scss'
 
 
 import {  NavLink,Link } from "react-router-dom";
-import '../style/Navbar.scss'
+import '../style/Header.scss'
 import useFetch from "../customize/fetch";
 import useSrt from "../customize/str"
+import Login from "./Login";
 
 
  function Header({dataheader}) {    
@@ -21,7 +22,8 @@ import useSrt from "../customize/str"
             {dataheader.sale ? <Text className='topbar'>{dataheader.sale} </Text> :null}
             {dataheader.header ?  
             
-            <nav className="navbar">
+            <nav >
+                <div className="navbar">
                 <div className="logo">
                     <Link to="/"><img src="https://www.coolmate.me/images/logo-coolmate.svg" alt="" /></Link>                    
                 </div>
@@ -53,7 +55,7 @@ import useSrt from "../customize/str"
                                                                     list.child.map((child)  => {                                
                                                                       return(
                                                                           <div key={child.name} className="menu-header-child">                                                                            
-                                                                              <Link to={`${child.name}`} className="child-name">
+                                                                              <Link to={`collection/${child.name}`} className="child-name">
                                                                                   <div className="child-name-title"> 
                                                                                           <Text>{child.name}</Text>
                                                                                       {child.attention? <Text className= "attention-hot">{child.attention}</Text> :null}                                            
@@ -123,11 +125,12 @@ import useSrt from "../customize/str"
                     
                 <div className="nav-right">
                     <button><img src="./src/img/icon-search.svg" alt="1" /></button>
-                    <button><img src="./src/img/icon-account.svg" alt="1" /></button>                  
-                    
-                    <a href="#"><img src="./src/img/icon-cart.svg" alt="1" />   </a>
-                                     
+                    <Login />    
+                    <button><img src="./src/img/icon-cart.svg" alt="1" /></button>           
                 </div>
+                </div>
+    
+                
             </nav>
              :null}
           
