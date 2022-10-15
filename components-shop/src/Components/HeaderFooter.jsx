@@ -10,9 +10,19 @@ import '../style/Header.scss'
 import useFetch from "../customize/fetch";
 import useSrt from "../customize/str"
 import Login from "./Login";
+import { useState } from "react";
+
+
+import { useSelector } from "react-redux";
+import { cartProductSelector } from "../redux/selectors";
+
 
 
  function Header({dataheader}) {    
+    const quantityCartProduct = useSelector(cartProductSelector);
+            
+
+    const onClickTest = () => console.log(quantityCartProduct);   
  
 
     return (    
@@ -55,7 +65,7 @@ import Login from "./Login";
                                                                     list.child.map((child)  => {                                
                                                                       return(
                                                                           <div key={child.name} className="menu-header-child">                                                                            
-                                                                              <Link to={`collection/${child.name}`} className="child-name">
+                                                                              <Link to={`collection/${useSrt(child.name,true)}`} className="child-name">
                                                                                   <div className="child-name-title"> 
                                                                                           <Text>{child.name}</Text>
                                                                                       {child.attention? <Text className= "attention-hot">{child.attention}</Text> :null}                                            
@@ -68,7 +78,7 @@ import Login from "./Login";
                                                                                    {child.product.map((content) => {
                                                                                       return (
                                                                                           <li key= {content}>
-                                                                                              <Link to= {`Danh-mục/${content}`}  className="child-product">{content}</Link>
+                                                                                              <Link to= {`Danh-mục/${useSrt(content,true)}`}  className="child-product">{content}</Link>
                                                                                               
                                                                                           </li>                                                   
                                                                                       
@@ -124,9 +134,17 @@ import Login from "./Login";
                  
                     
                 <div className="nav-right">
-                    <button><img src="./src/img/icon-search.svg" alt="1" /></button>
-                    <Login />    
-                    <button><img src="./src/img/icon-cart.svg" alt="1" /></button>           
+                    <div>
+                    <button onClick={onClickTest}><img src="https://www.coolmate.me/images/header/icon-search.svg"  /></button>
+                    </div>
+                    
+                    
+                    <div className="cart-product">
+                    <Link to="/Cart"><img src="https://www.coolmate.me/images/header/icon-cart.svg" /></Link> 
+                    <span className="quantity-product">{quantityCartProduct.length}</span>
+                    </div>
+                    <Login  button/>    
+                              
                 </div>
                 </div>
     
@@ -170,23 +188,23 @@ import Login from "./Login";
                    
                    <a href="#" className="sent-idea">Gửi ý kiến</a>
                    <div className="hotline">
-                       <img src="./src/img/icon-hotline.svg" alt="" />
+                       <img src="https://www.coolmate.me/images/footer/icon-hotline.svg" alt="" />
                        <div>
                            <Text> Hotline</Text>
                            <Text> 1900.272737 (028.7777.2737)</Text>
                        </div>                        
                    </div>
                    <div className="hotline">
-                       <img src="./src/img/icon-email.svg" alt="" />
+                       <img src="https://www.coolmate.me/images/footer/icon-email.svg" alt="" />
                        <div>
                            <Text> Email</Text>
                            <Text> Cool@coolmate.me</Text>
                        </div>                        
                    </div>
                    <div className="social">
-                       <a href=""><img src="./src/img/icon-facebook.svg" alt="" /></a>
-                       <a href=""><img src="./src/img/icon-instar.svg" alt="" /></a>
-                       <a href=""><img src="./src/img/icon-youtube.svg" alt="" /></a>
+                       <a href=""><img src="https://www.coolmate.me/images/footer/icon-facebook.svg" alt="" /></a>
+                       <a href=""><img src="https://www.coolmate.me/images/footer/icon-instar.svg" alt="" /></a>
+                       <a href=""><img src="https://www.coolmate.me/images/footer/icon-youtube.svg" alt="" /></a>
                    
                    
                    
@@ -201,10 +219,10 @@ import Login from "./Login";
 
               </div>
                <div className="footer-bottom-right">
-                   <a href="#"><img src="./src/img/handle_cert.png" alt="" /></a>
-                    <a href="#"><img src="./src/img/dmca_protected_15_120.png" alt="" /></a>
-                   <a href="#"><img src="./src/img/coolmate-info.png" alt="" /></a>
-                    <a href="#"><img src="./src/img/logoSaleNoti.png" alt="" /></a>
+                   <a href="#"><img src="https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/March2022/handle_cert.png" alt="" /></a>
+                    <a href="#"><img src="https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/March2022/dmca_protected_15_120.png" alt="" /></a>
+                   <a href="#"><img src="https://www.coolmate.me/images/footer/Coolmate-info.png" alt="" /></a>
+                    <a href="#"><img src="https://www.coolmate.me/images/footer/logoSaleNoti.png" alt="" /></a>
 
                
               </div>

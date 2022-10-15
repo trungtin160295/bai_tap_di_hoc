@@ -28,7 +28,7 @@ import ListProduct from './Components/ListProduct';
 import Login from "./Components/Login"
 import PagesContent from './pages/PagesContent';
 import PagesName from './pages/PagesName';
-
+import Cart from './pages/Cart'
 
 
 
@@ -46,6 +46,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path="/" element={<Views />} >
         <Route  index element={<Home/>} />
         <Route path="Sale" element={<div> chưa có  </div>} />
+        <Route path="Cart" element={<Cart/>} />
         <Route path="Đồ thể thao" element={<h2>dsdasd</h2>}/> 
         <Route path="Sản phẩm" element={<TabsProduct />} />
         <Route path="Về Coolmate" element={<div> chưa có  </div>} />     

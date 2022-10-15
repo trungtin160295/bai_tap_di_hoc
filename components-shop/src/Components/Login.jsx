@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import  { useState ,useEffect} from 'react';
 
-import {Modal,Button,CloseButton }from 'react-bootstrap';
+import {Modal,CloseButton }from 'react-bootstrap';
+
 import '../style/header.scss'
 import { useForm } from 'react-hook-form';
 
-export default function Login() {
+export default function Login({button}) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -12,14 +13,18 @@ export default function Login() {
 
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = data => console.log(data);
-  console.log(errors);
+ 
 
   return (
     <div className='card-login'>
-      <Button variant="primary" onClick={handleShow}>
-      <img src="https://www.coolmate.me/images/header/icon-account.svg" alt="" />
-      </Button>
-
+      {button ? 
+      <button  onClick={handleShow}>
+        <img src="https://www.coolmate.me/images/header/icon-account.svg" alt="" />
+      </button>      
+      :
+      <button  onClick={handleShow}className="button-login--now" >Đăng nhập ngay</button>
+}
+      
       <Modal show={show} onHide={handleClose}>
         <div className='login-top'>
           <div className=' login-title'>
@@ -33,7 +38,7 @@ export default function Login() {
           <div className='form-login'>
             <input type="text" placeholder="Email / Mobile number"  className='login-input' {...register("Email", {required: true, pattern: /^\S+@\S+$/i})} />
             <input type="password" placeholder="Password" className='login-input'{...register("Mobile number", {required: true, minLength: 9, maxLength: 12})} />
-            <Button type='Sumbit' className='button-login'>Đăng nhập</Button>
+            <button type='Sumbit' className='button-login'>Đăng nhập</button>
           </div>     
           
         </form>

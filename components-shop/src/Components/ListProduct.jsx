@@ -7,12 +7,10 @@ import Product from './Product';
 import useFetch from "../customize/fetch";
 import { useState, useEffect } from 'react';
 
-export default function ListProduct({imgFirst,dataProducts}) {      
-
-   
+export default function ListProduct({imgFirst,dataProducts}) {       
    
 
-    console.log(dataProducts);
+ 
     return (
         
         dataProducts.length > 0 &&

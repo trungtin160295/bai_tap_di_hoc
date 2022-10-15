@@ -8,8 +8,6 @@ function useSrt(str, path) {
   } else {
     console.log("qưewqeqw", str);
     str = str.replace(/-/g, " ");
-    console.log("else");
-
     return str;
   }
 

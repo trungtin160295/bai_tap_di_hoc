@@ -118,28 +118,32 @@
                     margin-left: 20px;
                     display: flex;
                     gap:20px;
-                    background-color:rgb(135, 205, 222);
+                    background-color:rgb(239, 246, 247);
                     align-items: center;
+                    border:1px solid ;
+                    padding:5px ;
+                    border-radius: 10px;
+                    font-size:20px ;
+                    font-weight: 700;
+                    button{
+                        border: none;
+                        font-size:20px ;
+                        font-weight: 700;
+                        
+                    }
 
-                    .quantity{
-                       font-size: 15;
+                    .quantity{                       
                        font-weight: 700;
                     }
-                    .product-quantity-down{
-                        width: 30px;
-                        font-size: 20px;
-                    }
-                    .product-quantity-up{
-                        width: 30px;
-                        font-size: 20px;
-                    }
-                }.product-buy{
+                   
+                }
+                .product-buy{
                     margin-left: 30px;
                     background-color: rgb(77, 48, 236);
                     color: aliceblue;
-                    font-size: 30px;
+                    font-size: 20px;
                     border-radius:10px ;
-                    padding:5px 10px ;
+                    padding:5px 20px ;
                 }
             }
             .product-policy{

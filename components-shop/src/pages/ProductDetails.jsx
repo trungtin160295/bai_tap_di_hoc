@@ -6,7 +6,7 @@ import ImageGallery from "react-image-gallery";
 import useFetch from "../customize/fetch";
 import { Button,Spinner } from 'reactstrap';
 
-import {Row,Col, } from 'react-bootstrap';
+import {Row,Col } from 'react-bootstrap';
 import Text from '../Components/Text';
 import { useParams} from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -18,22 +18,17 @@ import '../style/ProductDetails.scss'
 
 
 import cartSlice from "../redux/sliceReducer/cartReducer";
-import { useDispatch, useSelector } from "react-redux";
-import { cartProductSelector } from "../redux/selectors";
+import { useDispatch } from "react-redux";
+
 
 const ProductDetails = () => {  
   let {id} = useParams();
 
   
   const { data: product, isLoading,imgProduct }
-      = useFetch(`http://localhost:3004/products/${id}`, true); 
+      = useFetch(`http://localhost:3004/products/${id}`, true);   
 
-
-
-  const cartProduct = useSelector(cartProductSelector);
-  
-
-   console.log("color1",cartProduct);
+ 
     const dispatch =useDispatch()
     const [color, setColor] = useState(undefined)
 
@@ -76,9 +71,8 @@ const ProductDetails = () => {
               cartSlice.actions.addProduct({
                 color: color,
                 size: size,
-                price: product.price,
                 quantity: quantity,
-                ductName:product.ductName,
+                product:product,                
                 id:uuidv4()
               }))) {
                 alert('Success')
@@ -237,9 +231,9 @@ const ProductDetails = () => {
                               +
                           </button>
                       </div>
-                      <div  className="product-buy" onClick={() => addToCart()}>
+                      <button  className="product-buy" onClick={() => addToCart()}>
                         Thêm vào giỏ hàng
-                      </div>
+                      </button>
                   </div>
                       <div className="product-policy">
                         {

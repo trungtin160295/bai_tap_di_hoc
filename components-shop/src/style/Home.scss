@@ -73,7 +73,7 @@
   }
   .slick-next {
     right: 0px !important;
-    z-index: 10 !important;
+    z-index: 3!important;
     border-radius: 10px;
     margin-right: 5px;
     margin-top:-275px;    
@@ -83,7 +83,7 @@
   }
   .slick-prev {
     left: 0px !important;
-    z-index: 10 !important;
+    z-index: 3 !important;
     border-radius: 10px;
     margin-left: 5px;
     margin-top:250px ;    
@@ -273,7 +273,7 @@
     position: absolute;
     bottom: 30px;
     width: 100%;
-    z-index: 10;
+    z-index: 3;
     color: aqua;
     display: flex;
     justify-content: space-around;

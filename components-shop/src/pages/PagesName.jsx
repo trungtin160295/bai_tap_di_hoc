@@ -10,13 +10,13 @@ export  default function PageTitle () {
   const  listFilter = ["Mới nhất","Bán chạy", "Giá thấp đến cao","Giá cao đến thấp"]
   const [filter,setFilter] =useState(listFilter[0])
   const {name} = useParams();
-  const seachName = useSrt(name, false)
+  
 
 
 
 
   const { data: dataProducts, isLoading }
-  = useFetch(`http://localhost:3004/products/?q=${seachName}`, false); 
+  = useFetch(`http://localhost:3004/products/?q=${name}`, false); 
 
 
     
@@ -26,13 +26,13 @@ export  default function PageTitle () {
   return (
     <>
         <div className="collections-filter">
-            <h2>Sản phẩm :{name} </h2> 
+            <h2>Sản phẩm :{useSrt(name,false)} </h2> 
 
             <select
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
             
-          >
+            >
             {listFilter.map((option) => (
               <option key={option} value={option}>
                 {option}
