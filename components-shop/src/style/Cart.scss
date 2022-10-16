@@ -122,6 +122,14 @@
                 .product-detail-selected{
                     width: 100%;
                 }
+                .button-delete{
+                    background-color: white;
+                    height:30px ;
+                    border: none;
+                }
+                .button-delete:hover{
+                    background-color:red ;
+                }
             }
             .product-detail-bottom{
 
@@ -171,6 +179,16 @@
                     
                 }
                 
+            }
+            .change{
+               
+                width:100% ;
+                .button-change{
+                    background-color: aqua;
+                    border-radius: 10px;
+                    width:50% ;
+                    margin: 0px auto ;
+                }
             }
 
         }

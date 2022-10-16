@@ -3,73 +3,20 @@ import {Row,Col } from 'react-bootstrap';
 import {FormGroup,Label,Input} from'reactstrap';
 import Login from '../Components/Login';
 import { useForm } from 'react-hook-form';
-import { useState } from 'react';
-import { useSelector } from "react-redux";
+import { useState ,useEffect} from 'react';
+import { useSelector ,useDispatch} from "react-redux";
 import { cartProductSelector } from "../redux/selectors";
+import cartSlice from "../redux/sliceReducer/cartReducer";
+
+
+import CartProductDetal from '../Components/CartProductDetal';
 
 
 import '../style/Cart.scss'
 
 const Cart = () => {  
-    const product = {
-        color:"màu 2",
-        size:"XL",
-        quantity:3,
-        product:{
-            "id":1,
-            "linkImages": [ "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/September2022/combo-3_49.jpg",
-                            "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/September2022/139-1.jpg",
-                            "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/September2022/Untitled-3_45.jpg",
-                            "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/September2022/139-6.jpg"
-                            ],                         
-            "rate":  3.9 ,
-            "comment": 400,
-            "ductName": "Combo 03 Quần lót Trunk Pima Cotton thấm hút tốt - Xanh Navy",
-            "price":299000,
-            "discount": "",
-            "voucherCode": "",
-            "sale":"",
-            "combo":"",
-            "attention": "New" ,
-            "voucherValue": "",
-            "listSize" :["S","M","L","XL","2XL"],
-            "listColor" : ["màu 1","màu 2","màu 3","màu 4"],
-            "demand":"Mặc-nhà-&-Mặc-trong",
-            "category":"Quần-Lót-Nam",
-            "type":"Quần-Trunk-(Boxer)",
-            "collection":"",
-            "technology":"",
-            "date":"2011-11-14",
-            "outstanding":
-                [
-                        {
-                            "key" :"1",
-                            "content" :"Chất liệu 92% sợi Pima Cotton, 8% Spandex với khả năng hút ẩm và giữ màu tốt."
-                        },
-                        {
-                            "key" :"2",
-                            "content" :"Cotton Pima có độ dài hơn 50% so với cotton thông thường, nên sẽ tạo sự mềm mại, ít xù lông, bền và chắc chắn hơn so với cotton thường."
-                        },
-                        {
-                            "key" :"3",
-                            "content" :"Đai lưng được dệt bằng công nghệ mới nhất hiện tại, đem đến cảm giác co giãn siêu tốt, mềm mượt không vết hằn."
-                        },
-                        {
-                            "key" :"4",
-                            "content" :"An toàn, không gây kích ứng da."
-                        },
-                        {
-                            "key" :"5",
-                            "content" :"Sản xuất tại xưởng 10 năm kinh nghiệm tại TP Hồ Chí Minh."
-                        },
-                        {
-                            "key" :"6",
-                            "content" :"Tự hào sản xuất tại Việt Nam."
-                    }
-                ]
-                        
-        }
-    }
+    
+    
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
@@ -136,77 +83,87 @@ const Cart = () => {
             </Label>
          </FormGroup>  
         )}
-    function DetaillProduct({product}){
-        const [quantity, setQuantity] = useState(product.quantity)
-        const [color, setColor] = useState(product.color)
-        const [size, setSize] = useState(product.size)
-        const updateQuantity = (type) => {
-            if (type === 'plus') {
-                setQuantity(quantity + 1)
-            } else {
-                setQuantity(quantity - 1 < 1 ? 1 : quantity - 1)
-            }
-    }
-        return(
-            <Row className='product-cart-detail'>
-                    <Col md={12} xl={4}  className='product-img'>
-                        <img src={product.product.linkImages[1]} alt={product.product.ductName} />
-                    </Col>
-                    <Col md={12} xl={8}  className='product-detail-right'>
-                        <div className='product-detail-top'>
-                            <div className='product-detail-name'>
-                                {product.product.ductName}
-                            </div>
-                            <span>X</span>
-                            <div className='product-detail-selected'>
-                                <i>{color} / {size}</i>
-                            </div>
-                        </div>
-                        <div className='product-detail-bottom'>
-                            <div className='select-color-size'>
-                                <select
-                                    value={color}
-                                    onChange={(e) => setColor(e.target.value)}
-                                    className='select'
-                                >
-                                    {product.product.listColor.map((option) => (
-                                    <option key={option} value={option}>{option}</option>
-                                    ))}
-                                </select>
-                                <select
-                                    value={size}
-                                    onChange={(e) => setSize(e.target.value)}
-                                    className='select'
-                                >
-                                    {product.product.listSize.map((option) => (
-                                    <option key={option} value={option}>{option}</option>
-                                    ))}
-                                </select>
-                            </div>
-                            <div className='quantity-price'>
-                                <div className="product-quantity-change">
-                                    <button className="product-quantity-down" onClick={() => updateQuantity('minus')}>
-                                    -
-                                    </button>
-                                    <span className="quantity-buy">
-                                        {quantity}
-                                    </span>
-                                    <button className="product-quantity-up" onClick={() => updateQuantity('plus')}>
-                                        +
-                                    </button>
-                                </div>
-                                <div className='price'>
-                                    <span>000000</span>
-                                    <i><strike>22222</strike> </i>
-                                </div>
-                            </div>
-                        </div>
+    // function DetaillProduct({product}){
+    //     const dispatch =useDispatch()
+    //     const [quantity, setQuantity] = useState(product.quantity)
+    //     const [color, setColor] = useState(product.color)
+    //     const [size, setSize] = useState(product.size)
+    //     const updateQuantity = (type) => {
+    //         if (type === 'plus') {
+    //             setQuantity(quantity + 1)
+    //         } else {
+    //             setQuantity(quantity - 1 < 1 ? 1 : quantity - 1)
+    //         }
+    //         (dispatch(
+    //                     cartSlice.actions.changeProduct({                                         
+    //                       id:product.id,
+    //                       color: color,
+    //                       size: size,
+    //                       quantity: quantity,
+                         
+    //                     })))
+    //         }
+        
+    //     return(
+    //         <Row className='product-cart-detail'>
+    //                 <Col md={12} xl={4}  className='product-img'>
+    //                     <img src={product.product.linkImages[1]} alt={product.product.ductName} />
+    //                 </Col>
+    //                 <Col md={12} xl={8}  className='product-detail-right'>
+    //                     <div className='product-detail-top'>
+    //                         <div className='product-detail-name'>
+    //                             {product.product.ductName}
+    //                         </div>
+    //                         <span>X</span>
+    //                         <div className='product-detail-selected'>
+    //                             <i>{color} / {size}</i>
+    //                         </div>
+    //                     </div>
+    //                     <div className='product-detail-bottom'>
+    //                         <div className='select-color-size'>
+    //                             <select
+    //                                 value={color}
+    //                                 onChange={(e) => setColor(e.target.value)}
+    //                                 className='select'
+    //                             >
+    //                                 {product.product.listColor.map((option) => (
+    //                                 <option key={option} value={option}>{option}</option>
+    //                                 ))}
+    //                             </select>
+    //                             <select
+    //                                 value={size}
+    //                                 onChange={(e) => setSize(e.target.value)}
+    //                                 className='select'
+    //                             >
+    //                                 {product.product.listSize.map((option) => (
+    //                                 <option key={option} value={option}>{option}</option>
+    //                                 ))}
+    //                             </select>
+    //                         </div>
+    //                         <div className='quantity-price'>
+    //                             <div className="product-quantity-change">
+    //                                 <button className="product-quantity-down" onClick={() => updateQuantity('minus')}>
+    //                                 -
+    //                                 </button>
+    //                                 <span className="quantity-buy">
+    //                                     {quantity}
+    //                                 </span>
+    //                                 <button className="product-quantity-up" onClick={() => updateQuantity('plus')}>
+    //                                     +
+    //                                 </button>
+    //                             </div>
+    //                             <div className='price'>
+    //                                 <span>{product.product.price*(1-(product.product.discount/100))*quantity}</span>
+    //                                 <i><strike>{product.product.price*quantity}</strike> </i>
+    //                             </div>
+    //                         </div>
+    //                     </div>
                         
 
-                    </Col>
-                </Row>
-        )
-    }
+    //                 </Col>
+    //             </Row>
+    //     )
+    // }
 
 
 
@@ -256,7 +213,7 @@ const Cart = () => {
                 {CartProduct.length > 0 && 
                 CartProduct.map((product) =>{
                     return(
-                        <DetaillProduct product={product}/>
+                        <CartProductDetal product={product} key={product.id}/>
                     )
                 })
                 }

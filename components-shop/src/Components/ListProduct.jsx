@@ -9,11 +9,8 @@ import { useState, useEffect } from 'react';
 
 export default function ListProduct({imgFirst,dataProducts}) {       
    
-
- 
     return (
-        
-        dataProducts.length > 0 &&
+       dataProducts.length > 0 &&
         
         <Row className='list-product' >
             {imgFirst ?

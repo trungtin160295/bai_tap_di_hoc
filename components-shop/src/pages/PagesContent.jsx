@@ -45,7 +45,7 @@ export  default function PageTitle () {
               dataProducts ={dataProducts}
             />
           }
-         { isLoading === false && console.log(dataProducts.length)&& dataProducts.length =="0" &&
+         { isLoading === false &&  dataProducts.length =="0" &&
          <div>
             Sản phẩm này chưa trình bán.
             <br/>
