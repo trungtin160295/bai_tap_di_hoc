@@ -13,7 +13,7 @@ import cartSlice from "../redux/sliceReducer/cartReducer";
     const [quantity, setQuantity] = useState(product.quantity)
     const [color, setColor] = useState(product.color)
     const [size, setSize] = useState(product.size)
-    const [change, setChange] = useState(0)
+   
     const updateQuantity = (type) => {
         if (type === 'plus') {
             setQuantity(quantity + 1)
@@ -21,19 +21,8 @@ import cartSlice from "../redux/sliceReducer/cartReducer";
             setQuantity(quantity - 1 < 1 ? 1 : quantity - 1)
         }                       
         }
-       
-        
-    const  changeProduct = () =>{
-        (dispatch(
-            cartSlice.actions.changeProduct({                                         
-              id:product.id,
-              color: color,
-              size: size,
-              quantity: quantity,                           
-            })));
-        setChange(1)
-            
-    }
+              
+    
     const  deleteProduct = () =>{
         (dispatch(
             cartSlice.actions.deleteProduct({                                         
@@ -43,7 +32,15 @@ import cartSlice from "../redux/sliceReducer/cartReducer";
             
     }
     useEffect(() => {
-        setChange(0)
+        
+        (dispatch(
+            cartSlice.actions.changeProduct({                                         
+              id:product.id,
+              color: color,
+              size: size,
+              quantity: quantity,                           
+            })));
+            
     },[quantity,color,size]) 
   
     
@@ -98,15 +95,11 @@ import cartSlice from "../redux/sliceReducer/cartReducer";
 
                             </div>
                             <div className='price'>
-                                <span>{product.product.price*(1-(product.product.discount/100))*quantity}</span>
-                                <i><strike>{product.product.price*quantity}</strike> </i>
+                                <span>{Math.round(product.product.price*(1-(product.product.discount/100))*quantity)}.000 đ</span>
+                                {product.product.discount&&<i><strike>{product.product.price*quantity}.000 đ</strike> </i>}
                             </div>
                         </div>
-                        {change === 0 &&
-                         <div className='change'> 
-                            <button className='button-change' onClick={changeProduct}>Xác nhận</button>
-                         </div>
-                        }
+                       
                         
                        
                     </div>

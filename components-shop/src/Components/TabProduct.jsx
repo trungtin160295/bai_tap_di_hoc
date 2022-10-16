@@ -2,8 +2,9 @@ import React, { useState ,useEffect} from 'react';
 import useFetch from '../customize/fetch';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 
+// import "slick-carousel/slick/slick-theme.css";
+import ListProduct from './ListProduct';
 import Product from './Product';
 import '../style/Home.scss'
 
@@ -24,7 +25,7 @@ function TabsProduct(){
         setSelectedIndex(index)
         
       }
-      const settings = {        
+    const settings = {        
       speed: 1000,
       slidesToShow: 5,
       slidesToScroll: 2,
@@ -89,6 +90,7 @@ function TabsProduct(){
                     {titleTabs[selectedIndex].products.map((child,index) => {                      
                         return ( 
                         <Product products ={child}  index={index} key={child.id}/>
+                        
                         )
                     }
                     )}

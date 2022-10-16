@@ -20,8 +20,8 @@ const Cart = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
-    const CartProduct = useSelector(cartProductSelector);
-    
+    const cartProduct = useSelector(cartProductSelector);
+    const [sumMoney, setSumMoney] = useState()
 
     
     
@@ -65,7 +65,21 @@ const Cart = () => {
         }
     ]
 
-    
+    function sum (cartProduct){
+        let sumMoney = 0;
+        for (let i = 1; i < cartProduct.length; i++){
+            
+            sumMoney += Math.round(cartProduct[1].product.price*(1-(cartProduct[1].product.discount/100))*cartProduct[1].quantity);
+        }
+       
+        return sumMoney;
+    }
+
+    useEffect(() => {
+        
+        setSumMoney(sum(cartProduct))
+    },[cartProduct]) 
+
     function Payments({payment}){
         return(
             <FormGroup check className='payments-child'>
@@ -83,87 +97,7 @@ const Cart = () => {
             </Label>
          </FormGroup>  
         )}
-    // function DetaillProduct({product}){
-    //     const dispatch =useDispatch()
-    //     const [quantity, setQuantity] = useState(product.quantity)
-    //     const [color, setColor] = useState(product.color)
-    //     const [size, setSize] = useState(product.size)
-    //     const updateQuantity = (type) => {
-    //         if (type === 'plus') {
-    //             setQuantity(quantity + 1)
-    //         } else {
-    //             setQuantity(quantity - 1 < 1 ? 1 : quantity - 1)
-    //         }
-    //         (dispatch(
-    //                     cartSlice.actions.changeProduct({                                         
-    //                       id:product.id,
-    //                       color: color,
-    //                       size: size,
-    //                       quantity: quantity,
-                         
-    //                     })))
-    //         }
-        
-    //     return(
-    //         <Row className='product-cart-detail'>
-    //                 <Col md={12} xl={4}  className='product-img'>
-    //                     <img src={product.product.linkImages[1]} alt={product.product.ductName} />
-    //                 </Col>
-    //                 <Col md={12} xl={8}  className='product-detail-right'>
-    //                     <div className='product-detail-top'>
-    //                         <div className='product-detail-name'>
-    //                             {product.product.ductName}
-    //                         </div>
-    //                         <span>X</span>
-    //                         <div className='product-detail-selected'>
-    //                             <i>{color} / {size}</i>
-    //                         </div>
-    //                     </div>
-    //                     <div className='product-detail-bottom'>
-    //                         <div className='select-color-size'>
-    //                             <select
-    //                                 value={color}
-    //                                 onChange={(e) => setColor(e.target.value)}
-    //                                 className='select'
-    //                             >
-    //                                 {product.product.listColor.map((option) => (
-    //                                 <option key={option} value={option}>{option}</option>
-    //                                 ))}
-    //                             </select>
-    //                             <select
-    //                                 value={size}
-    //                                 onChange={(e) => setSize(e.target.value)}
-    //                                 className='select'
-    //                             >
-    //                                 {product.product.listSize.map((option) => (
-    //                                 <option key={option} value={option}>{option}</option>
-    //                                 ))}
-    //                             </select>
-    //                         </div>
-    //                         <div className='quantity-price'>
-    //                             <div className="product-quantity-change">
-    //                                 <button className="product-quantity-down" onClick={() => updateQuantity('minus')}>
-    //                                 -
-    //                                 </button>
-    //                                 <span className="quantity-buy">
-    //                                     {quantity}
-    //                                 </span>
-    //                                 <button className="product-quantity-up" onClick={() => updateQuantity('plus')}>
-    //                                     +
-    //                                 </button>
-    //                             </div>
-    //                             <div className='price'>
-    //                                 <span>{product.product.price*(1-(product.product.discount/100))*quantity}</span>
-    //                                 <i><strike>{product.product.price*quantity}</strike> </i>
-    //                             </div>
-    //                         </div>
-    //                     </div>
-                        
-
-    //                 </Col>
-    //             </Row>
-    //     )
-    // }
+  
 
 
 
@@ -205,13 +139,13 @@ const Cart = () => {
                 })}
                 </FormGroup>
                 <Row>
-                    <button className='button-pay'> Thanh toán</button>
+                    <button className='button-pay'> Thanh toán {sumMoney}</button>
                 </Row>
             </Col>
             <Col  md={12} xl={5} className='cart-right'>
                 <div className='title-cart'> Giỏ hàng của bạn</div>
-                {CartProduct.length > 0 && 
-                CartProduct.map((product) =>{
+                {cartProduct.length > 1 && 
+                cartProduct.map((product) =>{
                     return(
                         <CartProductDetal product={product} key={product.id}/>
                     )
@@ -221,23 +155,23 @@ const Cart = () => {
                 <div className='bill'>
                     <hr />
                     <div className=' bill-child'>
-                        <span>Tạm tính</span>
-                        <span>253366</span>
+                        <span>Tính tổng </span>
+                        <span>{sumMoney}.000 đ</span>
                     </div>
                     <div className='bill-child'>
                         <span>Giảm giá</span>
-                        <span>253366</span>
+                        <span>0 đ</span>
                         
                     </div>
                     <div className='bill-child'>
                         <span>Phí giao hàng</span>
-                        <span>253366</span>
+                        <span>Miễn phí</span>
                         
                     </div>
                     <hr />
                     <div className='bill-child'>
                         <span>Tổng tiền thanh toán</span>
-                        <span>253366</span>
+                        <span>{sumMoney}.000 đ</span>
                         
                     </div>
 

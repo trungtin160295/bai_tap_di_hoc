@@ -10,19 +10,32 @@ import '../style/Header.scss'
 import useFetch from "../customize/fetch";
 import useSrt from "../customize/str"
 import Login from "./Login";
-import { useState } from "react";
 
 
+import { useState,useEffect } from "react";
 import { useSelector } from "react-redux";
 import { cartProductSelector } from "../redux/selectors";
 
-
-
  function Header({dataheader}) {    
-    const quantityCartProduct = useSelector(cartProductSelector);
-            
+    const cartProduct = useSelector(cartProductSelector);
+    const [sumProduct, setSumProduct] = useState()        
 
-    const onClickTest = () => console.log(quantityCartProduct);   
+    const onClickTest = () => console.log(quantityCartProduct);  
+
+
+    function sum (cartProduct){     
+        let  sumProduct = 0 ;
+        for (let i = 1; i < cartProduct.length  ; i++){
+            
+            sumProduct += cartProduct[i].quantity;
+        }         
+        return sumProduct;
+    }
+
+    useEffect(() => {
+        
+        setSumProduct(sum(cartProduct))
+    },[cartProduct]) 
  
 
     return (    
@@ -141,7 +154,7 @@ import { cartProductSelector } from "../redux/selectors";
                     
                     <div className="cart-product">
                     <Link to="/Cart"><img src="https://www.coolmate.me/images/header/icon-cart.svg" /></Link> 
-                    <span className="quantity-product">{quantityCartProduct.length}</span>
+                    <span className="quantity-product">{sumProduct}</span>
                     </div>
                     <Login  button/>    
                               
