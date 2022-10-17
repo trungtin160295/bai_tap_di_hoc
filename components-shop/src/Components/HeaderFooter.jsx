@@ -2,25 +2,23 @@
 
 
 import Text from "./Text"
-import '../style/Footer.scss'
-
-
 import {  NavLink,Link } from "react-router-dom";
-import '../style/Header.scss'
-import useFetch from "../customize/fetch";
+
 import useSrt from "../customize/str"
 import Login from "./Login";
-
-
 import { useState,useEffect } from "react";
 import { useSelector } from "react-redux";
 import { cartProductSelector } from "../redux/selectors";
+
+
+import '../style/header.scss'
+import '../style/footer.scss'
 
  function Header({dataheader}) {    
     const cartProduct = useSelector(cartProductSelector);
     const [sumProduct, setSumProduct] = useState()        
 
-    const onClickTest = () => console.log(quantityCartProduct);  
+    const onClickTest = () => console.log(cartProduct);  
 
 
     function sum (cartProduct){     

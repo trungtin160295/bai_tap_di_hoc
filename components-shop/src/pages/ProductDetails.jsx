@@ -1,24 +1,23 @@
 
 import React from "react";
 import { useState, useEffect } from "react";
-
 import ImageGallery from "react-image-gallery";
 import useFetch from "../customize/fetch";
 import { Button,Spinner } from 'reactstrap';
-
 import {Row,Col } from 'react-bootstrap';
 import Text from '../Components/Text';
 import { useParams} from "react-router-dom";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
 
-import "react-image-gallery/styles/css/image-gallery.css";
-import '../style/ProductDetails.scss'
-
-
-
 import cartSlice from "../redux/sliceReducer/cartReducer";
 import { useDispatch } from "react-redux";
+
+
+
+import "react-image-gallery/styles/css/image-gallery.css";
+import '../style/productDetails.scss'
+
 
 
 const ProductDetails = () => {  

@@ -12,7 +12,7 @@ import cartSlice from "../redux/sliceReducer/cartReducer";
 import CartProductDetal from '../Components/CartProductDetal';
 
 
-import '../style/Cart.scss'
+import '../style/cart.scss'
 
 const Cart = () => {  
     

@@ -1,6 +1,6 @@
 import { Button } from 'reactstrap';
 import Text from './Text';
-import '../style/Card.scss'
+import '../style/card.scss'
 
 
 export default  function Card(props) {  

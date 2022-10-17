@@ -5,7 +5,7 @@ import Basic from '../Components/Basic'
 
  import Collection from '../Components/Collection'
  
- import '../style/Home.scss'
+ import '../style/home.scss'
 
 
 

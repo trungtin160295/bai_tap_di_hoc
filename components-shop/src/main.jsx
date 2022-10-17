@@ -29,6 +29,7 @@ import Login from "./Components/Login"
 import PagesContent from './pages/PagesContent';
 import PagesName from './pages/PagesName';
 import Cart from './pages/Cart'
+import AllProduct from './pages/AllProduct';
 
 
 
@@ -48,10 +49,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="Sale" element={<div> chưa có  </div>} />
         <Route path="Cart" element={<Cart/>} />
         <Route path="Đồ thể thao" element={<h2>dsdasd</h2>}/> 
-        <Route path="Sản phẩm" element={<TabsProduct />} />
-        <Route path="Về Coolmate" element={<div> chưa có  </div>} />     
-        <Route path="/Chọn Size" element={<Login/>}/>         
-        <Route path="Coolxprint" element={<ProductDetails/>} />      
+        <Route path="Sản phẩm" element={<AllProduct/>} />
+        <Route path="Về Coolmate" element={<h1>về coolmate</h1>} />     
+        <Route path="/Chọn Size" element={<h1>chon size</h1>}/>         
+        <Route path="Coolxprint" element={<h1>Coolxprint</h1>} />      
         <Route path = "/product/:ductName&:id" element={<ProductDetails/>}/>       
         <Route path="/Danh-mục/:content" element={<PagesContent/>}/> 
         <Route path="/collection/:name" element={<PagesName/>}/>      

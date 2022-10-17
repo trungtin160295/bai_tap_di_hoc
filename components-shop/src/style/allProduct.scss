@@ -1,0 +1,11 @@
+
+.collections{
+    display: flex;
+    .collections-filter{
+        display: flex;
+        gap: 20px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+    }
+}
