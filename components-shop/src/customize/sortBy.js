@@ -5,7 +5,7 @@
  * https://jsbin.com/jubijogivi/edit?js,console  Test
  */
 
-var sort = (function () {
+var sortBy = (function () {
   var toString = Object.prototype.toString,
     // default parser function
     parse = function (x) {
@@ -40,4 +40,4 @@ var sort = (function () {
     });
   };
 })();
-export default sort;
+export default sortBy;

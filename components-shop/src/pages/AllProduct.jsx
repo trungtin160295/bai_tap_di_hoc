@@ -1,5 +1,6 @@
 import ListProduct from "../Components/ListProduct";
 import useFetch from "../customize/fetch";
+import useSrt from "../customize/str"
 
 import '../style/allProduct.scss'
 export default function AllProduct () {    
@@ -38,54 +39,92 @@ export default function AllProduct () {
         {
             id:1,
             linkImg:"https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/June2022/quan-short.jpg",
-            title:"Quần Shorts"
+            title1:"Quần Shorts",
+            type:true
         },
         {
             id:2,
             linkImg:"https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/June2022/quan-dai.jpg",
-            title:"Quần dài"
+            title1:"Quần dài",
+            type:true
         },
         {
             id:3,
-            linkImg:"https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/June2022/quan-dai.jpg",
-            title:"Áo Tanktop"
+            linkImg:"https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/July2022/AntismellTANKTOP.jpg",
+            title1:"Áo Tank top",
+            title2:"Áo thể thao",
+            type:true
         },
         {
             id:4,
             linkImg:"https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/June2022/quan-lot.jpg",
-            title:"Quần lót nam"
+            title1:"Quần lót nam",
+            type:false
         },
         {
             id:5,
-            linkImg:"https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/June2022/quan-lot.jpg",
-            title:"Phụ kiện"
+            linkImg:"https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/June2022/phu-kien-nam.jpg",
+            title1:"Phụ kiện",
+            type:false
+
         },
         {
             id:6,
-            linkImg:"https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/June2022/quan-lot.jpg",
-            title:"Phụ kiện"
+            linkImg:"https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/July2022/AntismellPOLO-2.jpg",
+            title1:"Áo Polo",
+            title2:"Áo Sơ mi",
+            type:true
         }
     ]
+   
+   
+    const Collection =({collection}) =>{  
+        
+       
+      let productFilter       
+        if(collection.type===true){
+            let productFilter1 = dataProducts.filter(product =>product.type==useSrt(collection.title1,true));
+            let productFilter2=[];
+            if (collection.title2) {
+                productFilter2 = dataProducts.filter(product =>product.type==useSrt(collection.title2,true));                
+               }
+            productFilter =[...productFilter1,...productFilter2]
+        }
+        else{
+             productFilter = dataProducts.filter(product =>product.category==useSrt(collection.title1,true))
+        }
+        
 
-    
+        return(
+           
+            <>
+            <h3> <span>{collection.title1}</span> {collection.title2?  <span > & {collection.title2}  </span> :null}</h3>
+            <ListProduct 
+              imgFirst={collection.linkImg}
+              dataProducts ={productFilter}
+            />
+            </>
+        )
+    }
 
     return(
-        <div className="collections">
+        <div className="all-products">
             <div className="collections-filter">
                 {collectionsFilter.map((item) => {
                     return(
                         <a href="#"><img src={item.linkImg} key={item.id} alt=""  /></a>
                     )
                 })}
-                
-            
             </div>
             <hr />
-            <div className="collections-listing">
-                
+           {isLoading===false && dataProducts.length >0&&
+           <div className="collections-listing">
+            {collectionsListing.map((collection) =>{
+                return < Collection collection={collection} key={collection.id}/>
 
+            })}
             </div>
-            
+           } 
         </div>
     )
 }   

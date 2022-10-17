@@ -376,7 +376,7 @@
                             
                 },
                     {"id":"2",                       
-                    "title":"Quần-Lót-Nam",
+                    "title":"Quần lót nam",
                     "products":[
                         {
                             "id":7,                    
@@ -631,7 +631,7 @@
             "listSize" :["S","M","L","XL","2XL"],
             "listColor" : ["màu 1","màu 2","màu 3","màu 4"],
             "demand":"Mặc-nhà-&-Mặc-trong",
-            "category":"Quần-Lót-Nam",
+            "category":"Quần-lót-nam",
             "type":"Quần-Trunk-(Boxer)",
             "collection":"",
             "technology":"",
@@ -686,7 +686,7 @@
             "listSize" :["S","M","L","XL"],
             "listColor" : ["màu 1","màu 2","màu 3","màu 4"],
             "demand":"Mặc-nhà-&-Mặc-trong",
-            "category":"Quần-Lót-Nam",
+            "category":"Quần-lót-nam",
             "type":"Quần-Trunk-(Boxer)",
             "collection":"",
             "technology":"",
@@ -726,7 +726,7 @@
                             
             "rate":  5 ,
             "comment": 800,
-            "ductName": "Quần-Lót-Nam Brief Coolmate Basics",
+            "ductName": "Quần lót nam Brief Coolmate Basics",
             "price":49,
             "discount":"" ,
             "voucherCode": "XMDDDDDDDD",
@@ -737,7 +737,7 @@
             "listSize" :["S","M","L","2XL"],
             "listColor" : ["màu 1","màu 2","màu 3","màu 4"],
             "demand":"Mặc-nhà-&-Mặc-trong",
-            "category":"Quần-Lót-Nam",
+            "category":"Quần-lót-nam",
             "type":"Quần-Trunk-(Boxer)",
             "collection":"",
             "technology":"",
@@ -781,7 +781,7 @@
                             
             "rate":  3.9 ,
             "comment": 500,
-            "ductName": "Combo 05 Quần-Lót-Nam Trunk Coolmate Basics",
+            "ductName": "Combo 05 Quần lót nam Trunk Coolmate Basics",
             "price":200,
             "discount": 25,
             "voucherCode": "XMDDDDDDDD",
@@ -792,7 +792,7 @@
             "listSize" :["S","M","L","XL","2XL"],
             "listColor" : ["màu 1","màu 2","màu 3","màu 4"],
             "demand":"Mặc-nhà-&-Mặc-trong",
-            "category":"Quần-Lót-Nam",
+            "category":"Quần-lót-nam",
             "type":"Quần-Trunk-(Boxer)",
             "collection":"",
             "technology":"",
@@ -846,7 +846,7 @@
             "listSize" :["S","M","L","XL","2XL"],
             "listColor" : ["màu 1","màu 2","màu 3","màu 4"],
             "demand":"Mặc-nhà-&-Mặc-trong",
-            "category":"Quần-Lót-Nam",
+            "category":"Quần-lót-nam",
             "type":"Quần-Trunk-(Boxer)",
             "collection":"",
             "technology":"",
@@ -1415,7 +1415,7 @@
             "listColor" : ["màu 1","màu 2","màu 3","màu 4"],
             "demand":"Mặc-hằng-ngày",
             "category":"Áo-nam",
-            "type":"Áo-tank-top",
+            "type":"Áo-Tank-top",
             "collection":"Proudly-Vietnam",
             "technology":"Excool",
             "outstanding":
@@ -1676,7 +1676,7 @@
             "listColor" : ["màu 1","màu 2","màu 3","màu 4"],
             "demand":"Mặc-nhà-&-Mặc-trong",
             "category":"Áo-nam",
-            "type":"Áo-tank-top",
+            "type":"Áo-Tank-top",
             "collection":"Care-&-Share",
             "technology":"Cleandye",
             "date" :"2011-8-30",
@@ -1726,7 +1726,7 @@
             "listColor" : ["màu 1","màu 2","màu 3","màu 4"],
             "demand":"Mặc-nhà-&-Mặc-trong",
             "category":"Áo-nam",
-            "type":"Áo-tank-top",
+            "type":"Áo-Tank-top",
             "collection":"Care-&-Share",
             "technology":"Cleandye",
             "date" :"2011-10-30",
@@ -1788,7 +1788,7 @@
             "listColor" : ["màu 1","màu 2","màu 3","màu 4"],
             "demand":"Mặc-hằng-ngày",
             "category":"Áo-nam",
-            "type":"Áo-tank-top",
+            "type":"Áo-Tank-top",
             "collection":"Proudly-Vietnam",
             "technology":"Excool",
             "date":"2011-10-20",
@@ -2670,9 +2670,9 @@
             "content":"Sale"                                      
             },
             {"id":"2",            
-            "title":"Quần-Lót-Nam",            
+            "title":"Quần lótnam",            
             "search" :"demand",
-            "content":"Quần-Lót-Nam"                                      
+            "content":"Quần lót nam"                                      
             },
             {"id":"3",            
             "title":"Đồ-thể-thao",            
@@ -2821,7 +2821,7 @@
               
     },
     {   "id":"2",                       
-        "title":"Quần-Lót-Nam",
+        "title":"Quần lót nam",
         "products":[
             {
                 "id":7,                    
