@@ -55,7 +55,8 @@ import '../style/footer.scss'
                           return(
                             <li className="hover" key={item.id}>
                                 
-                                  <NavLink  to={`/${item.title}`}>  {item.title}  </NavLink>
+        
+                                  <NavLink  to={`Menu/${item.title}`}>  {item.title}  </NavLink>
                                   {item.child ?  
                                     <div className="dropdown-content ">
                                         
