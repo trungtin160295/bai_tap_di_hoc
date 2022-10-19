@@ -18,19 +18,13 @@ import Home from './pages/Home';
 
 import '../src/style/Home.scss'
 import Views from './Components/Views';
-
-import TabsProduct from './Components/TabProduct';
-
-
 import ProductDetails from './pages/ProductDetails'
-
-import ListProduct from './Components/ListProduct';
-import Login from "./Components/Login"
 import PagesContent from './pages/PagesContent';
 import PagesName from './pages/PagesName';
 import Cart from './pages/Cart'
 import AllProduct from './pages/AllProduct';
 import AboutCoolmate from './pages/AboutCoolmate'
+import ChooseSize from './pages/ChooseSize'
 
 
 
@@ -46,11 +40,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Views />} >
-        <Route  index element={<AboutCoolmate/>} />
+        <Route  index element={<ChooseSize/>} />
         <Route path="Menu/Sale" element={<div> chưa có  </div>} />
         <Route path="Cart" element={<Cart/>} />
         <Route path="Menu/Sản phẩm" element={<AllProduct/>} />
-        <Route path="Menu/Về Coolmate" element={<h1>về coolmate</h1>} />     
+        <Route path="Menu/Về Coolmate" element={<AboutCoolmate />} />     
         <Route path="Menu/Chọn Size" element={<h1>chon size</h1>}/>         
         <Route path="Menu/Coolxprint" element={<h1>Coolxprint</h1>} />      
         <Route path = "/product/:ductName&:id" element={<ProductDetails/>}/>       
