@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{Suspense,lazy} from 'react'
 import ReactDOM from 'react-dom/client'
 
 import './index.css';
@@ -11,20 +11,28 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import  FallbackLoading from './Components/FallbackLoading';
+import  Wrapper from './Components/Wrapper';
+
+const Home = lazy(() => import('./pages/Home'));
+const Views = lazy(() => import('./Components/Views'));
+const ProductDetails = lazy(() => import('./pages/ProductDetails'));
+const PagesContent = lazy(() => import('./pages/PagesContent'));
+const PagesName = lazy(() => import('./pages/PagesName'));
+const Cart = lazy(() => import('./pages/Cart'));
+const AllProduct = lazy(() => import('./pages/AllProduct'));
+const AboutCoolmate = lazy(() => import('./pages/AboutCoolmate'));
+const ChooseSize = lazy(() => import('./pages/ChooseSize'));
 
 
-import Home from './pages/Home';
 
 
-import '../src/style/Home.scss'
-import Views from './Components/Views';
-import ProductDetails from './pages/ProductDetails'
-import PagesContent from './pages/PagesContent';
-import PagesName from './pages/PagesName';
-import Cart from './pages/Cart'
-import AllProduct from './pages/AllProduct';
-import AboutCoolmate from './pages/AboutCoolmate'
-import ChooseSize from './pages/ChooseSize'
+
+
+
+
+
+
 
 
 
@@ -33,29 +41,38 @@ import ChooseSize from './pages/ChooseSize'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-
-  <Provider store={store} >
+<Suspense fallback={<FallbackLoading />}>
+<Provider store={store} >
     
-  <React.StrictMode>
-  <BrowserRouter>
+    <React.StrictMode>
+    <BrowserRouter>
+    <Wrapper>
     <Routes>
-      <Route path="/" element={<Views />} >
-        <Route  index element={<ChooseSize/>} />
-        <Route path="Menu/Sale" element={<div> chưa có  </div>} />
-        <Route path="Cart" element={<Cart/>} />
-        <Route path="Menu/Sản phẩm" element={<AllProduct/>} />
-        <Route path="Menu/Về Coolmate" element={<AboutCoolmate />} />     
-        <Route path="Menu/Chọn Size" element={<h1>chon size</h1>}/>         
-        <Route path="Menu/Coolxprint" element={<h1>Coolxprint</h1>} />      
-        <Route path = "/product/:ductName&:id" element={<ProductDetails/>}/>       
-        <Route path="/Danh-mục/:content" element={<PagesContent/>}/> 
-        <Route path="/collection/:name" element={<PagesName/>}/>      
-                      
-      </Route>
-  </Routes>
-</BrowserRouter>
-</React.StrictMode>
-  </Provider>
+        <Route path="/" element={<Views />} >
+          <Route  index element={<Home/>} />
+          <Route path="Menu/Sale" element={<div> chưa có  </div>} />
+          <Route path="Cart" element={<Cart/>} />
+          <Route path="Menu/Sản-phẩm" element={<AllProduct/>} />
+          <Route path="Menu/Về-Coolmate" element={<AboutCoolmate />} />     
+          <Route path="Menu/Chọn-Size" element={<ChooseSize/>}/>         
+          <Route path="Menu/Coolxprint" element={<h1>Coolxprint</h1>} />      
+          <Route path = "/product/:ductName&:id" element={<ProductDetails/>}/>       
+          <Route path="/Danh-mục/:content" element={<PagesContent/>}/> 
+          <Route path="/collection/:name" element={<PagesName/>}/>      
+                        
+        </Route>
+    </Routes>
+
+    </Wrapper>
+
+      
+  </BrowserRouter>
+  </React.StrictMode>
+    </Provider>
+    
+
+</Suspense>
+
   
   
  

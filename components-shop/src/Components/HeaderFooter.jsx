@@ -34,7 +34,7 @@ import '../style/footer.scss'
         
         setSumProduct(sum(cartProduct))
     },[cartProduct]) 
- 
+    
 
     return (    
            
@@ -56,7 +56,7 @@ import '../style/footer.scss'
                             <li className="hover" key={item.id}>
                                 
         
-                                  <NavLink  to={`Menu/${item.title}`}>  {item.title}  </NavLink>
+                                  <NavLink  to={`Menu/${useSrt(item.title,true)}`}>  {item.title}  </NavLink>
                                   {item.child ?  
                                     <div className="dropdown-content ">
                                         

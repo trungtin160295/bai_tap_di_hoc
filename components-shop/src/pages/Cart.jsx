@@ -1,6 +1,5 @@
 
 import {Row,Col } from 'react-bootstrap';
-import {FormGroup,Label,Input} from'reactstrap';
 import Login from '../Components/Login';
 import { useForm } from 'react-hook-form';
 import { useState ,useEffect} from 'react';
@@ -22,6 +21,14 @@ const Cart = () => {
     const onSubmit = data => console.log(data);
     const cartProduct = useSelector(cartProductSelector);
     const [sumMoney, setSumMoney] = useState()
+    const [payment, setPayment] = useState(
+        {
+            id:1,
+            name:"COD",
+            content:["COD","Thanh toán khi nhận hàng"],
+            linkImg:"https://www.coolmate.me/images/COD.svg"
+        }
+    )
 
     
     
@@ -69,7 +76,7 @@ const Cart = () => {
         let sumMoney = 0;
         for (let i = 1; i < cartProduct.length; i++){
             
-            sumMoney += Math.round(cartProduct[1].product.price*(1-(cartProduct[1].product.discount/100))*cartProduct[1].quantity);
+            sumMoney += Math.round(cartProduct[i].product.price*(1-(cartProduct[i].product.discount/100))*cartProduct[i].quantity);
         }
        
         return sumMoney;
@@ -80,22 +87,26 @@ const Cart = () => {
         setSumMoney(sum(cartProduct))
     },[cartProduct]) 
 
-    function Payments({payment}){
+    function Payments({item}){
         return(
-            <FormGroup check className='payments-child'>
-            <Label check className='check-input'>
-            <input  type="radio" name="radio1" />
-            <div className='payments-child-conten'>
-                <img src={payment.linkImg} alt= {payment.content} className='img-check'/>
-                <div className='payments-content'>
-                {payment.content.map((item) =>{
-                    return <div className='payments-title' key={item}>{item}</div>
-                })}
-                {payment.sale?<i>{payment.sale}</i>:null}
-                </div>
-            </div>
-            </Label>
-         </FormGroup>  
+            <div             
+            className={`payments-child  ${item.id ==payment.id ? 'active' : ''}`}
+            onClick={()=>setPayment(item)}
+            >
+                
+                   
+                    <div className='payments-child-conten'>
+                        <button className={`${item.id ==payment.id ? 'active-button' : ''}`}>&#8192; </button>
+                        <img src={item.linkImg} alt= {item.content} className='img-check'/>
+                        <div className='payments-content'>
+                        {item.content.map((item) =>{
+                            return <div className='payments-title' key={item}>{item}</div>
+                        })}
+                        {item.sale?<i className='payments-sale'>{item.sale}</i>:null}
+                        </div>
+                    </div>
+                
+         </div>  
         )}
   
 
@@ -130,16 +141,20 @@ const Cart = () => {
                 <Row>
                     <input type="text" placeholder="Chú ý (Ví dụ:Giao hàng giờ hành chính)"  className='buyer-information more'/>
                 </Row>
-                <FormGroup tag="fieldset">
-                <legend className='title-pay'>Hình thức thanh toán</legend>
+                <div >
+                    <hr />
+                <h1 className='title-pay'>Hình thức thanh toán</h1>
                 {listPayments.map((payment) =>{
                 return (
-                    <Payments payment={payment} key={payment.id} />
+                    <Payments item={payment} key={payment.id} />
                 )
                 })}
-                </FormGroup>
+                </div>
                 <Row>
-                    <button className='button-pay'> Thanh toán {sumMoney}</button>
+                    <button className='button-pay'>
+                         Thanh toán {sumMoney != 0 ? sumMoney :"0"}
+                         .000 đ bằng {payment.name}
+                         </button>
                 </Row>
             </Col>
             <Col  md={12} xl={5} className='cart-right'>

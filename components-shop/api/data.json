@@ -1391,7 +1391,8 @@
                             "content" :"Tự hào sản xuất tại Việt Nam."
                         }
                 ]       
-        } , {
+        } , 
+        {
             "id":15,
             "linkImages": [ "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/May2022/outdor23_3.jpg",
                             "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/May2022/outdor23_2.jpg",
@@ -1654,7 +1655,8 @@
                             "content" :"Tự hào sản xuất tại Việt Nam."
                         }
                 ]       
-        } , {
+        } , 
+        {
             "id":20,
             "linkImages": [ "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/Tank_xam_dam_11.jpg",
                             "https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/Tank_xam_dam_2d.jpg",
@@ -2633,7 +2635,125 @@
                             }
                          
                 ]       
-        }         
+        },
+        {
+            "id":36,
+            "linkImages": [
+                    "https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2022/combo-3_49.jpg",
+                    "https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2022/139-1.jpg",
+                    "https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2022/Untitled-3_45.jpg"
+                    ],
+                          
+            "rate":  4.9 ,
+            "comment": 390,
+            "ductName": "Combo 03 Quần lót Trunk Pima Cotton thấm hút tốt",
+            "price":299,
+            "discount": "7",
+            "voucherCode": "",
+            "sale":"",
+            "combo":"",
+            "attention": "" ,
+            "voucherValue":"",
+            "listSize" :["M","X","L","XL","3XL"],
+            "listColor" : ["Đen","Xanh","Xám","Blue"],
+            "demand":"Mặc-nhà-&-Mặc-trong",
+            "category":"Quần-lót-nam",
+            "type":"Quần-Trunk-(Boxer)",
+            "collection":"Care-&-Share",
+            "technology":"HeiQ-Viroblock",
+            "date":"2011-11-29",
+            "outstanding":
+                [
+                        {
+                            "key" :"1",
+                            "content" :"Chất liệu: 43% Sợi Sorona + 57% Polyester co giãn."
+                },
+                        {
+                            "key" :"2",
+                            "content" :"Quần ống dài, lưng quần âu có chun CO GIÃN bên trong vừa vặn với cơ thể."
+                        },
+                        {
+                            "key" :"3",
+                            "content" :"Dáng quần hơi ôm một chút để bạn luôn cảm thấy thoải mái và lịch sự."
+                        },
+                        {
+                            "key" :"4",
+                            "content" :"Ứng dụng công nghệ Excool: Co giãn 4 chiều, Nhẹ, Thoáng khí, Chống tia UV SPF50+."
+                            },
+                            {
+                            "key" :"5",
+                                "content" :"Không nên ủi, nếu cần thì ủi ở nhiệt độ thấp dưới 110 độ."
+                            },
+                            {
+                                "key" :"6",
+                                "content" :"Tự hào sản xuất tại Việt Nam ."
+                            },
+                            {
+                                "key" :"7",
+                                "content" :"Người mẫu: 1m80 - 75kg, mặc XL ."
+                            }
+                         
+                ]       
+        },
+        {
+            "id":36,
+            "linkImages": [
+                    "https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2022/combo-3_49.jpg",
+                    "https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2022/139-1.jpg",
+                    "https://media.coolmate.me/cdn-cgi/image/quality=80,format=auto/uploads/September2022/Untitled-3_45.jpg"
+                    ],
+                          
+            "rate":  4.9 ,
+            "comment": 390,
+            "ductName": "Combo 03 Quần lót Trunk Pima Cotton thấm hút tốt",
+            "price":299,
+            "discount": "7",
+            "voucherCode": "",
+            "sale":"",
+            "combo":"",
+            "attention": "" ,
+            "voucherValue":"",
+            "listSize" :["M","X","L","XL","3XL"],
+            "listColor" : ["Đen","Xanh","Xám","Blue"],
+            "demand":"Mặc-nhà-&-Mặc-trong",
+            "category":"Quần-lót-nam",
+            "type":"Quần-Trunk-(Boxer)",
+            "collection":"Care-&-Share",
+            "technology":"HeiQ-Viroblock",
+            "date":"2011-11-29",
+            "outstanding":
+                [
+                        {
+                            "key" :"1",
+                            "content" :"Chất liệu: 43% Sợi Sorona + 57% Polyester co giãn."
+                },
+                        {
+                            "key" :"2",
+                            "content" :"Quần ống dài, lưng quần âu có chun CO GIÃN bên trong vừa vặn với cơ thể."
+                        },
+                        {
+                            "key" :"3",
+                            "content" :"Dáng quần hơi ôm một chút để bạn luôn cảm thấy thoải mái và lịch sự."
+                        },
+                        {
+                            "key" :"4",
+                            "content" :"Ứng dụng công nghệ Excool: Co giãn 4 chiều, Nhẹ, Thoáng khí, Chống tia UV SPF50+."
+                            },
+                            {
+                            "key" :"5",
+                                "content" :"Không nên ủi, nếu cần thì ủi ở nhiệt độ thấp dưới 110 độ."
+                            },
+                            {
+                                "key" :"6",
+                                "content" :"Tự hào sản xuất tại Việt Nam ."
+                            },
+                            {
+                                "key" :"7",
+                                "content" :"Người mẫu: 1m80 - 75kg, mặc XL ."
+                            }
+                         
+                ]       
+        }          
         
 
         

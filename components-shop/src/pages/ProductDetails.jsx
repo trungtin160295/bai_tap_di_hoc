@@ -81,26 +81,6 @@ const ProductDetails = () => {
         }
     }
 
-    // const goToCart = () => {
-    //     if (check()) {
-    //         let newItem = {
-    //             slug: product.slug,
-    //             color: color,
-    //             size: size,
-    //             price: product.price,
-    //             quantity: quantity
-    //         }
-    //         if (dispatch(addItem(newItem))) {
-    //             dispatch(remove())
-    //             props.history.push('/cart')
-    //         } else {
-    //             alert('Fail')
-    //         }
-    //     }
-    // }  
- 
-        
-  
   
   const productPolicy =[
     { key:"1",
@@ -159,14 +139,13 @@ const ProductDetails = () => {
                       </div>
                       
                       <div className="product-price">
-                        <Text className="price-discount">{product.price*(1-(product.discount/100))}đ &nbsp;</Text>  
+                        <Text className="price-discount">{product.price*(1-(product.discount/100))}.000đ &nbsp;</Text>  
                         
-                        {!product.discount &&
-                        <Text  className="price">{product.price}d &nbsp;</Text> 
+                        {product.discount ? 
+                        <Text  className="price">{product.price}.000đ &nbsp;</Text> 
                         &&
-                        <Text  className="product-discount">-{product.discount}%</Text> 
-                        }
-                                         
+                        <Text  className="product-discount">-{product.discount}%</Text>
+                        :null}
                       </div>
                       { product.combo!= "" && 
                         <span className="product-combo">
