@@ -11,6 +11,8 @@ import { useSelector } from "react-redux";
 import { cartProductSelector } from "../redux/selectors";
 
 
+
+
 import '../style/header.scss'
 import '../style/footer.scss'
 

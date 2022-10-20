@@ -9,6 +9,7 @@ import Text from '../Components/Text';
 import { useParams} from "react-router-dom";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
+import { ToastContainer, toast } from 'react-toastify';
 
 import cartSlice from "../redux/sliceReducer/cartReducer";
 import { useDispatch } from "react-redux";
@@ -16,7 +17,9 @@ import { useDispatch } from "react-redux";
 
 
 import "react-image-gallery/styles/css/image-gallery.css";
+import 'react-toastify/dist/ReactToastify.css';
 import '../style/productDetails.scss'
+
 
 
 
@@ -29,11 +32,14 @@ const ProductDetails = () => {
 
  
     const dispatch =useDispatch()
+    const [buttonBuy, setButtonBuy] = useState("Vui lòng chọn màu sắc")
     const [color, setColor] = useState(undefined)
+
 
     const [size, setSize] = useState(undefined)
 
     const [quantity, setQuantity] = useState(1)
+
 
     const updateQuantity = (type) => {
         if (type === 'plus') {
@@ -42,6 +48,7 @@ const ProductDetails = () => {
             setQuantity(quantity - 1 < 1 ? 1 : quantity - 1)
         }
     }
+    
   
     useEffect(() => {
         
@@ -50,22 +57,21 @@ const ProductDetails = () => {
         setSize(undefined)
     }, [product])
 
-    const check = () => {
-        if (color === undefined) {
-            alert('Vui lòng chọn màu sắc!')
-            return false
-        }
+    useEffect(() => {
 
-        if (size === undefined) {
-            alert('Vui lòng chọn kích cỡ!')
-            return false
-        }
+      if (color != undefined) {
+        setButtonBuy("Vui lòng chọn kích cỡ")
+        if (size != undefined) {
+          setButtonBuy("Thêm vào giỏ hàng")
+         }
+      }
 
-        return true
-    }
+     
+  }, [color,size])
+   
 
     const addToCart = () => {
-        if (check()) {          
+        if (buttonBuy ==="Thêm vào giỏ hàng") {          
             if (dispatch(
               cartSlice.actions.addProduct({
                 color: color,
@@ -74,7 +80,7 @@ const ProductDetails = () => {
                 product:product,                
                 id:uuidv4()
               }))) {
-                alert('Success')
+                purchaseNotice()  
             } else {
                 alert('Fail')
             }
@@ -108,19 +114,73 @@ const ProductDetails = () => {
       content:"Giao hàng nhanh toàn quốc"
     },
   ]
+  const purchaseNotice = () => toast(<PurchaseNotice/>
+  
+  
+  )
+  const PurchaseNotice = () => {
+    return(
+      <div  className="buy-notice">
+      <h6> Đã thêm sản phẩm vào giỏ !</h6>
+      <hr />
+      <div className="product-information ">
+        <div className="product-img">
+          <img src="https://media.coolmate.me/cdn-cgi/image/quality=80/uploads/August2022/3536_57.jpg" alt="" />
+        </div>
+        <div className="information-content">
+          <div className="product-title">
+            Quần short nam thể thao Movement 7' co giãn - Xanh rêu
+          </div>
+          <div className="information-buy">
+            <div className="information-color-size">
+              Đen / L
+            </div>
+            <div className="information-pice">
+              <span className="pice">
+                40000
+
+              </span>
+              <span className="cost">
+              55555
+              </span>
+
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+      <hr />
+      <button className='see-cart'>
+        Xem giỏ hàng 
+      </button>
+
+    </div>
+   
+    )
+  }
+  
+
+
+
            
   return (
-    
-       
   <div className="product-petails">
+    <ToastContainer />
+    
+
     
     {isLoading === false && product !=null && 
+
+
       <>
          <div  className="path">
           <Link to="/">Trang chủ /</Link>
           <Link to={`/${product.type}`}>{product.type}</Link>          
              
           </div>
+         
           <div className="product-presented">
           
             
@@ -210,8 +270,9 @@ const ProductDetails = () => {
                           </button>
                       </div>
                       <button  className="product-buy" onClick={() => addToCart()}>
-                        Thêm vào giỏ hàng
+                        {buttonBuy}
                       </button>
+                     
                   </div>
                       <div className="product-policy">
                         {
@@ -249,6 +310,7 @@ const ProductDetails = () => {
               
             </Row>
           </div>
+          
 
           </>}
           {isLoading === true &&

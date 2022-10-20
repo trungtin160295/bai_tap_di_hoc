@@ -13,6 +13,9 @@ import {
 } from "react-router-dom";
 import  FallbackLoading from './Components/FallbackLoading';
 import  Wrapper from './Components/Wrapper';
+import  Test from './Components/Test';
+
+
 
 const Home = lazy(() => import('./pages/Home'));
 const Views = lazy(() => import('./Components/Views'));
@@ -40,6 +43,9 @@ const ChooseSize = lazy(() => import('./pages/ChooseSize'));
 
 
 
+
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
 <Suspense fallback={<FallbackLoading />}>
 <Provider store={store} >
@@ -47,21 +53,21 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
     <BrowserRouter>
     <Wrapper>
-    <Routes>
-        <Route path="/" element={<Views />} >
-          <Route  index element={<Home/>} />
-          <Route path="Menu/Sale" element={<div> chưa có  </div>} />
-          <Route path="Cart" element={<Cart/>} />
-          <Route path="Menu/Sản-phẩm" element={<AllProduct/>} />
-          <Route path="Menu/Về-Coolmate" element={<AboutCoolmate />} />     
-          <Route path="Menu/Chọn-Size" element={<ChooseSize/>}/>         
-          <Route path="Menu/Coolxprint" element={<h1>Coolxprint</h1>} />      
-          <Route path = "/product/:ductName&:id" element={<ProductDetails/>}/>       
-          <Route path="/Danh-mục/:content" element={<PagesContent/>}/> 
-          <Route path="/collection/:name" element={<PagesName/>}/>      
-                        
-        </Route>
-    </Routes>
+      <Routes>
+          <Route path="/" element={<Views />} >
+            <Route  index element={<Test/>} />
+            <Route path="Menu/Sale" element={<div> chưa có  </div>} />
+            <Route path="Cart" element={<Cart/>} />
+            <Route path="Menu/Sản-phẩm" element={<AllProduct/>} />
+            <Route path="Menu/Về-Coolmate" element={<AboutCoolmate />} />     
+            <Route path="Menu/Chọn-Size" element={<ChooseSize/>}/>         
+            <Route path="Menu/Coolxprint" element={<h1>Coolxprint</h1>} />      
+            <Route path = "/product/:ductName&:id" element={<ProductDetails/>}/>       
+            <Route path="/Danh-mục/:content" element={<PagesContent/>}/> 
+            <Route path="/collection/:name" element={<PagesName/>}/>      
+                          
+          </Route>
+      </Routes>
 
     </Wrapper>
 
