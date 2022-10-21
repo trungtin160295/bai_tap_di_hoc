@@ -3,12 +3,13 @@
 
 import Text from "./Text"
 import {  NavLink,Link } from "react-router-dom";
-
+import useFetch from "../customize/fetch";
 import useSrt from "../customize/str"
 import Login from "./Login";
-import { useState,useEffect } from "react";
+import { useState,useEffect,useRef } from "react";
 import { useSelector } from "react-redux";
 import { cartProductSelector } from "../redux/selectors";
+import { Spinner } from 'reactstrap';
 
 
 
@@ -16,13 +17,30 @@ import { cartProductSelector } from "../redux/selectors";
 import '../style/header.scss'
 import '../style/footer.scss'
 
- function Header({dataheader}) {    
-    const cartProduct = useSelector(cartProductSelector);
+ function Header({dataheader}) {
+    const cartProduct = useSelector(cartProductSelector);    
+    const  seachInput = useRef()
     const [sumProduct, setSumProduct] = useState()        
+    const [keyWord,setKeyWord] =useState("")
+    const [show,setShow] =useState(false)
+    const [timeShow,setTimeShow] =useState(false)
 
-    const onClickTest = () => console.log(cartProduct);  
+    
+    if(show){
+        setTimeout(() => {
+            setShow(false)
+        }, 100000);
+    }
 
+  const { data: dataProductsSeach,isLoading:loadSeach }
+  = useFetch(`http://localhost:3004/products/?q=${keyWord}`, false); 
 
+    const focusSeachInput = () =>{
+        setShow(true)
+        seachInput.current.focus()
+        
+    }
+       
     function sum (cartProduct){     
         let  sumProduct = 0 ;
         for (let i = 1; i < cartProduct.length  ; i++){
@@ -33,48 +51,36 @@ import '../style/footer.scss'
     }
 
     useEffect(() => {
-        
         setSumProduct(sum(cartProduct))
     },[cartProduct]) 
     
-
     return (    
            
         
         <header>
             {dataheader.sale ? <Text className='topbar'>{dataheader.sale} </Text> :null}
             {dataheader.header ?  
-            
             <nav >
                 <div className="navbar">
                 <div className="logo">
                     <Link to="/"><img src="https://www.coolmate.me/images/logo-coolmate.svg" alt="" /></Link>                    
                 </div>
-                 
                 <div className="nav-center">
                   <ul >
                       { dataheader.header.map((item) =>{
                           return(
                             <li className="hover" key={item.id}>
-                                
-        
                                   <NavLink  to={`Menu/${useSrt(item.title,true)}`}>  {item.title}  </NavLink>
                                   {item.child ?  
                                     <div className="dropdown-content ">
-                                        
                                         {item.title ==="Sản phẩm" &&
                                           <div className="menu-header">
                                               { item.child ?
                                                   item.child.map((list) =>{       
-                                          
-
                                                       return(
                                                           <div key={list.title} >
                                                               <Text className="title">{list.title}</Text>
-                                                              
-                                                          
                                                               <div  className="menu-header-column">
-                                                                  
                                                                   {
                                                                     list.child.map((child)  => {                                
                                                                       return(
@@ -95,26 +101,19 @@ import '../style/footer.scss'
                                                                                               <Link to= {`Danh-mục/${useSrt(content,true)}`}  className="child-product">{content}</Link>
                                                                                               
                                                                                           </li>                                                   
-                                                                                      
                                                                                       )
                                                                                   })} 
                                                                               </ul>:null} 
                                                                               <hr  style={{width:'80%'  ,margin: '0'} }/>
-                                      
                                                                           </div>
-                                                                          
-                                      
                                                                       )
                                                                   })}
                                                               </div>
-                                                          
                                                           </div>
                                                       )
-                                                  
                                                   } )
                                                 :null
                                               }  
-                                              
                                           </div>
                                         }  
                                         {item.title ==="Về Coolmate" &&
@@ -149,7 +148,7 @@ import '../style/footer.scss'
                     
                 <div className="nav-right">
                     <div>
-                    <button onClick={onClickTest}><img src="https://www.coolmate.me/images/header/icon-search.svg"  /></button>
+                    <button onClick={focusSeachInput}><img src="https://www.coolmate.me/images/header/icon-search.svg"  /></button>
                     </div>
                     
                     
@@ -165,6 +164,50 @@ import '../style/footer.scss'
                 
             </nav>
              :null}
+             <div  className={`container-seach  ${show===true ? 'show-nav-seach' : ''}`}>
+                <div className="nav-seach">
+                    <input ref = {seachInput} type="text"  onChange={(e) =>setKeyWord(e.target.value)} />
+                    <Link >Tìm kiếm</Link>
+                </div>
+                {
+                keyWord.length > 0 && loadSeach===false ? 
+                <div className="seach-products">
+                    <Link > Xem thêm</Link>
+                    {dataProductsSeach.length >0?
+                    dataProductsSeach.slice(0,5).map((product) =>{
+                        return(
+                            <div className="product">
+                                <div className="product-img">
+                                    <img src={product.linkImages[0]} alt="" />
+                                </div>
+                                <div className="products-right">
+                                    <h5 className="product-title">
+                                    {product.ductName}
+                                    </h5>
+                                    <div className="product-pice">
+                                        <span className="pice">{product.price} .000 đ </span>
+                                        <span className="pice-sale">{Math.round(product.price*(1-(product.discount/100)))}.000đ </span>
+
+                                    </div>
+                                    
+                                </div>
+
+
+                            </div>
+                        )
+                    })
+                    
+                    :<div>
+                        không có sản phẩm
+                    </div> 
+                    }
+                    
+
+                </div>
+                :null}
+               
+             </div>
+            
           
         
         </header>

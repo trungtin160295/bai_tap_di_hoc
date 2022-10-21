@@ -199,12 +199,13 @@ const ProductDetails = () => {
                       </div>
                       
                       <div className="product-price">
-                        <Text className="price-discount">{product.price*(1-(product.discount/100))}.000đ &nbsp;</Text>  
+                        <Text className="price-discount">{Math.round(product.price*(1-(product.discount/100)))}.000đ &nbsp;</Text>  
                         
-                        {product.discount ? 
-                        <Text  className="price">{product.price}.000đ &nbsp;</Text> 
-                        &&
-                        <Text  className="product-discount">-{product.discount}%</Text>
+                        {product.discount ?
+                        <>
+                          <Text  className="price">{product.price}.000đ &nbsp;</Text> 
+                          <Text  className="product-discount">-{product.discount}%</Text>
+                        </>
                         :null}
                       </div>
                       { product.combo!= "" && 
